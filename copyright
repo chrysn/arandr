@@ -1,0 +1,15 @@
+This package was created and debianized by chrysn <chrysn@fsfe.org> on
+Mon, 17 Mar 2008 16:08:54 +0000.
+
+It was downloaded from <http://svn.amsuess.com/svn/tools/arandr/>
+
+Copyright: 
+
+    Copyright (C) 2008 chrysn <chrysn@fsfe.org>
+
+License:
+
+    GNU GPLv3 or higher
+
+The Debian packaging is (C) 2008, chrysn <chrysn@fsfe.org> and
+is licensed under the GPL, see `/usr/share/common-licenses/GPL'.
