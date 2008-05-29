@@ -2,9 +2,8 @@ Source: arandr
 Section: x11
 Priority: extra
 Maintainer: chrysn <chrysn@fsfe.org>
-Build-Depends: debhelper (>= 5), python-setuptools
+Build-Depends: debhelper (>= 5)
 Standards-Version: 3.7.2
-Homepage: http://christian.amsuess.com/tools/arandr/
 
 Package: arandr
 Architecture: all
