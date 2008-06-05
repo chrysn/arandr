@@ -10,8 +10,8 @@ build: build-stamp
 
 build-stamp: configure-stamp 
 	dh_testdir
-	# man page could be built here, but rst2man not packaged
-	gzip -9 -c distrib/arandr.1 > distrib/arandr.1.gz
+
+	./setup.py build
 
 	touch $@
 
@@ -21,9 +21,7 @@ clean:
 	rm -f build-stamp configure-stamp
 	rm -f *.pyc */*.pyc */*/*.pyc
 	rm -f *~ ../*/*~ ../*/*/*~
-	rm -f distrib/arandr.1.gz
 	rm -rf build 
-	rm -rf arandr.egg-info
 
 	dh_clean 
 
@@ -36,7 +34,7 @@ install: build
 	cp distrib/arandr.desktop $(CURDIR)/debian/arandr/usr/share/applications/
 	cp debian/copyright $(CURDIR)/debian/arandr/usr/share/doc/arandr/
 
-	dh_installman distrib/arandr.1.gz
+	#dh_installman distrib/arandr.1.gz
 
 
 binary-indep: build install
