@@ -1,13 +1,13 @@
 Source: arandr
 Section: x11
 Priority: extra
-Maintainer: chrysn <chrysn@fsfe.org>
-Build-Depends: debhelper (>= 5)
+Maintainer: Christian M. Amsüss <chrysn@fsfe.org>
+Build-Depends: debhelper (>= 5), python, gettext
 Standards-Version: 3.7.3
 
 Package: arandr
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, python, python-setuptools, x11-xserver-utils | xrandr
+Depends: ${shlibs:Depends}, ${misc:Depends}, python, x11-xserver-utils | xrandr
 Description: Simple visual front end for XRandR 1.2
  ARandR is a visual front end for XRandR 1.2 (per display options), which
  provides full controll over positioning, saving and loading to/from shell

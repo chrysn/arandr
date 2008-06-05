@@ -31,10 +31,8 @@ install: build
 	dh_clean -k 
 	dh_installdirs
 	./setup.py install --root $(CURDIR)/debian/arandr --no-compile install
-	cp distrib/arandr.desktop $(CURDIR)/debian/arandr/usr/share/applications/
 	cp debian/copyright $(CURDIR)/debian/arandr/usr/share/doc/arandr/
-
-	#dh_installman distrib/arandr.1.gz
+	gzip -9 -c debian/changelog > $(CURDIR)/debian/arandr/usr/share/doc/arandr/changelog.Debian.gz
 
 
 binary-indep: build install
