@@ -13,9 +13,6 @@ build-stamp: configure-stamp
 	# man page could be built here, but rst2man not packaged
 	gzip -9 -c distrib/arandr.1 > distrib/arandr.1.gz
 
-	# crude
-	msgfmt distrib/po/de.po -o distrib/po/de.mo
-
 	touch $@
 
 clean:
@@ -28,9 +25,6 @@ clean:
 	rm -rf build 
 	rm -rf arandr.egg-info
 
-	# crude
-	rm -f distrib/po/*.mo
-
 	dh_clean 
 
 install: build
@@ -41,10 +35,6 @@ install: build
 	./setup.py install --root $(CURDIR)/debian/arandr --no-compile install
 	cp distrib/arandr.desktop $(CURDIR)/debian/arandr/usr/share/applications/
 	cp debian/copyright $(CURDIR)/debian/arandr/usr/share/doc/arandr/
-
-	# crude
-	mkdir -p $(CURDIR)/debian/arandr/usr/share/locale/de/LC_MESSAGES/
-	cp distrib/po/de.mo $(CURDIR)/debian/arandr/usr/share/locale/de/LC_MESSAGES/arandr.mo
 
 	dh_installman distrib/arandr.1.gz
 
