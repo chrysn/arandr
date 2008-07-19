@@ -1,6 +1,6 @@
 arandr (0.1-1) unstable; urgency=low
 
-  * Initial release
+  * Initial release (closes: #484849)
 
  -- Christian M. Amsüss <chrysn@fsfe.org>  Thu, 5 Jun 2008 22:47:54 +0000
 
