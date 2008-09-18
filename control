@@ -1,9 +1,10 @@
 Source: arandr
 Section: x11
-Priority: extra
+Priority: optional
 Maintainer: Christian M. Amsüss <chrysn@fsfe.org>
 Homepage: http://christian.amsuess.com/tools/arandr/
-Build-Depends: debhelper (>= 5), python, gettext
+Build-Depends: debhelper (>= 5)
+Build-Depends-Indep: python, gettext
 Standards-Version: 3.8.0
 
 Package: arandr

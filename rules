@@ -36,6 +36,8 @@ install: build
 
 
 binary-indep: build install
+	dh_md5sums
+
 binary-arch: build install
 
 binary: binary-indep binary-arch
