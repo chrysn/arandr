@@ -1,3 +1,9 @@
+arandr (0.1.1-2) unstable; urgency=low
+
+  * Fix GPL2/GPL3 mismatch
+
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Sun, 26 Oct 2008 11:26:45 +0100
+
 arandr (0.1.1-1) unstable; urgency=low
 
   * Minor bugfixes, translation additions
