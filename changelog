@@ -1,3 +1,12 @@
+arandr (0.1.2-1) unstable; urgency=low
+
+  * New release (closes: #523903)
+      + Accepts XRandR version 1.3
+      + New command line switch to accept untested versions
+  * Change Standards-Version to 3.8.1 (no changes)
+
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Mon, 13 Apr 2009 17:00:17 +0200
+
 arandr (0.1.1-2) unstable; urgency=low
 
   * Fix GPL2/GPL3 mismatch
