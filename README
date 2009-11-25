@@ -1,0 +1,95 @@
+==========================
+ARandR: Another XRandR GUI
+==========================
+
+
+Design intent
+-------------
+
+Provide a simple visual front end for XRandR_ 1.2, client side X only (no xorg.conf involved, no pre-1.2 options).
+
+
+Features
+--------
+
+ * Full controll over positioning (instead of plain "left of") with edge snapping
+ * Saving configurations as executable shell scripts (configurations can be loaded without using this program)
+ * Configuration files can be edited to include additional payload (like xsetwacom_ commands tablet PC users need when rotating), which is preserved when editing
+ * Metacity keybinding integration:
+
+  * Saved configurations can be bound to arbitrary keys via metacity's custom commands.
+  * Several layouts can be bound to one key; they are cycled through. (Useful for "rotate" buttons on tablet PCs.)
+
+ * Main widget separated from packaged application (to facilitate integration with existing solutions)
+
+
+Status
+------
+
+Works for me and some others.
+
+See TODO_ for planned features.
+
+
+Installation
+------------
+
+ * Debian package_::
+
+	wget http://christian.amsuess.com/tools/arandr/files/debian/arandr_0.1.1-1_all.deb
+	sudo dpkg -i arandr_0.1.1-1_all.deb
+
+ * PKGBUILD_ for archlinux on AUR::
+
+	yaourt -S arandr
+
+ * `tar ball`_::
+	
+	wget http://christian.amsuess.com/tools/arandr/files/arandr-0.1.1.tar.gz
+	tar xzf arandr-0.1.1.tar.gz
+	cd arandr-0.1.1
+	sudo ./setup.py install
+
+ * Directly from SVN::
+
+	svn co http://svn.amsuess.com/svn/tools/arandr/trunk/ arandr
+
+   To run::
+
+	cd arandr
+	./arandr
+
+
+Dependencies
+------------
+
+ * python
+ * PyGTK
+ * xrandr
+
+
+Bugs / Caveats
+--------------
+
+ * Changes while running are not caught (no HAL events!)
+
+
+About
+-----
+
+Copyright (c) chrysn_ <chrysn@fsfe.org> 2008, published under GPLv3_
+
+Inspired by the `dual head sketch`_ in the ThinkWiki_.
+
+
+ .. _XRandR: http://www.x.org/wiki/Projects/XRandR
+ .. _xsetwacom: http://linuxwacom.sourceforge.net/index.php/howto/xsetwacom
+ .. _TODO: ./TODO
+ .. _setuptools: http://pypi.python.org/pypi/setuptools
+ .. _package: http://christian.amsuess.com/tools/arandr/files/debian/arandr_0.1.1-1_all.deb
+ .. _`tar ball`: http://christian.amsuess.com/tools/arandr/files/arandr-0.1.1.tar.gz
+ .. _PKGBUILD: http://aur.archlinux.org/packages.php?ID=17385
+ .. _chrysn: http://christian.amsuess.com
+ .. _GPLv3: http://www.gnu.org/licenses/gpl-3.0.txt
+ .. _`dual head sketch`: http://www.thinkwiki.org/wiki/Image:Intel-DualHead.png
+ .. _ThinkWiki: http://thinkwiki.org/
