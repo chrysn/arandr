@@ -1,3 +1,12 @@
+arandr (0.1.2-2) unstable; urgency=low
+
+  * Use --install-layout=deb (closes: #557790)
+  * Copyright file according to DEP-5
+  * Better use of debhelper
+  * Updated to policy 3.8.3 (no changes required)
+
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Wed, 25 Nov 2009 18:41:38 +0100
+
 arandr (0.1.2-1) unstable; urgency=low
 
   * New release (closes: #523903)
