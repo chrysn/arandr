@@ -5,7 +5,7 @@ Maintainer: Christian M. Amsüss <chrysn@fsfe.org>
 Homepage: http://christian.amsuess.com/tools/arandr/
 Build-Depends: debhelper (>= 7)
 Build-Depends-Indep: python, gettext
-Standards-Version: 3.8.1
+Standards-Version: 3.8.3
 
 Package: arandr
 Architecture: all
