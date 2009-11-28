@@ -1,3 +1,9 @@
+arandr (0.1.2-3) UNRELEASED; urgency=low
+
+  * Added Vcs-* to debian/control
+
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Sat, 28 Nov 2009 20:38:27 +0100
+
 arandr (0.1.2-2) unstable; urgency=low
 
   * Use --install-layout=deb (closes: #557790)
