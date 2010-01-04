@@ -1,47 +1,4 @@
 #!/usr/bin/make -f
 
-configure: configure-stamp
-configure-stamp:
-	dh_testdir
-	touch configure-stamp
-
-
-build: build-stamp
-build-stamp: configure-stamp 
-	dh_testdir
-
-	./setup.py build
-
-	touch $@
-
-clean:
-	dh_testdir
-	dh_testroot
-	rm -f build-stamp configure-stamp
-	rm -f *.pyc */*.pyc */*/*.pyc
-	rm -f *~ ../*/*~ ../*/*/*~
-	rm -rf build 
-
-	dh_clean 
-
-install: build
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-	dh_installdocs
-	dh_installchangelogs
-	./setup.py install --install-layout=deb --root $(CURDIR)/debian/arandr --no-compile install
-	dh_compress
-
-
-binary-indep: build install
-	dh_md5sums
-
-binary-arch: build install
-
-binary: binary-indep binary-arch
-	dh_gencontrol
-	dh_builddeb
-
-.PHONY: build clean binary-indep binary-arch binary install configure
+%:
+	dh $@

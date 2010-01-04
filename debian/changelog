@@ -1,8 +1,9 @@
 arandr (0.1.2-3) UNRELEASED; urgency=low
 
-  * Added Vcs-* to debian/control
+  * Add Vcs-* to debian/control
+  * Switch to python-support (simplify debian/rules)
 
- -- Christian M. Amsüss <chrysn@fsfe.org>  Sat, 28 Nov 2009 20:38:27 +0100
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Tue, 05 Jan 2010 00:14:06 +0100
 
 arandr (0.1.2-2) unstable; urgency=low
 
