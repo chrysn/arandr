@@ -11,7 +11,7 @@ Vcs-git: git://gitorious.org/arandr/arandr.git/
 
 Package: arandr
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python, x11-xserver-utils | xrandr, python-gtk2
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, x11-xserver-utils | xrandr, python-gtk2
 Description: Simple visual front end for XRandR 1.2
  ARandR is a visual front end for XRandR 1.2 (per display options), which
  provides full controll over positioning, saving and loading to/from shell
