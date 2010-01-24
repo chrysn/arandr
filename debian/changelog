@@ -1,10 +1,10 @@
 arandr (0.1.2-3) UNRELEASED; urgency=low
 
   * Add Vcs-* to debian/control
-  * Switch to python-support (simplify debian/rules)
+  * Switch to python-support (and simplify debian/rules; closes: #566037)
   * Switch to dpkg-source 3.0 (quilt) format
 
- -- Christian M. Amsüss <chrysn@fsfe.org>  Tue, 05 Jan 2010 00:52:02 +0100
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Sun, 24 Jan 2010 21:47:35 +0100
 
 arandr (0.1.2-2) unstable; urgency=low
 
