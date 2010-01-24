@@ -2,3 +2,7 @@
 
 %:
 	dh $@
+
+clean:
+	dh clean
+	rm -rf build/ # workaround for incomplete `./setup.py clean -a` (fixed upstream in 776dac913555b6cc3745e62f454174304d4ceffc and a1c7001a4c07275e38513f985ccfa060ddeed078, this will make sure `make clean` cleans up everything until the next upstream release 
