@@ -1,3 +1,9 @@
+arandr (0.1.2-4) unstable; urgency=low
+
+  * Change Standards-Version to 3.8.4 (no changes)
+
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Wed, 10 Feb 2010 15:04:57 +0100
+
 arandr (0.1.2-3) unstable; urgency=low
 
   * Add Vcs-* to debian/control
