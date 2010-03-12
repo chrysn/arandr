@@ -5,6 +5,7 @@ arandr (0.1.3-1) unstable; urgency=low
     - New translations
     - Minor bugfixes 
   * Add build dependency on python-docutils for man page generation
+  * Note new translations in copyright file
 
  -- Christian M. Amsüss <chrysn@fsfe.org>  Fri, 12 Mar 2010 21:20:48 +0100
 
