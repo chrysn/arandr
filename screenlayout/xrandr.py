@@ -1,4 +1,5 @@
 """Wrapper around command line xrandr (only 1.2 per output features supported)"""
+
 import os
 import subprocess
 import warnings
@@ -11,257 +12,256 @@ gettext.install('arandr')
 SHELLSHEBANG='#!/bin/sh'
 
 class XRandR(object):
-	DEFAULTTEMPLATE = [SHELLSHEBANG, '%(xrandr)s']
+    DEFAULTTEMPLATE = [SHELLSHEBANG, '%(xrandr)s']
 
-	def __init__(self, display=None, force_version=False):
-		"""Create proxy object and check for xrandr at `display`. Fail with
-		untested versions unless `force_version` is True."""
-		self.environ = dict(os.environ)
-		if display:
-			self.environ['DISPLAY'] = display
+    def __init__(self, display=None, force_version=False):
+        """Create proxy object and check for xrandr at `display`. Fail with
+        untested versions unless `force_version` is True."""
+        self.environ = dict(os.environ)
+        if display:
+            self.environ['DISPLAY'] = display
 
-		version_output = self._output("--version")
-		if not ("1.2" in version_output or "1.3" in version_output) and not force_version:
-			raise Exception("XRandR 1.2 required; for newer versions please adapt the code")
-	
-	def _get_outputs(self):
-		assert self.state.outputs.keys() == self.configuration.outputs.keys()
-		return self.state.outputs.keys()
-	outputs = property(_get_outputs)
-	
-	#################### calling xrandr ####################
-	
-	def _output(self, *args):
-		p = subprocess.Popen(("xrandr",)+args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=self.environ)
-		ret, err = p.communicate()
-		status = p.wait()
-		if status!=0:
-			raise Exception("XRandR returned error code %d: %r"%(status,err))
-		if err:
-			warnings.warn("XRandR wrote to stderr, but did not report an error (Message was: %r)"%err)
-		return ret
+        version_output = self._output("--version")
+        if not ("1.2" in version_output or "1.3" in version_output) and not force_version:
+            raise Exception("XRandR 1.2/1.3 required.")
 
-	def _run(self, *args):
-		self._output(*args)
+    def _get_outputs(self):
+        assert self.state.outputs.keys() == self.configuration.outputs.keys()
+        return self.state.outputs.keys()
+    outputs = property(_get_outputs)
 
-	#################### loading ####################
-	
-	def load_from_string(self, data):
-		data = data.replace("%","%%")
-		lines = data.split("\n")
-		if lines[-1] == '': lines.pop() # don't create empty last line
+    #################### calling xrandr ####################
 
-		if lines[0] != SHELLSHEBANG:
-			raise FileLoadError('Not a shell script.')
-	
-		xrandrlines = [i for i,l in enumerate(lines) if l.strip().startswith('xrandr ')]
-		if len(xrandrlines)==0:
-			raise FileLoadError('No recognized xrandr command in this shell script.')
-		if len(xrandrlines)>1:
-			raise FileLoadError('More than one xrandr line in this shell script.')
-		self._load_from_commandlineargs(lines[xrandrlines[0]].strip())
-		lines[xrandrlines[0]] = '%(xrandr)s'
+    def _output(self, *args):
+        p = subprocess.Popen(("xrandr",)+args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=self.environ)
+        ret, err = p.communicate()
+        status = p.wait()
+        if status!=0:
+            raise Exception("XRandR returned error code %d: %s"%(status,err))
+        if err:
+            warnings.warn("XRandR wrote to stderr, but did not report an error (Message was: %r)"%err)
+        return ret
 
-		return lines
+    def _run(self, *args):
+        self._output(*args)
 
-	def _load_from_commandlineargs(self, commandline):
-		self.load_from_x()
+    #################### loading ####################
 
-		args = BetterList(commandline.split(" "))
-		if args.pop(0) != 'xrandr':
-			raise FileSyntaxError()
-		options = dict((a[0], a[1:]) for a in args.split('--output') if a) # first part is empty, exclude empty parts
+    def load_from_string(self, data):
+        data = data.replace("%","%%")
+        lines = data.split("\n")
+        if lines[-1] == '': lines.pop() # don't create empty last line
 
-		for on,oa in options.items():
-			o = self.configuration.outputs[on]
-			if oa == ['--off']: 
-				o.active = False
-			else:
-				if len(oa)%2 != 0:
-					raise FileSyntaxError()
-				parts = [(oa[2*i],oa[2*i+1]) for i in range(len(oa)//2)]
-				for p in parts:
-					if p[0] == '--mode':
-						o.mode = Size(p[1])
-					elif p[0] == '--pos':
-						o.position = Position(p[1])
-					elif p[0] == '--rotate':
-						if p[1] not in ROTATIONS:
-							raise FileSyntaxError()
-						o.rotation = Rotation(p[1])
-					else:
-						raise FileSyntaxError()
-				o.active = True
+        if lines[0] != SHELLSHEBANG:
+            raise FileLoadError('Not a shell script.')
 
-	def load_from_x(self):
-		self.configuration = self.Configuration()
-		self.state = self.State()
+        xrandrlines = [i for i,l in enumerate(lines) if l.strip().startswith('xrandr ')]
+        if len(xrandrlines)==0:
+            raise FileLoadError('No recognized xrandr command in this shell script.')
+        if len(xrandrlines)>1:
+            raise FileLoadError('More than one xrandr line in this shell script.')
+        self._load_from_commandlineargs(lines[xrandrlines[0]].strip())
+        lines[xrandrlines[0]] = '%(xrandr)s'
 
-		screenline, items = self._load_raw_lines()
+        return lines
 
-		self._load_parse_screenline(screenline)
+    def _load_from_commandlineargs(self, commandline):
+        self.load_from_x()
 
-		for headline,details in items:
-			if headline.startswith("  "): continue # a currently disconnected part of the screen i can't currently get any info out of
-			if headline == "": continue # noise
+        args = BetterList(commandline.split(" "))
+        if args.pop(0) != 'xrandr':
+            raise FileSyntaxError()
+        options = dict((a[0], a[1:]) for a in args.split('--output') if a) # first part is empty, exclude empty parts
 
-			hsplit = headline.split(" ")
-			o = self.state.Output(hsplit[0])
-			assert hsplit[1] in ("connected","disconnected")
+        for on,oa in options.items():
+            o = self.configuration.outputs[on]
+            if oa == ['--off']:
+                o.active = False
+            else:
+                if len(oa)%2 != 0:
+                    raise FileSyntaxError()
+                parts = [(oa[2*i],oa[2*i+1]) for i in range(len(oa)//2)]
+                for p in parts:
+                    if p[0] == '--mode':
+                        o.mode = Size(p[1])
+                    elif p[0] == '--pos':
+                        o.position = Position(p[1])
+                    elif p[0] == '--rotate':
+                        if p[1] not in ROTATIONS:
+                            raise FileSyntaxError()
+                        o.rotation = Rotation(p[1])
+                    else:
+                        raise FileSyntaxError()
+                o.active = True
 
-			o.connected = (hsplit[1] == 'connected')
+    def load_from_x(self): # FIXME -- use --verbose or, better, a library
+        self.configuration = self.Configuration()
+        self.state = self.State()
 
-			if not hsplit[2].startswith("("):
-				active = True
+        screenline, items = self._load_raw_lines()
 
-				geometry = Geometry(hsplit[2])
+        self._load_parse_screenline(screenline)
 
-				if hsplit[3] in ROTATIONS: rotation = Rotation(hsplit[3])
-				else: rotation = NORMAL
-			else:
-				active = False
-				geometry = None
-				rotation = None
-				
+        for headline,details in items:
+            if headline.startswith("  "): continue # a currently disconnected part of the screen i can't currently get any info out of
+            if headline == "": continue # noise
 
-			o.rotations = set()
-			for r in ROTATIONS:
-				if r in headline:
-					o.rotations.add(r)
+            hsplit = headline.split(" ")
+            o = self.state.Output(hsplit[0])
+            assert hsplit[1] in ("connected","disconnected")
 
-			for d in details:
-				o.modes.append(Size(int(a) for a in d.strip().split(" ")[0].split("x")))
-			
-			self.state.outputs[o.name] = o
-			self.configuration.outputs[o.name] = self.configuration.OutputConfiguration(active, geometry, rotation)
-	
-	def _load_raw_lines(self):
-		output = self._output("-q")
-		items = []
-		screenline = None
-		for l in output.split('\n'):
-			if l.startswith("Screen "):
-				assert screenline is None
-				screenline = l
-			elif l.startswith("   "): # mode
-				items[-1][1].append(l)
-			else:
-				items.append([l, []])
-		return screenline, items
+            o.connected = (hsplit[1] == 'connected')
 
-	def _load_parse_screenline(self, screenline):
-		assert screenline is not None
-		ssplit = screenline.split(" ")
+            if not hsplit[2].startswith("("):
+                active = True
 
-		ssplit_expect = ["Screen",None,"minimum",None,"x",None,"current",None,"x",None,"maximum",None,"x",None]
-		assert all(a==b for (a,b) in zip(ssplit,ssplit_expect) if b is not None)
+                geometry = Geometry(hsplit[2])
 
-		self.state.virtual = self.state.Virtual(
-				min = Size((int(ssplit[3]),int(ssplit[5][:-1]))),
-				max = Size((int(ssplit[11]),int(ssplit[13])))
-				)
-		self.configuration.virtual = Size((int(ssplit[7]),int(ssplit[9][:-1])))
+                if hsplit[3] in ROTATIONS: rotation = Rotation(hsplit[3])
+                else: rotation = NORMAL
+            else:
+                active = False
+                geometry = None
+                rotation = None
 
-	#################### saving ####################
-	
-	def save_to_shellscript_string(self, template=None, additional=None):
-		"""Return a shellscript that will set the current configuration. Output can be parsed by load_from_string.
+            o.rotations = set()
+            for r in ROTATIONS:
+                if r in headline:
+                    o.rotations.add(r)
 
-		You may specify a template, which must contain a %(xrandr)s parameter and optionally others, which will be filled from the additional dictionary."""
-		if not template:
-			template = self.DEFAULTTEMPLATE
-		template = '\n'.join(template)+'\n'
+            for d in details:
+                o.modes.append(Size(int(a) for a in d.strip().split(" ")[0].split("x")))
 
-		d = {'xrandr': "xrandr "+" ".join(self.configuration.commandlineargs())}
-		if additional:
-			d.update(additional)
+            self.state.outputs[o.name] = o
+            self.configuration.outputs[o.name] = self.configuration.OutputConfiguration(active, geometry, rotation)
 
-		return template%d
-	
-	def save_to_x(self):
-		self.check_configuration()
-		self._run(*self.configuration.commandlineargs())
-	
-	def check_configuration(self):
-		vmax = self.state.virtual.max
+    def _load_raw_lines(self):
+        output = self._output("-q")
+        items = []
+        screenline = None
+        for l in output.split('\n'):
+            if l.startswith("Screen "):
+                assert screenline is None
+                screenline = l
+            elif l.startswith("   "): # mode
+                items[-1][1].append(l)
+            else:
+                items.append([l, []])
+        return screenline, items
 
-		for on in self.outputs:
-			oc = self.configuration.outputs[on]
-			os = self.state.outputs[on]
+    def _load_parse_screenline(self, screenline):
+        assert screenline is not None
+        ssplit = screenline.split(" ")
 
-			if not oc.active:
-				continue
+        ssplit_expect = ["Screen",None,"minimum",None,"x",None,"current",None,"x",None,"maximum",None,"x",None]
+        assert all(a==b for (a,b) in zip(ssplit,ssplit_expect) if b is not None)
 
-			# we trust users to know what they are doing (e.g. widget: will accept current mode, but not offer to change it lacking knowledge of alternatives)
-			#if oc.rotation not in os.rotations:
-			#	raise InadequateConfiguration("Rotation not allowed.")
-			#if oc.mode not in os.modes:
-			#	raise InadequateConfiguration("Mode not allowed.")
+        self.state.virtual = self.state.Virtual(
+                min = Size((int(ssplit[3]),int(ssplit[5][:-1]))),
+                max = Size((int(ssplit[11]),int(ssplit[13])))
+                )
+        self.configuration.virtual = Size((int(ssplit[7]),int(ssplit[9][:-1])))
 
-			x = oc.position[0] + oc.size[0]
-			y = oc.position[1] + oc.size[1]
+    #################### saving ####################
 
-			if x > vmax[0] or y > vmax[1]:
-				raise InadequateConfiguration(_("A part of an output is outside the virtual screen."))
+    def save_to_shellscript_string(self, template=None, additional=None):
+        """Return a shellscript that will set the current configuration. Output can be parsed by load_from_string.
 
-			if oc.position[0] < 0 or oc.position[1] < 0:
-				raise InadequateConfiguration(_("An output is outside the virtual screen."))
+        You may specify a template, which must contain a %(xrandr)s parameter and optionally others, which will be filled from the additional dictionary."""
+        if not template:
+            template = self.DEFAULTTEMPLATE
+        template = '\n'.join(template)+'\n'
 
-	#################### sub objects ####################
-	
-	class State(object):
-		"""Represents everything that can not be set by xrandr."""
-		def __init__(self):
-			self.outputs = {}
+        d = {'xrandr': "xrandr "+" ".join(self.configuration.commandlineargs())}
+        if additional:
+            d.update(additional)
 
-		def __repr__(self):
-			return '<%s for %d Outputs, %d connected>'%(type(self).__name__, len(self.outputs), len([x for x in self.outputs.values() if x.connected]))
+        return template%d
 
-		class Virtual(object):
-			def __init__(self, min, max):
-				self.min = min
-				self.max = max
+    def save_to_x(self):
+        self.check_configuration()
+        self._run(*self.configuration.commandlineargs())
 
-		class Output(object):
-			def __init__(self, name):
-				self.name = name
-				self.modes = []
+    def check_configuration(self):
+        vmax = self.state.virtual.max
 
-			def __repr__(self):
-				return '<%s %r (%d modes)>'%(type(self).__name__, self.name, len(self.modes))
-	
-	class Configuration(object):
-		"""Represents everything that can be set by xrand (and is therefore subject to saving and loading from files)"""
-		def __init__(self):
-			self.outputs = {}
+        for on in self.outputs:
+            oc = self.configuration.outputs[on]
+            #os = self.state.outputs[on]
 
-		def __repr__(self):
-			return '<%s for %d Outputs, %d active>'%(type(self).__name__, len(self.outputs), len([x for x in self.outputs.values() if x.active]))
+            if not oc.active:
+                continue
 
-		def commandlineargs(self):
-			args = []
-			for on,o in self.outputs.items():
-				args.append("--output")
-				args.append(on)
-				if not o.active:
-					args.append("--off")
-				else:
-					args.append("--mode")
-					args.append(str(o.mode))
-					args.append("--pos")
-					args.append(str(o.position))
-					args.append("--rotate")
-					args.append(o.rotation)
-			return args
+            # we trust users to know what they are doing (e.g. widget: will accept current mode, but not offer to change it lacking knowledge of alternatives)
+            #if oc.rotation not in os.rotations:
+            #    raise InadequateConfiguration("Rotation not allowed.")
+            #if oc.mode not in os.modes:
+            #    raise InadequateConfiguration("Mode not allowed.")
 
-		class OutputConfiguration(object):
-			def __init__(self, active, geometry, rotation):
-				self.active = active
-				if active:
-					self.position = geometry.position
-					self.rotation = rotation
-					if rotation.is_odd:
-						self.mode = Size(reversed(geometry.size))
-					else:
-						self.mode = geometry.size
-			size = property(lambda self: Size(reversed(self.mode)) if self.rotation.is_odd else self.mode)
+            x = oc.position[0] + oc.size[0]
+            y = oc.position[1] + oc.size[1]
+
+            if x > vmax[0] or y > vmax[1]:
+                raise InadequateConfiguration(_("A part of an output is outside the virtual screen."))
+
+            if oc.position[0] < 0 or oc.position[1] < 0:
+                raise InadequateConfiguration(_("An output is outside the virtual screen."))
+
+    #################### sub objects ####################
+
+    class State(object):
+        """Represents everything that can not be set by xrandr."""
+        def __init__(self):
+            self.outputs = {}
+
+        def __repr__(self):
+            return '<%s for %d Outputs, %d connected>'%(type(self).__name__, len(self.outputs), len([x for x in self.outputs.values() if x.connected]))
+
+        class Virtual(object):
+            def __init__(self, min, max):
+                self.min = min
+                self.max = max
+
+        class Output(object):
+            def __init__(self, name):
+                self.name = name
+                self.modes = []
+
+            def __repr__(self):
+                return '<%s %r (%d modes)>'%(type(self).__name__, self.name, len(self.modes))
+
+    class Configuration(object):
+        """Represents everything that can be set by xrand (and is therefore subject to saving and loading from files)"""
+        def __init__(self):
+            self.outputs = {}
+
+        def __repr__(self):
+            return '<%s for %d Outputs, %d active>'%(type(self).__name__, len(self.outputs), len([x for x in self.outputs.values() if x.active]))
+
+        def commandlineargs(self):
+            args = []
+            for on,o in self.outputs.items():
+                args.append("--output")
+                args.append(on)
+                if not o.active:
+                    args.append("--off")
+                else:
+                    args.append("--mode")
+                    args.append(str(o.mode))
+                    args.append("--pos")
+                    args.append(str(o.position))
+                    args.append("--rotate")
+                    args.append(o.rotation)
+            return args
+
+        class OutputConfiguration(object):
+            def __init__(self, active, geometry, rotation):
+                self.active = active
+                if active:
+                    self.position = geometry.position
+                    self.rotation = rotation
+                    if rotation.is_odd:
+                        self.mode = Size(reversed(geometry.size))
+                    else:
+                        self.mode = geometry.size
+            size = property(lambda self: Size(reversed(self.mode)) if self.rotation.is_odd else self.mode)
