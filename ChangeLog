@@ -1,0 +1,418 @@
+commit c5dcf2710d9b4030da7685349c1248549d020039
+Author: chrysn <chrysn@fsfe.org>
+Date:   Fri Mar 12 21:12:37 2010 +0100
+
+    ready for release 0.1.3
+
+commit c5f8e86f3fa5b3d327237a39e370381099088b58
+Author: chrysn <chrysn@fsfe.org>
+Date:   Fri Mar 12 14:36:42 2010 +0100
+
+    add changelog handling to release checklist
+
+commit 7468f4aaeec9bf4c63525b768f9a1e55af5cbee3
+Author: chrysn <chrysn@fsfe.org>
+Date:   Fri Mar 12 13:40:15 2010 +0100
+
+    addedd newsfile (including old changes)
+
+commit 9629ac3d18552aad69f197bce94a1970c1466671
+Author: chrysn <chrysn@fsfe.org>
+Date:   Fri Mar 12 00:26:15 2010 +0100
+
+    update release checklist: use release branch
+
+commit 315178aac62d145986203d13282f0b0da636890a
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu Mar 11 23:54:20 2010 +0100
+
+    update copyright range
+
+commit cb76e5f75e20623017e4a1527edeb1f2cfed51f8
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu Mar 11 23:39:21 2010 +0100
+
+    don't request too large a window size
+    
+    recent x servers tend to allocate huge virtuals, causing
+    bigger-than-screen windows. with the current configuration, this can
+    still happen, but will now only happen if there are about three screens
+    connected (depending on relative sizes) -- and for those cases, there is
+    the zoom function.
+
+commit 5351dcbdaedc36014e2f5545b20d1c8cb42ca49b
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu Mar 11 23:05:55 2010 +0100
+
+    use pangocairo for text display
+    
+    solves problems with exotic scripts (previous version just displayed
+    rectangles instead of characters when run with kannada language)
+    
+    does not affect dependencies (comes with python-gtk2)
+
+commit bd66d76d30cdd1590d281d054525de0d57da9299
+Merge: b516954 4ec04ca
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu Mar 11 20:28:44 2010 +0100
+
+    new kannada translations
+    
+    including updates everywhere languages are involved and minor updates
+    for the european languages to follow the new translation hints
+
+commit b516954c4b821174106e69c9d622bb3ce606fb9c
+Merge: 5462c04 94d448d
+Author: chrysn <chrysn@fsfe.org>
+Date:   Wed Mar 3 14:44:27 2010 +0100
+
+    import cosmetic updates in pt_BR translation
+
+commit 5462c0474ead793d9f7524be8b4ac8edffba5d30
+Merge: 0b9b2ef fec6e22
+Author: chrysn <chrysn@fsfe.org>
+Date:   Wed Mar 3 14:39:42 2010 +0100
+
+    better use of gettext
+    
+    * support for ## comments that show up in .pot
+    * update mechanism for .po files
+    * make arandr use local translations when called locally
+    * update *.po{t,}
+
+commit 0b9b2ef13e72561e1130414c9fe46b6deaee9863
+Merge: e2e8476 ea5bc07
+Author: chrysn <chrysn@fsfe.org>
+Date:   Wed Feb 10 14:50:05 2010 +0100
+
+    included danish translation by Joe Hansen <joedalton2@yahoo.dk>
+
+commit e2e8476f55b9a6ee8a6212ecdb0fca041a488baa
+Merge: 9910d2e ed1abcb
+Author: chrysn <chrysn@fsfe.org>
+Date:   Wed Jan 27 21:40:19 2010 +0100
+
+    man page fixes by albert dengg and new man page build system
+
+commit 9910d2e0eb2f807e651fb5ca883d0cce1a4bd81f
+Author: chrysn <chrysn@fsfe.org>
+Date:   Wed Jan 27 01:52:44 2010 +0100
+
+    improved installation instructions for slackware
+
+commit 13c2ea04c017ffae2180dd87f3b12ee3ba4cdc03
+Merge: 9c5ab17 570f524
+Author: chrysn <chrysn@fsfe.org>
+Date:   Wed Jan 27 01:49:56 2010 +0100
+
+    portuguese (brasilian) translation added
+
+commit 9c5ab179047a9f602e98df61c327d8eb5398056d
+Author: chrysn <chrysn@fsfe.org>
+Date:   Tue Jan 26 15:27:10 2010 +0100
+
+    add installation instructions for slackware
+
+commit 804c2c11f18198b7f0f37910fcd19b2f3e88e858
+Merge: 90d427f a81e7b8
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu Jan 21 01:16:34 2010 +0100
+
+    italian translation added
+
+commit 90d427f9c36c8c4f9e283da21799bab1eb6cb6d8
+Merge: a1c7001 9ce9cae
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Jan 18 20:49:04 2010 +0100
+
+    Merge branch 'translations': first test changes
+
+commit a1c7001a4c07275e38513f985ccfa060ddeed078
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Jan 18 20:37:50 2010 +0100
+
+    fix setup.py clean to ignore missing files
+
+commit 57b4b7efe9f5a5fea8e716d2320ff05fc1c4de74
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Jan 18 20:06:14 2010 +0100
+
+    add pot file creation and pot file
+    
+    pot file is kept in the source for better transifex integration and
+    because it might be relevant to have a reference pot if po merging is to
+    be done.
+
+commit 00952727014b197c59b2884e16d31e098c98c45f
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Jan 18 18:34:37 2010 +0100
+
+    (fixed link)
+
+commit f689d99f09a091456a0f4bb23df9259f119f8920
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Jan 18 18:28:49 2010 +0100
+
+    added contributing to readme
+    
+    including some hypterlink fixes
+
+commit 7ff67baa4a2f95e919eedfb115211a2ff87502be
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Jan 11 17:16:39 2010 +0100
+
+    minor changes hinted at by pychecker
+    
+    what remains are the "Parameter (widget) not used" complaints, mostly
+    from gtk integration which often passes unnecessary parameters and a "No
+    method arguments, should have self as argument" from a flexible
+    decorator.
+
+commit 91f2885dbb2f349f29948283ce273cee9da512b2
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Jan 11 16:56:43 2010 +0100
+
+    pep 8 fix: use spaces (recommended)
+
+commit 776dac913555b6cc3745e62f454174304d4ceffc
+Author: chrysn <chrysn@fsfe.org>
+Date:   Tue Jan 5 00:45:58 2010 +0100
+
+    `./setup.py clean -a`: remove manually created files
+    
+    as the build target creates translation and man page files, these have
+    to be cleaned up in the clean target.
+
+commit f0feede688480240a015e53d5fe635c6858a8de6
+Author: chrysn <chrysn@fsfe.org>
+Date:   Tue Jan 5 00:45:30 2010 +0100
+
+    (don't rely on garbage collector to close file)
+
+commit 464905529534f441cf7d2827286d08aa233001f3
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Jan 4 23:39:39 2010 +0100
+
+    add working event demo
+    
+    (as of now, this is a standalone file; pulling this into arandr will
+    introduce a dependency on xcb)
+
+commit 2e7c6123c148d7893bc9452838fdf739509a884b
+Author: chrysn <chrysn@fsfe.org>
+Date:   Sat Nov 28 21:21:05 2009 +0100
+
+    README and TODO updates
+    
+    reformatting, updated links, removed TODO item
+
+commit 17e56521d333dc1a5fcdcd7e9f4b0881a6f4b1c5
+Author: chrysn <chrysn@fsfe.org>
+Date:   Sat Nov 28 20:56:08 2009 +0100
+
+    change official source to git hosted on gitorious
+
+commit b6ce6ae289a60169bece5a757022792962cc8d5c
+Author: chrysn <chrysn@fsfe.org>
+Date:   Wed Nov 25 21:38:08 2009 +0100
+
+    readme updates
+    
+     * new debian package available
+     * acknowledge bug with unusual modes
+
+commit d845551631d997c43bf10d007b9a4440ecc2daaf
+Author: chrysn <chrysn@fsfe.org>
+Date:   Wed Nov 25 18:21:39 2009 +0100
+
+    release process changes to `git archive`
+    
+    while previous tar balls were built using `setup.py sdist`, in future
+    they will be created using `git archive`. this avoids differences
+    between the tar ball and the last commit (with which the debian branch
+    is merged).
+
+commit 6210593441e07ca81f26e6ed43ac2c9c8c872708
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Wed Nov 25 15:20:05 2009 +0000
+
+    german translation update
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@160 84c1553d-868a-485e-9ebb-c7de0e225ff1
+
+commit c7206c8d2108887742abbd655f1e539e076a22dc
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Wed Nov 25 15:20:04 2009 +0000
+
+    minor cleanups
+    
+     * whitespace fixes
+     * pep8 enhancements
+     * comment / docstring / message updates
+     * destroy dialogs instead of hiding them
+     * remove stale code
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@159 84c1553d-868a-485e-9ebb-c7de0e225ff1
+
+commit c4cffa4fda5a85632fd8ee4f333198d70f17e8e8
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Wed Nov 25 15:20:03 2009 +0000
+
+    more todo items
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@158 84c1553d-868a-485e-9ebb-c7de0e225ff1
+
+commit e1730007aa6ecb7ba74f1ec3bfae8b48d1d3bfde
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Thu Apr 16 21:46:16 2009 +0000
+
+    more missing version changes
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@154 84c1553d-868a-485e-9ebb-c7de0e225ff1
+
+commit b4744267e20966d692992569a802d412cecf7da7
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Thu Apr 16 13:16:44 2009 +0000
+
+    README/TODO changes to reflect new version
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@153 84c1553d-868a-485e-9ebb-c7de0e225ff1
+
+commit f8893378c549afdc8803191895a019135b1680b8
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Mon Apr 13 13:46:57 2009 +0000
+
+    accept xrandr 1.3, added --force-version
+    
+    by default, arandr only accepts xrandr versions it has been tested with.
+    this patch adds 1.3 to these versions, and adds a --force-version switch
+    to override this check for future upgrades.
+    
+    no changes for new 1.3 features have been made.
+    
+    to be released as 0.1.2.
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@150 84c1553d-868a-485e-9ebb-c7de0e225ff1
+
+commit b93477fd0a033f09f1f113bcd95f894ba9c8419f
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Mon Jul 21 20:56:14 2008 +0000
+
+     * translation updates
+     * fix uncaught ImportError
+     * increase vresion to 0.1.1 for bugfix release
+    
+    
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@136 84c1553d-868a-485e-9ebb-c7de0e225ff1
+
+commit 6e04d1b114595df8c3ac1d68998457dda57c43d4
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Mon Jul 21 19:14:20 2008 +0000
+
+     * added gettext support to modules which did not already used it
+     * caught import error of gconf (which is no declared dependency, neither should be)
+    
+    
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@135 84c1553d-868a-485e-9ebb-c7de0e225ff1
+
+commit 779044ba2f6b5e81746eaadf7d4c5ffd490d1105
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Fri Jun 13 12:47:44 2008 +0000
+
+    fixed python gtk dependency
+    
+    
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@133 84c1553d-868a-485e-9ebb-c7de0e225ff1
+
+commit cbc6bb0ae3c913357c0395c4abfd02e202cec62c
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Tue Jun 10 12:52:21 2008 +0000
+
+    added arch reference
+    
+    
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@132 84c1553d-868a-485e-9ebb-c7de0e225ff1
+
+commit 6fcba91a65d88a01aa2b206a3c0d13ba6af2bec8
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Fri Jun 6 22:20:29 2008 +0000
+
+    url to debian file changed in readme part 2
+    
+    
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@128 84c1553d-868a-485e-9ebb-c7de0e225ff1
+
+commit e3a2f82e915238bbd8cf0ceb007d012cf6e767bc
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Fri Jun 6 22:19:47 2008 +0000
+
+    path to debian file changed in readme
+    
+    
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@127 84c1553d-868a-485e-9ebb-c7de0e225ff1
+
+commit 54a233bd2367bed75483b5a8026ea270e1ee083d
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Fri Jun 6 22:17:42 2008 +0000
+
+    fixed bug in optparse usage
+    
+    
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@126 84c1553d-868a-485e-9ebb-c7de0e225ff1
+
+commit c428375a65a0b023abc27421410cef021723c5db
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Fri Jun 6 21:21:18 2008 +0000
+
+    added --randr-display option
+    
+    
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@125 84c1553d-868a-485e-9ebb-c7de0e225ff1
+
+commit 8858606de32cfca964e235c032990e9deaf5eb71
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Thu Jun 5 21:54:12 2008 +0000
+
+    change to readme
+    
+    
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@124 84c1553d-868a-485e-9ebb-c7de0e225ff1
+
+commit 9db813a33cf0a35eb38fced7e9acbdaa9fa2d4e0
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Thu Jun 5 21:50:55 2008 +0000
+
+    added tarball download option
+    
+    
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@123 84c1553d-868a-485e-9ebb-c7de0e225ff1
+
+commit 176879a00f176b6093929a1875e8067a90dfa270
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Thu Jun 5 21:49:12 2008 +0000
+
+    changed readme file for 0.1 release
+    
+    
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@122 84c1553d-868a-485e-9ebb-c7de0e225ff1
+
+commit e7fa91464b1655228b6827ff6a20626155a5e9de
+Author: chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>
+Date:   Thu Jun 5 21:42:03 2008 +0000
+
+    added trunk
+    
+    
+    
+    git-svn-id: http://svn.amsuess.com/svn/tools/arandr/trunk@121 84c1553d-868a-485e-9ebb-c7de0e225ff1
