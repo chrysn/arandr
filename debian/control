@@ -5,7 +5,7 @@ Maintainer: Christian M. Amsüss <chrysn@fsfe.org>
 Homepage: http://christian.amsuess.com/tools/arandr/
 Build-Depends: debhelper (>= 7), python (>= 2.5)
 Build-Depends-Indep: gettext, python-support, python-docutils (>=0.6)
-Standards-Version: 3.8.4
+Standards-Version: 3.9.1
 Vcs-Browser: http://gitorious.org/arandr/arandr/commits/debian
 Vcs-git: git://gitorious.org/arandr/arandr.git/
 
