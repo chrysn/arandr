@@ -27,3 +27,44 @@ Files: data/po/pt_BR.po
 Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
            2010, Phantom X <megaphantomx@bol.com.br>
 License: GPL-3+
+
+Files: data/po/ru.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2010, HsH <hsh@runtu.org>
+License: GPL-3+
+
+Files: data/po/fr.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2010, Clément Démoulins <clement@archivel.fr>
+License: GPL-3+
+
+Files: data/po/pl.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2010, RooTer <rooter@kyberian.net>
+License: GPL-3+
+
+Files: data/po/ar.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2010, Mohammad Alhargan <malham1@gmail.com>
+           2010, aboodilankaboot <shiningmoon25@gmail.com>
+License: GPL-3+
+
+Files: data/po/tr.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2010, Mehmet Gülmen <memetgulmen@gmail.com>
+License: GPL-3+
+
+Files: data/po/es.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2010, Ricardo A. Hermosilla Carrillo <ra.hermosillac@gmail.com>
+License: GPL-3+
+
+Files: data/po/ca.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2010, el_libre <el.libre@gmail.com>
+License: GPL-3+
+
+Files: data/po/zh_CN.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2010, Carezero <carezero@qq.com>
+License: GPL-3+

@@ -3,6 +3,7 @@ arandr (0.1.4-1) unstable; urgency=low
   * New upstream version
     - New translations
     - Bugfix
+  * Note new translations in copyright file
 
  -- Christian M. Amsüss <chrysn@fsfe.org>  Mon, 13 Dec 2010 14:44:02 +0100
 
