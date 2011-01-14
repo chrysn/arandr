@@ -1,12 +1,11 @@
-Format-Specification: http://dep.debian.net/deps/dep5/
-Name: arandr
-Maintainer: Christian M. Amsüss <chrysn@fsfe.org>
+Format: http://dep.debian.net/deps/dep5/
+Upstream-Name: ARandR
+Upstream-Contact: Christian M. Amsüss <chrysn@fsfe.org>
 Source: http://christian.amsuess.com/tools/arandr/
 
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+Files: *
+Copyright: 2008–2011, chrysn <chrysn@fsfe.org>
 License: GPL-3+
- The full text of the GPL is distributed as COPYING in arandr's source, and is
- distributed in /usr/share/common-licenses/GPL-3 on Debian systems.
 
 Files: data/po/da.po
 Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
@@ -68,3 +67,8 @@ Files: data/po/zh_CN.po
 Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
            2010, Carezero <carezero@qq.com>
 License: GPL-3+
+
+License: GPL-3+
+ The full text of the GPL is distributed as COPYING in arandr's source, and is
+ distributed in /usr/share/common-licenses/GPL-3 on Debian systems.
+

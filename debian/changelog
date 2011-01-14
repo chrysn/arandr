@@ -1,3 +1,10 @@
+arandr (0.1.4-2) UNRELEASED; urgency=low
+
+  * Updated copyright file to latest DEP-5 changes, now usable with
+    config-model
+
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Fri, 14 Jan 2011 11:08:57 +0100
+
 arandr (0.1.4-1) unstable; urgency=low
 
   * New upstream version
