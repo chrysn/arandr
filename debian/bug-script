@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# reportbug helper for arandr
+
+exec >&3
+
+echo "Output of $0:"
+echo "$ xrandr --version"
+xrandr --version
+
+echo "$ xrandr --query --current"
+xrandr --query --current
+
+echo "$ xrandr --query --current --verbose"
+xrandr --query --current --verbose
