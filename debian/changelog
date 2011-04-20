@@ -3,8 +3,9 @@ arandr (0.1.4-2) UNRELEASED; urgency=low
   * Updated copyright file to latest DEP-5 changes, now usable with
     config-model
   * Added a bug script that includes xrandr output in bug reports
+  * Fixed typo in description (closes: #623518)
 
- -- Christian M. Amsüss <chrysn@fsfe.org>  Thu, 10 Mar 2011 18:08:05 +0100
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Wed, 20 Apr 2011 23:26:25 +0200
 
 arandr (0.1.4-1) unstable; urgency=low
 
