@@ -8,8 +8,9 @@ arandr (0.1.5-1) unstable; urgency=low
   * Added a bug script that includes xrandr output in bug reports
   * Fixed typo in description (closes: #623518)
   * Note new translators in copyright file
+  * Change Standards-Version to 3.9.2 (no changes)
 
- -- Christian M. Amsüss <chrysn@fsfe.org>  Sun, 09 Oct 2011 15:42:30 +0200
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Sun, 09 Oct 2011 15:48:46 +0200
 
 arandr (0.1.4-1) unstable; urgency=low
 
