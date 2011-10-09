@@ -1,3 +1,127 @@
+commit 40d7c96992292e59ba2ce881f5e6301ff4f96b6a
+Author: chrysn <chrysn@fsfe.org>
+Date:   Sun Oct 9 15:24:31 2011 +0200
+
+    ready for release 0.1.5
+
+commit ac7084f87c3fed55fe0edc5bb2a41aa6d803edd7
+Author: chrysn <chrysn@fsfe.org>
+Date:   Sun Oct 9 15:17:53 2011 +0200
+
+    added reference to gentoo package
+
+commit 223a8cb7274d6ad0bb3fa66a74db7aae5d3a7ef1
+Author: chrysn <chrysn@fsfe.org>
+Date:   Tue Oct 4 23:54:20 2011 +0200
+
+    translations are now also accepted via launchpad
+
+commit 908e8504e35d9d16f83f2153b86e0a18e9f7f4e6
+Merge: e929014 e372c5a
+Author: chrysn <chrysn@fsfe.org>
+Date:   Tue Oct 4 23:46:49 2011 +0200
+
+    modifications on translation files (due to launchpad integration)
+
+commit e9290143962c40fb34df72dcf252e7548d38af51
+Merge: da24c0d cfba8db
+Author: chrysn <chrysn@fsfe.org>
+Date:   Tue Oct 4 16:19:46 2011 +0200
+
+    minor changes to release process
+
+commit da24c0d4a5f9bf6d1557793988481f4f4faf2b38
+Author: chrysn <chrysn@fsfe.org>
+Date:   Sat Oct 1 17:14:27 2011 +0200
+
+    news file catch-up
+
+commit b47c332431e5877d67f3313d6734754604123910
+Author: chrysn <chrysn@fsfe.org>
+Date:   Sat Oct 1 17:14:16 2011 +0200
+
+    new unxrandr tool
+
+commit 24c1ef0b57f54e6046b04ac75b54d242f1b41ed5
+Author: chrysn <chrysn@fsfe.org>
+Date:   Sat Oct 1 16:01:37 2011 +0200
+
+    add copyright header to arandr executable
+    
+    (was missed in 8ec86e)
+
+commit f1bee8c958440c8efdb51570d9a2d21983d00a21
+Merge: 8ec86e2 ba658b1
+Author: chrysn <chrysn@fsfe.org>
+Date:   Sat Oct 1 15:42:49 2011 +0200
+
+    translation updates: added fa, updated fr and ro
+
+commit 8ec86e2d716cc805cf60e676b239ed6efade19ff
+Author: chrysn <chrysn@fsfe.org>
+Date:   Sat Oct 1 14:08:11 2011 +0200
+
+    added gpl copyright headers to all source files
+    
+    redhat needs it for inclusion[1], and it's preferred in debian anyway,
+    so why not...
+    
+    [1] https://bugzilla.redhat.com/show_bug.cgi?id=739088
+
+commit bd70c60c61ada665131fb9e21f171f076b3e006b
+Merge: 18e1263 1c46577
+Author: chrysn <chrysn@fsfe.org>
+Date:   Sat Jul 16 11:40:39 2011 +0200
+
+    several website fixes, especially concerning cglita's branch
+
+commit 18e12636c5b7d509319b84d94e9db040b4530400
+Merge: 9bfa3c7 7b4ea10
+Author: chrysn <chrysn@fsfe.org>
+Date:   Sat Jul 16 11:39:55 2011 +0200
+
+    included slovak translation
+
+commit 9bfa3c7708c1a85e535a2b9c181648094064884f
+Merge: f7c04a1 9db23ec
+Author: chrysn <chrysn@fsfe.org>
+Date:   Sun Feb 20 16:02:33 2011 +0100
+
+    included romanian translation
+
+commit f7c04a1ec86f621767c5d41ad9912f2f57e9e0ab
+Merge: a11418f ed230ea
+Author: chrysn <chrysn@fsfe.org>
+Date:   Sun Jan 2 12:33:10 2011 +0100
+
+    included dutch translation
+
+commit a11418fb774a00a43dd5ae71f0b014d841fe3569
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Dec 13 23:03:46 2010 +0100
+
+    new slackware package
+
+commit 0486530cd14348976c76f8b68789172aa9839cd0
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Dec 13 16:02:42 2010 +0100
+
+    transifex url changed
+
+commit fc46ccc80d530e4dcb0db5eebe2ff57fb9cb85c2
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Dec 13 16:02:32 2010 +0100
+
+    arandr is now in arch
+
+commit 9d2ce88ad4a38cba8ffdea7629626d1e2115a66d
+Author: chrysn <chrysn@fsfe.org>
+Date:   Sat Dec 11 16:08:35 2010 +0100
+
+    release checklist fixes from last release
+    
+    fixed typo, added reminder to upload tarball
+
 commit 51f9184224e666fbed0e6fc9b7d8ebff5848c0fc
 Author: chrysn <chrysn@fsfe.org>
 Date:   Sat Dec 11 15:49:33 2010 +0100

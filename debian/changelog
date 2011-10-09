@@ -1,11 +1,14 @@
-arandr (0.1.4-2) UNRELEASED; urgency=low
+arandr (0.1.5-1) unstable; urgency=low
 
+  * New upstream release
+    - New translations
+    - New `unxrandr` tool
   * Updated copyright file to latest DEP-5 changes, now usable with
     config-model
   * Added a bug script that includes xrandr output in bug reports
   * Fixed typo in description (closes: #623518)
 
- -- Christian M. Amsüss <chrysn@fsfe.org>  Wed, 20 Apr 2011 23:26:25 +0200
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Sun, 09 Oct 2011 15:35:12 +0200
 
 arandr (0.1.4-1) unstable; urgency=low
 

@@ -1,5 +1,21 @@
 #!/usr/bin/env python
 
+# ARandR -- Another XRandR GUI
+# Copyright (C) 2008 -- 2011 chrysn <chrysn@fsfe.org>
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 import os
 import operator
 import subprocess
@@ -25,7 +41,7 @@ PO_DIR = 'data/po'
 POT_FILE = os.path.join(PO_DIR, 'messages.pot')
 
 PACKAGENAME = "arandr"
-PACKAGEVERSION = "0.1.4"
+PACKAGEVERSION = "0.1.5"
 AUTHOR = "chrysn"
 AUTHOR_MAIL = "chrysn@fsfe.org"
 URL = "http://christian.amsuess.com/tools/arandr/"
@@ -57,7 +73,7 @@ class update_po(NoOptionCommand):
         for po in glob.glob(os.path.join(PO_DIR, '*.po')):
             if not self.dry_run:
                 info('Updating %s' % po)
-                subprocess.check_call(['msgmerge', '-U', '--no-wrap', po, POT_FILE])
+                subprocess.check_call(['msgmerge', '-U', po, POT_FILE])
 
 class build_trans(NoOptionCommand):
     description = 'Compile .po files into .mo files'
@@ -82,18 +98,20 @@ class build_man(NoOptionCommand):
     def run(self):
         self.mkpath('build')
 
-        sourcefile = 'data/arandr.1.txt'
-        gzfile = os.path.join('build', 'arandr.1.gz')
+        for (sourcefile, gzfile) in [
+                ('data/arandr.1.txt', os.path.join('build', 'arandr.1.gz')),
+                ('data/unxrandr.1.txt', os.path.join('build', 'unxrandr.1.gz')),
+                ]:
 
-        if newer(sourcefile, gzfile):
-            rst_source = open(sourcefile).read()
-            manpage = docutils.core.publish_string(rst_source, writer=docutils.writers.manpage.Writer())
-            info('compressing man page to %s', gzfile)
+            if newer(sourcefile, gzfile):
+                rst_source = open(sourcefile).read()
+                manpage = docutils.core.publish_string(rst_source, writer=docutils.writers.manpage.Writer())
+                info('compressing man page to %s', gzfile)
 
-            if not self.dry_run:
-                compressed = gzip.open(gzfile, 'w', 9)
-                compressed.write(manpage)
-                compressed.close()
+                if not self.dry_run:
+                    compressed = gzip.open(gzfile, 'w', 9)
+                    compressed.write(manpage)
+                    compressed.close()
 
 class build(_build):
     sub_commands = _build.sub_commands + [('build_trans', None), ('build_man', None)]
@@ -158,7 +176,7 @@ setup(name = PACKAGENAME,
             },
         data_files = [
             ('share/applications', ['data/arandr.desktop']), # FIXME: use desktop-file-install?
-            ('share/man/man1', ['build/arandr.1.gz']),
+            ('share/man/man1', ['build/arandr.1.gz', 'build/unxrandr.1.gz']),
             ],
-        scripts = ['arandr'],
+        scripts = ['arandr', 'unxrandr'],
 )

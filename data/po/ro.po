@@ -1,50 +1,52 @@
-# Danish translation ARandR.
-# Copyright (C) 2009 chrysn & Joe Hansen.
-# This file is distributed under the same license as the ARandR package.
-# Joe Hansen <joedalton2@yahoo.dk>, 2010.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR chrysn
+# This file is distributed under the same license as the PACKAGE package.
 #
-# output -> skærm (se forklaring længere nede).
-#
+# Translators:
+# Себастьян Gli ţa Κατινα <gseba@users.sourceforge.net>, 2011.
+# sjb <gseba@users.sourceforge.net>, 2011
 msgid ""
 msgstr ""
-"Project-Id-Version: arandr 0.1.2\n"
+"Project-Id-Version: ARandR\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2011-10-01 14:13+0200\n"
-"PO-Revision-Date: 2010-04-23 17:30+01:00\n"
-"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
-"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
-"Language: da\n"
+"PO-Revision-Date: 2011-03-22 15:09+0000\n"
+"Last-Translator: Себастьян Gli ţa Κατινα <gseba@users.sourceforge.net>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
+"2:1))\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
-msgstr "_Udseende"
+msgstr "_Configuraţie"
 
 #: screenlayout/gui.py:128
 msgid "_View"
-msgstr "_Vis"
+msgstr "_Vizualizare"
 
 #: screenlayout/gui.py:130
 msgid "_Outputs"
-msgstr "_Skærme"
+msgstr "_Ecrane"
 
 #: screenlayout/gui.py:131
 msgid "Dummy"
-msgstr "Dummy"
+msgstr "Simulare"
 
 #: screenlayout/gui.py:133
 msgid "_System"
-msgstr "_System"
+msgstr "_Sistem"
 
 #: screenlayout/gui.py:134
 msgid "_Keybindings (Metacity)"
-msgstr "_Nøgletildelinger (Metacity)"
+msgstr "_Funcţii taste (Metacity)"
 
 #: screenlayout/gui.py:136
 msgid "_Help"
-msgstr "_Hjælp"
+msgstr "_Ajutor"
 
 #: screenlayout/gui.py:140
 msgid "1:4"
@@ -60,11 +62,11 @@ msgstr "1:16"
 
 #: screenlayout/gui.py:189
 msgid "Script Properties"
-msgstr "Skriptegenskaber"
+msgstr "Proprietăţi script"
 
 #: screenlayout/gui.py:201
 msgid "Script"
-msgstr "Skript"
+msgstr "Script"
 
 #: screenlayout/gui.py:217
 #, python-format
@@ -72,78 +74,75 @@ msgid ""
 "XRandR failed:\n"
 "%s"
 msgstr ""
-"XRandR mislykkedes:\n"
+"Eşuare XRandR:\n"
 "%s"
 
 #: screenlayout/gui.py:227
 msgid "Open Layout"
-msgstr "Åbn udseende"
+msgstr "Deschide configuraţie"
 
 #: screenlayout/gui.py:239
 msgid "Save Layout"
-msgstr "Gem udseende"
+msgstr "Salvare configuraţie"
 
-# skærmudseende. Muligvis er "skærmopsætning" mere dækkende.  XRandR,
-# som ARandR vist er en grænseflade til, styrer skærmopløsning, rotation osv.
 #: screenlayout/meta.py:23
 msgid "ARandR Screen Layout Editor"
-msgstr "ARandR - redigering af skærmopsætning"
+msgstr "ARandR, editor configuraţii ecrane"
 
 #. # translators, please translate in the style of "Another XRandR GUI
 #. # (ein weiteres GUI für XRandR)" so users get both the explanation of
 #. # the acronym and a localized version.
 #: screenlayout/meta.py:27
 msgid "Another XRandR GUI"
-msgstr "Another XRandR GUI (en anden XRandR-grænseflade)"
+msgstr "Another ARandR GUI (un alt GUI pentru XRandR)"
 
 #: screenlayout/metacity.py:53
 msgid "Accelerator"
-msgstr "Accelerator"
+msgstr "Combinaţie taste"
 
 #: screenlayout/metacity.py:54
 msgid "Action"
-msgstr "Handling"
+msgstr "Acţiune"
 
 #: screenlayout/metacity.py:120
 msgid "disabled"
-msgstr "deaktiveret"
+msgstr "dezactivat"
 
 #: screenlayout/metacity.py:135
 msgid "New accelerator..."
-msgstr "Ny accelerator..."
+msgstr "Adăugare combinaţie taste.."
 
 #: screenlayout/metacity.py:198
 msgid "no action"
-msgstr "ingen handling"
+msgstr "nicio acţiune"
 
 #: screenlayout/metacity.py:228
 msgid "incompatible configuration"
-msgstr "inkompatibel konfiguration"
+msgstr "configurare incompatibilă"
 
 #: screenlayout/metacity.py:235
 msgid "other application"
-msgstr "andet program"
+msgstr "altă aplicaţie"
 
 #: screenlayout/metacity.py:255
 #, python-format
 msgid "No files in %(folder)r. Save a layout first."
-msgstr "Ingen filer i %(folder)r. Gem et udseende først."
+msgstr "Niciun fişier în %(folder)r. Trebuie salvată întâi o configuraţie."
 
 #: screenlayout/metacity.py:284
 msgid "gconf not available."
-msgstr "gconf ikke tilgængelig."
+msgstr "gconf indisponibil."
 
 #: screenlayout/metacity.py:285
 msgid ""
 "In order to configure metacity, you need to have the python gconf module "
 "installed."
 msgstr ""
-"For at kunne konfigurere metacity, skal du have pythons gconf-modul "
-"installeret."
+"Pentru configurare metacity, modulul python gconf trebuie să fie instalat"
 
 #: screenlayout/metacity.py:292
 msgid "Keybindings (via Metacity)"
-msgstr "Nøgletildelinger (via Metacity)"
+msgstr "Funcţii taste (via Metacity)"
 
 #: screenlayout/metacity.py:305
 msgid ""
@@ -155,61 +154,47 @@ msgid ""
 "This will only work if you use metacity or another program reading its "
 "configuration."
 msgstr ""
-"Klik på en knap i den venstre kolonne og tryk på en tastekombination du "
-"ønsker at tildele til et bestemt skærmopsætning. (Brug Slet tilbage for at "
-"rydde acceleratorer, escape for at fortryde redigering.) Vælg så et eller "
-"flere udseender i den højre kolonne.\n"
+"Faceţi click pe un buton în coloana din stânga apoi apăsaţi combinaţia de "
+"taste dorită la o anume configuraţie de ecrane (utilizaţi backspace pentru "
+"ştergere sau escape pentru abandonare).\n"
 "\n"
-"Dette vil kun virke, hvis du bruger metacity eller et andet program, der "
-"læser metacitys konfiguration."
+"Aceasta nu funcţionează decât dacă utilizaţi metacity sau alt program "
+"compatibil la citire."
 
 #: screenlayout/widget.py:61
 msgid ""
 "Your configuration does not include an active monitor. Do you want to apply "
 "the configuration?"
 msgstr ""
-"Din konfiguration inkluderer ikke nogen aktiv overvågning. Ønsker du at "
-"anvende konfigurationen?"
+"Configuraţia aleasă nu include niciun ecran activ: se aplică totuşi "
+"configuraţia?"
 
 #: screenlayout/widget.py:301
 msgid "Active"
-msgstr "Aktiv"
+msgstr "Activ"
 
 #: screenlayout/widget.py:319
 #, python-format
 msgid "Setting this resolution is not possible here: %s"
-msgstr "Angivelse af denne opløsning er ikke muligt her: %s"
+msgstr "Definirea acestei resoluţii nu este posibilă aici : %s"
 
-# retning er brugt i OpenOffice, kunne måske også være opsætning
 #: screenlayout/widget.py:332
 #, python-format
 msgid "This orientation is not possible here: %s"
-msgstr "Denne retning er ikke mulig her: %s"
+msgstr "Această orientare nu este possibilă aici : %s"
 
 #: screenlayout/widget.py:338
 msgid "Resolution"
-msgstr "Opløsning"
+msgstr "Rezoluţie"
 
-# retning er brugt i OpenOffice, kunne måske også være opsætning
-# Jeg tror Orientering er bedst, da det er hvorvidt skærmen vises drejet
-# 90 grader til venstre, på hovedet eller tilsvarende
-# (jf. xrandr-kommandoen --rotate)
 #: screenlayout/widget.py:340
 msgid "Orientation"
-msgstr "Orientering"
+msgstr "Orientare"
 
-# Et output (i xrandr) svarer til en skærm eller anden enhed, som ting
-# kan blive tegnet på.  Kommandoen 'xrandr -q' skriver en liste over de
-# outputs, computeren har.  På min computer er det LVDS (lcd-skærmen),
-# VGA-0 (stikket til f.eks. en projektor) og S-video.  De er altså
-# forskellige outputs.
-# Jeg tror derfor "skærm" eller "uddataenhed" vil være gode
-# oversættelser af output.  Der er vist et par tidligere strenge hvori
-# det muligvis skal gøres konsistent.
 #: screenlayout/xrandr.py:222
 msgid "A part of an output is outside the virtual screen."
-msgstr "En del af en skærm er uden for den virtuelle skærm."
+msgstr "Partea unui ecran este în afara zonei virtuale."
 
 #: screenlayout/xrandr.py:225
 msgid "An output is outside the virtual screen."
-msgstr "En skærm er uden for den virtuelle skærm."
+msgstr "Un ecran este în afara zonei virtuale."
