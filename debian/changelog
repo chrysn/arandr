@@ -3,14 +3,13 @@ arandr (0.1.5-1) unstable; urgency=low
   * New upstream release
     - New translations
     - New `unxrandr` tool
-  * Updated copyright file to latest DEP-5 changes, now usable with
-    config-model
   * Added a bug script that includes xrandr output in bug reports
   * Fixed typo in description (closes: #623518)
   * Note new translators in copyright file
   * Change Standards-Version to 3.9.2 (no changes)
+  * Updated copyright file to DEP-5 release, now usable with config-model
 
- -- Christian M. Amsüss <chrysn@fsfe.org>  Sun, 09 Oct 2011 15:48:46 +0200
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Sun, 09 Oct 2011 15:52:10 +0200
 
 arandr (0.1.4-1) unstable; urgency=low
 
