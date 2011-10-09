@@ -16,27 +16,16 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-"""Run ARandR GUI"""
+"""Display an xrandr command that reproduces the current setup."""
 
-import sys
-import gettext
+import optparse
 
-# monkey patch gettext for local execution
+import screenlayout.xrandr
+import screenlayout.meta
 
-if sys.argv[0].startswith('./'):
-    old_find = gettext.find
+p = optparse.OptionParser(description=__doc__, usage="%prog", version=screenlayout.meta.__version__)
+p.parse_args()
 
-    def find_wrapper(domain, localedir=None, languages=None, all=False):
-        """Catch finds for arandr and redirect them to local files"""
-        if domain == 'arandr':
-            result = old_find(domain, './build/locale', languages, all)
-            if result:
-                return result
-        return old_find(domain, localedir, languages, all)
-
-    gettext.find = find_wrapper
-
-# defer importing and thus loading locales until monkey patching is done
-
-from screenlayout.gui import main
-main()
+current = screenlayout.xrandr.XRandR()
+current.load_from_x()
+print current.save_to_shellscript_string(["%(xrandr)s"]).strip()
