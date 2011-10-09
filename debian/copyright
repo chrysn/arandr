@@ -22,9 +22,19 @@ Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
            2010, gundachandru <gundachandru@gmail.com>
 License: GPL-3+
 
+Files: data/po/nl.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2011, wimfeijen <wimfeijen@gmail.com>
+License: GPL-3+
+
 Files: data/po/pt_BR.po
 Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
            2010, Phantom X <megaphantomx@bol.com.br>
+License: GPL-3+
+
+Files: data/po/ro.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2010–2011, Себастьян Gli ţa Κατινα <gseba@users.sourceforge.net>
 License: GPL-3+
 
 Files: data/po/ru.po
@@ -35,6 +45,7 @@ License: GPL-3+
 Files: data/po/fr.po
 Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
            2010, Clément Démoulins <clement@archivel.fr>
+           2011, Bruno Patri <bruno.patri@gmail.com>
 License: GPL-3+
 
 Files: data/po/pl.po
@@ -66,6 +77,16 @@ License: GPL-3+
 Files: data/po/zh_CN.po
 Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
            2010, Carezero <carezero@qq.com>
+License: GPL-3+
+
+Files: data/po/sk.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2011, Slavko <linux@slavino.sk>
+License: GPL-3+
+
+Files: data/po/fa.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2011, Alireza Savand <agahia.com@gmail.com>
 License: GPL-3+
 
 License: GPL-3+
