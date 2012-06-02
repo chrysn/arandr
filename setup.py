@@ -41,7 +41,7 @@ PO_DIR = 'data/po'
 POT_FILE = os.path.join(PO_DIR, 'messages.pot')
 
 PACKAGENAME = "arandr"
-PACKAGEVERSION = "0.1.5"
+PACKAGEVERSION = "0.1.6"
 AUTHOR = "chrysn"
 AUTHOR_MAIL = "chrysn@fsfe.org"
 URL = "http://christian.amsuess.com/tools/arandr/"
@@ -136,7 +136,7 @@ class clean(_clean):
     def run(self):
         if self.all:
             dirs = ['build/locale']
-            files = ['build/arandr.1.gz']
+            files = ['build/arandr.1.gz', 'build/unxrandr.1.gz']
             for directory in dirs:
                 if os.path.exists(directory):
                     remove_tree(directory, dry_run=self.dry_run)

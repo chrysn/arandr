@@ -1,4 +1,12 @@
-arandr (0.1.5-1) unstable; urgency=low
+arandr (0.1.6-1) unstable; urgency=low
+
+  * New upstream release
+    - New translations
+    - Bugfixes
+
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Sat, 02 Jun 2012 16:00:04 +0200
+
+arandr (0.1.5-1) UNRELEASED; urgency=low
 
   * New upstream release
     - New translations
