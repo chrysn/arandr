@@ -1,50 +1,51 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR chrysn
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Alireza Savand <agahia.com@gmail.com>, 2011.
+# Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2012.
+# chrysn <chrysn@fsfe.org>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: ARandR\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2011-10-01 14:13+0200\n"
-"PO-Revision-Date: 2011-03-25 14:53+0000\n"
-"Last-Translator: Alir3z4 <agahia.com@gmail.com>\n"
+"PO-Revision-Date: 2012-05-03 09:44+0000\n"
+"Last-Translator: Algimantas Margevičius <gymka@mail.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
-msgstr "_پوسته"
+msgstr "_Išdėstymas"
 
 #: screenlayout/gui.py:128
 msgid "_View"
-msgstr "_نما"
+msgstr "R_odymas"
 
 #: screenlayout/gui.py:130
 msgid "_Outputs"
-msgstr "_خروجي ها"
+msgstr "_Išvestys"
 
 #: screenlayout/gui.py:131
 msgid "Dummy"
-msgstr "ساختگی"
+msgstr "Butaforinis"
 
 #: screenlayout/gui.py:133
 msgid "_System"
-msgstr "_سيستم"
+msgstr "_Sistema"
 
 #: screenlayout/gui.py:134
 msgid "_Keybindings (Metacity)"
-msgstr "_Keybindings (Metacity)"
+msgstr "_Klavišų susiejimai (Metacity)"
 
 #: screenlayout/gui.py:136
 msgid "_Help"
-msgstr "_راهنمايي"
+msgstr "Ž_inynas"
 
 #: screenlayout/gui.py:140
 msgid "1:4"
@@ -60,135 +61,124 @@ msgstr "1:16"
 
 #: screenlayout/gui.py:189
 msgid "Script Properties"
-msgstr "تنظيمات اسكريپت"
+msgstr "Scenarijaus savybės"
 
 #: screenlayout/gui.py:201
 msgid "Script"
-msgstr "اسكريپت"
+msgstr "Scenarijus"
 
 #: screenlayout/gui.py:217
 #, python-format
 msgid ""
 "XRandR failed:\n"
 "%s"
-msgstr "XRandR شکست خورد :  %s"
+msgstr "XRandR nepavyko:\n%s"
 
 #: screenlayout/gui.py:227
 msgid "Open Layout"
-msgstr "باز کردن لایه"
+msgstr "Atverti išdėstymą"
 
 #: screenlayout/gui.py:239
 msgid "Save Layout"
-msgstr "ذخيره لايه"
+msgstr "Išsaugoti išdėstymą"
 
 #: screenlayout/meta.py:23
 msgid "ARandR Screen Layout Editor"
-msgstr "ARandR صفحه ویرایشگر لايه"
+msgstr "ARandR ekranų išdėstymų redaktorius"
 
 #. # translators, please translate in the style of "Another XRandR GUI
 #. # (ein weiteres GUI für XRandR)" so users get both the explanation of
 #. # the acronym and a localized version.
 #: screenlayout/meta.py:27
 msgid "Another XRandR GUI"
-msgstr "یکی دیگر از رابط کاربری گرافیکی XRandR"
+msgstr "Another XRandR GUI (dar vienas XRandR GUI)"
 
 #: screenlayout/metacity.py:53
 msgid "Accelerator"
-msgstr "شتاب دهنده"
+msgstr "Spartusis klavišas"
 
 #: screenlayout/metacity.py:54
 msgid "Action"
-msgstr "عمل"
+msgstr "Veiksmas"
 
 #: screenlayout/metacity.py:120
 msgid "disabled"
-msgstr "غیرفعال شده"
+msgstr "išjungta"
 
 #: screenlayout/metacity.py:135
 msgid "New accelerator..."
-msgstr "شتاب دهنده جدید..."
+msgstr "Naujas spartusis klavišas..."
 
 #: screenlayout/metacity.py:198
 msgid "no action"
-msgstr "بدون فعاليت"
+msgstr "nėra veiksmo"
 
 #: screenlayout/metacity.py:228
 msgid "incompatible configuration"
-msgstr "پیکربندی ناسازگار"
+msgstr "nesuderinama konfigūracija"
 
 #: screenlayout/metacity.py:235
 msgid "other application"
-msgstr "سایر نرم افزارها"
+msgstr "kita programa"
 
 #: screenlayout/metacity.py:255
 #, python-format
 msgid "No files in %(folder)r. Save a layout first."
-msgstr "هیچ فایل در %(folder)r. ذخیره طرح بندی اول."
+msgstr "Aplanke %(folder)r failų nėra. Pirmiausia išsaugokite išdėstymą."
 
 #: screenlayout/metacity.py:284
 msgid "gconf not available."
-msgstr "gconf در دسترس نیست."
+msgstr "gconf neprieinama."
 
 #: screenlayout/metacity.py:285
 msgid ""
 "In order to configure metacity, you need to have the python gconf module "
 "installed."
-msgstr ""
-"به منظور پیکربندی metacity ، شما نیاز به gconf پایتون ماژول نصب شده است."
+msgstr "Norint konfigūruoti „metacity“, turi būti įdiegtas python gconf modulis."
 
 #: screenlayout/metacity.py:292
 msgid "Keybindings (via Metacity)"
-msgstr "Keybindings (از طریق Metacity)"
+msgstr "Klavišų susiejimai (su Metacity)"
 
 #: screenlayout/metacity.py:305
 msgid ""
-"Click on a button in the left column and press a key combination you want to "
-"bind to a certain screen layout. (Use backspace to clear accelerators, "
-"escape to abort editing.) Then, select one or more layouts in the right "
-"column.\n"
+"Click on a button in the left column and press a key combination you want to bind to a certain screen layout. (Use backspace to clear accelerators, escape to abort editing.) Then, select one or more layouts in the right column.\n"
 "\n"
-"This will only work if you use metacity or another program reading its "
-"configuration."
-msgstr ""
-"روی دکمه در ستون چپ کلیک کنید و کلید ترکیبی دلخواه برای تنظیم کردن پوسته "
-"مورد نظر فشار دهید. ( از backcpace برای پاکسازی سرعت‌دهنده‌ها، escape برای "
-"لغو وبرایش استفاده کنید.) سپس یک یا چند پوسته در ستون راست انتخاب کنید.\n"
-"این کار خواهد کرد در صورتی که شما از برای خواندن پیکربندی از metacity یا "
-"دیگر برنامه‌ای استفاده کنید."
+"This will only work if you use metacity or another program reading its configuration."
+msgstr "Spragtelėkite ant mygtuko dešiniame stulpelyje ir paspauskite klavišų kombinaciją kurią norėsite naudoti tam ekranų išdėstymui. (Norėdami išvalyti spartųjį klavišą, paspauskite „Backspace“, „escape“ norėdami nutraukti redagavimą.) Tada pasirinkite vieną ar kelis išdėstymus, iš dešinio stulpelio.\n\nTai veiks tik tada jei naudojate „metacity“ ar kitą programą skaitančią tą konfigūraciją."
 
 #: screenlayout/widget.py:61
 msgid ""
 "Your configuration does not include an active monitor. Do you want to apply "
 "the configuration?"
-msgstr ""
-"تنظيمات شما شامل مانيتور فعال نيست. آيا ميخواهيد همين تنظيمات را اعمال كنيد؟"
+msgstr "Jūsų konfigūracijoje nėra aktyvaus monitoriaus. Ar norite pritaikyti šią konfigūraciją?"
 
 #: screenlayout/widget.py:301
 msgid "Active"
-msgstr "فعال"
+msgstr "Aktyvus"
 
 #: screenlayout/widget.py:319
 #, python-format
 msgid "Setting this resolution is not possible here: %s"
-msgstr "تنظیم این رزولوشن  در اینجا امکان پذیر نیست : %s"
+msgstr "Nustatyti šią raišką čia, negalima: %s"
 
 #: screenlayout/widget.py:332
 #, python-format
 msgid "This orientation is not possible here: %s"
-msgstr "این جهت گیری در اينجا امكان پذير نيست : %s"
+msgstr "Čia ši orientacija negalima: %s"
 
 #: screenlayout/widget.py:338
 msgid "Resolution"
-msgstr "رزولوشن"
+msgstr "Raiška"
 
 #: screenlayout/widget.py:340
 msgid "Orientation"
-msgstr "جهت"
+msgstr "Orientacija"
 
 #: screenlayout/xrandr.py:222
 msgid "A part of an output is outside the virtual screen."
-msgstr "بخشی از خروجی خارج از صفحه نمایش مجازی."
+msgstr "Dalis išvesties yra už virtualaus ekrano."
 
 #: screenlayout/xrandr.py:225
 msgid "An output is outside the virtual screen."
-msgstr "خروجی خارج از صفحه نمایش مجازی."
+msgstr "Išvestis yra už virtualaus ekrano."

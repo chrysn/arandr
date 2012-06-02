@@ -19,13 +19,13 @@
 import gettext
 gettext.install('arandr')
 
-__version__ = '0.1.5'
+__version__ = '0.1.6'
 PROGRAMNAME = _(u'ARandR Screen Layout Editor')
 ## translators, please translate in the style of "Another XRandR GUI
 ## (ein weiteres GUI für XRandR)" so users get both the explanation of
 ## the acronym and a localized version.
 PROGRAMDESCRIPTION = _(u'Another XRandR GUI')
-COPYRIGHT = u'© chrysn 2008 – 2011'
+COPYRIGHT = u'© chrysn 2008 – 2012'
 
 TRANSLATORS = [
         'chrysn <chrysn@fsfe.org>',
@@ -43,9 +43,14 @@ TRANSLATORS = [
         'aboodilankaboot <shiningmoon25@gmail.com>',
         'Carezero <carezero@qq.com>',
         'wimfeijen <wimfeijen@gmail.com>',
-        'sjb <gseba@users.sourceforge.net>',
         'Slavko <linux@slavino.sk>',
         'Alireza Savand <agahia.com@gmail.com>',
         'Bruno_Patri <bruno.patri@gmail.com>',
         'Себастьян Gli ţa Κατινα <gseba@users.sourceforge.net>',
+        'Belvar <glasbarg@gmail.com>',
+        'Algimantas Margevičius <margevicius.algimantas@gmail.com>',
+        'Miguel Anxo Bouzada <mbouzada@gmail.com>',
+        'o-157',
+        'Ingemar Karlsson <ingemar@ingk.se>',
+        'Semsudin Abdic <abdic88@gmail.com>',
         ]
