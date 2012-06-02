@@ -4,7 +4,7 @@ Upstream-Contact: Christian M. Amsüss <chrysn@fsfe.org>
 Source: http://christian.amsuess.com/tools/arandr/
 
 Files: *
-Copyright: 2008–2011, chrysn <chrysn@fsfe.org>
+Copyright: 2008–2012, chrysn <chrysn@fsfe.org>
 License: GPL-3+
 
 Files: data/po/da.po
@@ -67,6 +67,7 @@ License: GPL-3+
 Files: data/po/es.po
 Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
            2010, Ricardo A. Hermosilla Carrillo <ra.hermosillac@gmail.com>
+           2012, Miguel Anxo Bouzada <mbouzada@gmail.com>
 License: GPL-3+
 
 Files: data/po/ca.po
@@ -86,7 +87,37 @@ License: GPL-3+
 
 Files: data/po/fa.po
 Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2011, Alireza Savand <agahia.com@gmail.com>
+           2012, Alireza Savand <agahia.com@gmail.com>
+License: GPL-3+
+
+Files: data/po/br.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2012, Belvar <glasbarg@gmail.com>
+License: GPL-3+
+
+Files: data/po/lt.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2012, Algimantas Margevičius <margevicius.algimantas@gmail.com>
+License: GPL-3+
+
+Files: data/po/gl.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2012, Miguel Anxo Bouzada <mbouzada@gmail.com>
+License: GPL-3+
+
+Files: data/po/jp.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2012, o-157
+License: GPL-3+
+
+Files: data/po/sv.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2012, Ingemar Karlsson <ingemar@ingk.se>
+License: GPL-3+
+
+Files: data/po/bs.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2012, Semsudin Abdic <abdic88@gmail.com>
 License: GPL-3+
 
 License: GPL-3+
