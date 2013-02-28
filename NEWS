@@ -1,3 +1,17 @@
+Version 0.1.7
+* Fix the 'primary' issue
+  - ignores the primary keyword
+  - makes ARandR compatible with xrandr 1.4.0
+* Merged parts of the cglita branch
+  - solves ValueError / "1080p" issue
+* New translations:
+  - Ukrainian (by Rax Garfield)
+  - Hungarian (by Tamás Nagy)
+  - Greek (by Dimitris Giouroukis)
+  - Korean (by ParkJS)
+* Updated translations:
+  - Lithuanian (by Mantas Kriaučiūnas)
+
 Version 0.1.6
 * New translations:
   - Breton (by Belvar)
