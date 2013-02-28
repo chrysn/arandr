@@ -7,6 +7,7 @@ arandr (0.1.7-1) unstable; urgency=low
   * Note new translations and contributor in copyright file
   * Change Standards-Version to 3.9.4 (no changes)
     - Specify branch of Vcs-git field
+  * Add a Debian menu file (Closes: #692176)
 
  -- Christian M. Amsüss <chrysn@fsfe.org>  Thu, 28 Feb 2013 19:18:25 +0100
 
