@@ -9,14 +9,15 @@ msgstr ""
 "Project-Id-Version: ARandR\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2011-10-01 14:13+0200\n"
-"PO-Revision-Date: 2013-02-27 00:36+0000\n"
-"Last-Translator: HeavensBus <HeavensBus@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2013-02-28 09:26+0200\n"
+"Last-Translator: Michal Čihař <michal@cihar.com>\n"
+"Language-Team: Korean <http://hosted.weblate.org/projects/arandr/master/ko/>\n"
+"Language: ko_KR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ko_KR\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 1.5-dev\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
@@ -159,7 +160,7 @@ msgstr "활성"
 #: screenlayout/widget.py:319
 #, python-format
 msgid "Setting this resolution is not possible here: %s"
-msgstr "%s 해상도는 설정이 불가능 합니다. "
+msgstr "%s 해상도는 설정이 불가능 합니다."
 
 #: screenlayout/widget.py:332
 #, python-format
