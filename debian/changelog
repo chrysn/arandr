@@ -5,6 +5,8 @@ arandr (0.1.7-1) unstable; urgency=low
     - Compatibility with xrandr client 1.4.0 ("primary" issue)
     - New translations
   * Note new translations and contributor in copyright file
+  * Change Standards-Version to 3.9.4 (no changes)
+    - Specify branch of Vcs-git field
 
  -- Christian M. Amsüss <chrysn@fsfe.org>  Thu, 28 Feb 2013 19:18:25 +0100
 
