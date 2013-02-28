@@ -1,3 +1,89 @@
+commit 74e5fba2b2f2b7f303699ca2c20b7b1d9c9a230b
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu Feb 28 19:12:46 2013 +0100
+
+    ready for release 0.1.7
+
+commit 615607eb6796345d946e0fae8fdaf8680758b95e
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu Feb 28 18:27:48 2013 +0100
+
+    bugfix for uninitialized variable
+    
+    was tricky to find because it occurs only if the first output is
+    inactive.
+    
+    thanks to Sid Karuaratne for pointing finding it.
+
+commit 0fe7a5d650d0a3ed2116acdbc87bfcd7e60d5fc1
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu Feb 28 17:26:08 2013 +0100
+
+    changed attribution of ukrainian translation
+    
+    as requested by rax himself
+
+commit 3d4646344cfe8dbac6bc95c6cf934cd2e4dc59c4
+Merge: 98c5117 09928da
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu Feb 28 11:42:51 2013 +0100
+
+    update README / website
+    
+    * acknowledge weblate as the new translation tool
+    * move cglita branch to "similar programs" (as it's partially merged to fix the
+      bug)
+
+commit 98c5117b09e72c8e656cd27c0190a8ad2dd3ba46
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu Feb 28 11:26:38 2013 +0100
+
+    bugfix: remove duplicate modes
+    
+    the "minimal cglita" merge intoduced a bug where named screen modes with
+    more than one actual modes are shown more than once; this patch detects
+    and drops duplicates.
+
+commit fd3dc6fd3f714b2571707c2bf108bad77498a39b
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu Feb 28 04:56:23 2013 +0100
+
+    ignore 'primary' in xrandr output
+    
+    since 1.4.0, xrandr indicates which output is currently primary; this
+    patch ignores that and restores xrandr 1.4.0 compatibility.
+    
+    note that the version detection didn't work for the affected users, as
+    --version also prints the server's xrandr version, which was still 1.3.
+
+commit dad11f9ced9bc4fdb8632a992bf731ebf1efca40
+Merge: 123355d b5d1446
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu Feb 28 04:33:59 2013 +0100
+
+    merge parts of the cglita branch
+    
+    closes the most common arandr issue
+
+commit 123355d4cc8f1199b233a432c2f770fee5dbc251
+Merge: 2dc9952 467e077
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu Feb 28 01:40:21 2013 +0100
+
+    translations from transifex
+    
+    new: ko_KR
+
+commit 2dc9952600a1fa22f1aaa98fef50280fe5b1b932
+Merge: 801e664 09745e4
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu Feb 28 01:39:17 2013 +0100
+
+    translations from launchpad
+    
+    new: uk, hu, el
+    updated: lt
+
 commit 801e66476f1ac1cca227a0919cf081e003b0d820
 Author: chrysn <chrysn@fsfe.org>
 Date:   Sat Jun 2 15:49:21 2012 +0200
