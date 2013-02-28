@@ -4,7 +4,12 @@ Upstream-Contact: Christian M. Amsüss <chrysn@fsfe.org>
 Source: http://christian.amsuess.com/tools/arandr/
 
 Files: *
-Copyright: 2008–2012, chrysn <chrysn@fsfe.org>
+Copyright: 2008–2013, chrysn <chrysn@fsfe.org>
+License: GPL-3+
+
+Files: screenlayout/xrandr.py
+Copyright: 2008–2013, chrysn <chrysn@fsfe.org>
+           2011, Себастьян Gli ţa Κατινα
 License: GPL-3+
 
 Files: data/po/da.po
@@ -98,6 +103,7 @@ License: GPL-3+
 Files: data/po/lt.po
 Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
            2012, Algimantas Margevičius <margevicius.algimantas@gmail.com>
+           2012, Mantas Kriaučiūnas <mantas@akl.lt>
 License: GPL-3+
 
 Files: data/po/gl.po
@@ -105,7 +111,7 @@ Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
            2012, Miguel Anxo Bouzada <mbouzada@gmail.com>
 License: GPL-3+
 
-Files: data/po/jp.po
+Files: data/po/ja.po
 Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
            2012, o-157
 License: GPL-3+
@@ -118,6 +124,26 @@ License: GPL-3+
 Files: data/po/bs.po
 Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
            2012, Semsudin Abdic <abdic88@gmail.com>
+License: GPL-3+
+
+Files: data/po/uk.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2012, Rax Garfield
+License: GPL-3+
+
+Files: data/po/hu.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2012, Tamás Nagy <kisagy@gmail.com>
+License: GPL-3+
+
+Files: data/po/el.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2012, Dimitris Giouroukis
+License: GPL-3+
+
+Files: data/po/ko_KR.po
+Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
+           2013, ParkJS <HeavensBus@gmail.com>
 License: GPL-3+
 
 License: GPL-3+

@@ -4,6 +4,7 @@ arandr (0.1.7-1) unstable; urgency=low
     - Compatibility with non "<width>x<height" modes (Closes: #507521)
     - Compatibility with xrandr client 1.4.0 ("primary" issue)
     - New translations
+  * Note new translations and contributor in copyright file
 
  -- Christian M. Amsüss <chrysn@fsfe.org>  Thu, 28 Feb 2013 19:18:25 +0100
 
