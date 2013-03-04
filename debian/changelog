@@ -1,4 +1,4 @@
-arandr (0.1.7-1) unstable; urgency=low
+arandr (0.1.7.1-1) unstable; urgency=low
 
   * New upstream release
     - Compatibility with non "<width>x<height" modes (Closes: #507521)
@@ -9,7 +9,7 @@ arandr (0.1.7-1) unstable; urgency=low
     - Specify branch of Vcs-git field
   * Add a Debian menu file (Closes: #692176)
 
- -- Christian M. Amsüss <chrysn@fsfe.org>  Thu, 28 Feb 2013 19:18:25 +0100
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Mon, 04 Mar 2013 19:11:30 +0100
 
 arandr (0.1.6-1) unstable; urgency=low
 
