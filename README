@@ -48,6 +48,8 @@ Installation
 
         yum install arandr
 
+    * SuSE users can use the `X11:Utilities repository`_; ARandR can be found in the ``noarch`` directory of their distribution version.
+
 * From source:
 
     * Fetch either
@@ -182,3 +184,4 @@ Translations by
  .. _Fedora: https://admin.fedoraproject.org/pkgdb/applications/Arandr
  .. _docutils: http://docutils.sourceforge.net/
  .. _`debian bug #507521`: http://bugs.debian.org/507521
+ .. _`X11:Utilities repository`: http://download.opensuse.org/repositories/X11:/Utilities/
