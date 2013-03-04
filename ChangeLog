@@ -1,3 +1,48 @@
+commit 846451d14cfde701277d6ec0d9ebce0600dcbab1
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Mar 4 18:15:55 2013 +0100
+
+    ready for release 0.1.7.1
+
+commit 08e7739ec5b96dabcb055704bbf79954c83329d7
+Merge: f7f44c7 e10ca80
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Mar 4 18:12:38 2013 +0100
+
+    some fixes for website/readme
+
+commit f7f44c735321e6d09d452824eaaaf492dcf160b5
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Mar 4 17:57:07 2013 +0100
+
+    setup.py: be installable even without locales
+    
+    the install_data step previously failed in absence of translations. the
+    build/locale directory is now built by build_trans unconditionally,
+    making everything work even without present translations.
+    
+    the problem came up in gentoo, where translation files are deleted
+    selectively to only install what the user wants.
+
+commit 2fa045379e3e9652701861a491a46806fcee52e1
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Mar 4 17:31:42 2013 +0100
+
+    fix unassigned variable error
+    
+    manifests in "AttributeError: 'Size' object has no attribute '_size'"
+    when different modes with the same name have different screen sizes.
+
+commit 8535870c4cda27e4d23dd4f0802006fb6ba7ef28
+Author: chrysn <chrysn@fsfe.org>
+Date:   Fri Mar 1 13:47:14 2013 +0100
+
+    disable the output submenu instead of the checkbox
+    
+    result of feedback from the OpenSUSE package maintainer Stefan Seyfried.
+    this makes it easier for graphics cards with many outputs to see which
+    one was just plugged in and can be activated.
+
 commit 74e5fba2b2f2b7f303699ca2c20b7b1d9c9a230b
 Author: chrysn <chrysn@fsfe.org>
 Date:   Thu Feb 28 19:12:46 2013 +0100
