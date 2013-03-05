@@ -78,7 +78,7 @@ Installation
 Dependencies
 ------------
 
- * python_
+ * python_ 2
  * PyGTK_
  * xrandr_
  * docutils_ (>=0.6; for building the man page)
