@@ -60,9 +60,9 @@ Installation
             tar xzf arandr-0.1.7.1.tar.gz
             cd arandr-0.1.7.1
 
-        * or get it directly from GIT (`hosted on gitorious`_)::
+        * or get it directly from GIT (`hosted on alioth`_)::
 
-            git clone git://gitorious.org/arandr/arandr.git
+            git clone git://anonscm.debian.org/arandr/arandr.git
             cd arandr
 
     * and start it using::
@@ -110,7 +110,7 @@ alphabetical order:
 * `zarfy <http://sourceforge.net/projects/zarfy/>`_, notable for its nice use of a current screenshot
 * cglita wrote a patch that solved the ValueError / "1080p" problem. His patches went a little further and include more precise mode line selection; I keep it around, and you can try it like this::
 
-    git clone git://gitorious.org/arandr/arandr.git -b cglita
+    git clone git://anonscm.debian.org/arandr/arandr.git -b cglita
     cd arandr
     ./arandr
 
@@ -171,7 +171,7 @@ Translations by
  .. _GPLv3: http://www.gnu.org/licenses/gpl-3.0.txt
  .. _`dual head sketch`: http://www.thinkwiki.org/wiki/Image:Intel-DualHead.png
  .. _ThinkWiki: http://thinkwiki.org/
- .. _`hosted on gitorious`: http://gitorious.org/arandr/arandr
+ .. _`hosted on alioth`: https://alioth.debian.org/scm/browser.php?group_id=100834
  .. _Debian: http://packages.debian.org/arandr
  .. _Ubuntu: http://packages.ubuntu.com/arandr
  .. _gettext: http://www.gnu.org/software/gettext/
