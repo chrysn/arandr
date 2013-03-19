@@ -85,12 +85,13 @@ Dependencies
 
 
 
-Bugs / Caveats
---------------
+Bugs / Communication
+--------------------
 
- * Changes while running are not caught.
  * Versions before 0.1.7 depended on all modes to have a <width>x<height> name (see `debian bug #507521`_); if ARandR does not start up, please install the latest version. (On different bugtrackers, this is called the ValueError / "1080p" / "1024x768i" problem).
- * See TODO_ for planned features.
+ * There exists a `list of bugs`_ (and feature requests and general wishlist). To report a problem or request a feature, you can `register on alioth`_ (the hosting service) and `report it`_.
+ * For general discussion, you can `subscribe to the general discussion list`_ <arandr-users@lists.alioth.debian.org>.
+ * To stay informed about new releases, `subscribe to the announce list`_ <arandr-announce@lists.alioth.debian.org>.
 
 
 Similar projects
@@ -164,7 +165,6 @@ Translations by
 
  .. _XRandR: http://www.x.org/wiki/Projects/XRandR
  .. _xsetwacom: http://linuxwacom.sourceforge.net/index.php/howto/xsetwacom
- .. _TODO: ./TODO
  .. _`latest release`: http://christian.amsuess.com/tools/arandr/files/arandr-0.1.7.1.tar.gz
  .. _archlinux: http://www.archlinux.org/packages/community/any/arandr/
  .. _chrysn: http://christian.amsuess.com
@@ -185,3 +185,8 @@ Translations by
  .. _docutils: http://docutils.sourceforge.net/
  .. _`debian bug #507521`: http://bugs.debian.org/507521
  .. _`X11:Utilities repository`: http://download.opensuse.org/repositories/X11:/Utilities/
+ .. _`list of bugs`: https://alioth.debian.org/tracker/?atid=413123&group_id=100834
+ .. _`register on alioth`: https://alioth.debian.org/account/register.php
+ .. _`report it`: https://alioth.debian.org/tracker/?func=add&group_id=100834&atid=413123
+ .. _`subscribe to the general discussion list`: https://lists.alioth.debian.org/mailman/listinfo/arandr-users
+ .. _`subscribe to the announce list`: https://lists.alioth.debian.org/mailman/listinfo/arandr-announce
