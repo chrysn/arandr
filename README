@@ -14,8 +14,10 @@ Features
 * Saving configurations as executable shell scripts (configurations can be loaded without using this program)
 * Configuration files can be edited to include additional payload (like xsetwacom_ commands tablet PC users need when rotating), which is preserved when editing
 * Metacity key binding integration:
-    * Saved configurations can be bound to arbitrary keys via metacity's custom commands.
-    * Several layouts can be bound to one key; they are cycled through. (Useful for "rotate" buttons on tablet PCs.)
+
+  * Saved configurations can be bound to arbitrary keys via metacity's custom commands.
+  * Several layouts can be bound to one key; they are cycled through. (Useful for "rotate" buttons on tablet PCs.)
+
 * Main widget separated from packaged application (to facilitate integration with existing solutions)
 
 
@@ -25,73 +27,73 @@ Installation
 
 * Using your distribution's installer:
 
-    * Debian_ / Ubuntu_::
+  * Debian_ / Ubuntu_::
 
-        aptitude install arandr
+      aptitude install arandr
 
-    * archlinux_::
+  * archlinux_::
 
-        pacman -S arandr
+      pacman -S arandr
 
-    * Slackware using a `slackbuild by PhantomX`_::
+  * Slackware using a `slackbuild by PhantomX`_::
 
-        wget http://cloud.github.com/downloads/PhantomX/slackbuilds/arandr-0.1.4.tar.bz2
-        tar xjf arandr-0.1.4.tar.bz2
-        cd arandr
-        ./arandr.SlackBuild 2>&1 | tee build.log
+      wget http://cloud.github.com/downloads/PhantomX/slackbuilds/arandr-0.1.4.tar.bz2
+      tar xjf arandr-0.1.4.tar.bz2
+      cd arandr
+      ./arandr.SlackBuild 2>&1 | tee build.log
 
-    * Gentoo_::
+  * Gentoo_::
 
-        emerge arandr
+      emerge arandr
 
-    * Fedora_::
+  * Fedora_::
 
-        yum install arandr
+      yum install arandr
 
-    * SuSE users can use the `X11:Utilities repository`_; ARandR can be found in the ``noarch`` directory of their distribution version.
+  * SuSE users can use the `X11:Utilities repository`_; ARandR can be found in the ``noarch`` directory of their distribution version.
 
 * From source:
 
-    * Fetch either
+  * Fetch either
 
-        * the `latest release`_::
+    * the `latest release`_::
 
-            wget http://christian.amsuess.com/tools/arandr/files/arandr-0.1.7.1.tar.gz
-            tar xzf arandr-0.1.7.1.tar.gz
-            cd arandr-0.1.7.1
+        wget http://christian.amsuess.com/tools/arandr/files/arandr-0.1.7.1.tar.gz
+        tar xzf arandr-0.1.7.1.tar.gz
+        cd arandr-0.1.7.1
 
-        * or get it directly from GIT (`hosted on alioth`_, `browsable on anonscm.debian.org`_)::
+    * or get it directly from GIT (`hosted on alioth`_, `browsable on anonscm.debian.org`_)::
 
-            git clone git://anonscm.debian.org/arandr/arandr.git
-            cd arandr
+        git clone git://anonscm.debian.org/arandr/arandr.git
+        cd arandr
 
-    * and start it using::
+  * and start it using::
 
-        ./arandr
+      ./arandr
 
-    * or install it::
+  * or install it::
 
-        sudo ./setup.py install
+      sudo ./setup.py install
 
 
 
 Dependencies
 ------------
 
- * python_ 2
- * PyGTK_
- * xrandr_
- * docutils_ (>=0.6; for building the man page)
+* python_ 2
+* PyGTK_
+* xrandr_
+* docutils_ (>=0.6; for building the man page)
 
 
 
 Bugs / Communication
 --------------------
 
- * Versions before 0.1.7 depended on all modes to have a <width>x<height> name (see `debian bug #507521`_); if ARandR does not start up, please install the latest version. (On different bugtrackers, this is called the ValueError / "1080p" / "1024x768i" problem).
- * There exists a `list of bugs`_ (and feature requests and general wishlist). To report a problem or request a feature, you can `register on alioth`_ (the hosting service) and `report it`_.
- * For general discussion, you can `subscribe to the general discussion list`_ <arandr-users@lists.alioth.debian.org>.
- * To stay informed about new releases, `subscribe to the announce list`_ <arandr-announce@lists.alioth.debian.org>.
+* Versions before 0.1.7 depended on all modes to have a <width>x<height> name (see `debian bug #507521`_); if ARandR does not start up, please install the latest version. (On different bugtrackers, this is called the ValueError / "1080p" / "1024x768i" problem).
+* There exists a `list of bugs`_ (and feature requests and general wishlist). To report a problem or request a feature, you can `register on alioth`_ (the hosting service) and `report it`_.
+* For general discussion, you can `subscribe to the general discussion list`_ <arandr-users@lists.alioth.debian.org>.
+* To stay informed about new releases, `subscribe to the announce list`_ <arandr-announce@lists.alioth.debian.org>.
 
 
 Similar projects
