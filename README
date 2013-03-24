@@ -121,7 +121,7 @@ Contributing
 
 If you are fluent with languages not yet supported, you can add translations to ARandR using gettext_. An easy way to do this is `ARandR's page on hosted Weblate`_. (Transifex and Launchpad translations were discontinued for lack of SCM integration and associated problems with attributing contributions).
 
-Please send bug reports, suggestions, patches and git pull requests to me_.
+If you want to contribute code, contact me_ directly or send bug reports, suggestions, patches and git pull requests to the bugtracker_ or the `arandr-users mailing list`_.
 
 
 About
@@ -178,6 +178,8 @@ Translations by
  .. _gettext: http://www.gnu.org/software/gettext/
  .. _`ARandR's page on hosted Weblate`: http://hosted.weblate.org/projects/arandr/translations/
  .. _me: mailto:chrysn@fsfe.org
+ .. _bugtracker: https://alioth.debian.org/tracker/?atid=413123&group_id=100834
+ .. _`arandr-users mailing list`: https://lists.alioth.debian.org/mailman/listinfo/arandr-users
  .. _python: http://www.python.org/
  .. _PyGTK: http://www.pygtk.org/
  .. _`slackbuild by PhantomX`: http://github.com/PhantomX/slackbuilds/tree/master/arandr/
