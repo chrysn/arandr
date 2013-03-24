@@ -60,7 +60,7 @@ Installation
             tar xzf arandr-0.1.7.1.tar.gz
             cd arandr-0.1.7.1
 
-        * or get it directly from GIT (`hosted on alioth`_)::
+        * or get it directly from GIT (`hosted on alioth`_, `browsable on anonscm.debian.org`_)::
 
             git clone git://anonscm.debian.org/arandr/arandr.git
             cd arandr
@@ -172,6 +172,7 @@ Translations by
  .. _`dual head sketch`: http://www.thinkwiki.org/wiki/Image:Intel-DualHead.png
  .. _ThinkWiki: http://thinkwiki.org/
  .. _`hosted on alioth`: https://alioth.debian.org/scm/browser.php?group_id=100834
+ .. _`browsable on anonscm.debian.org`: http://anonscm.debian.org/gitweb/?p=arandr/arandr.git
  .. _Debian: http://packages.debian.org/arandr
  .. _Ubuntu: http://packages.ubuntu.com/arandr
  .. _gettext: http://www.gnu.org/software/gettext/
