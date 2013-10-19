@@ -8,22 +8,25 @@ msgstr ""
 "Project-Id-Version: arandr\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-10-01 14:13+0200\n"
-"PO-Revision-Date: 2012-11-26 17:50+0000\n"
-"Last-Translator: Dimitris Giouroukis <Unknown>\n"
-"Language-Team: Greek <el@li.org>\n"
+"PO-Revision-Date: 2013-10-19 11:47+0200\n"
+"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>\n"
+"Language-Team: Greek "
+"<http://hosted.weblate.org/projects/arandr/translations/el/>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 1.8-dev\n"
 "X-Launchpad-Export-Date: 2012-11-27 06:13+0000\n"
-"X-Generator: Launchpad (build 16309)\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
-msgstr ""
+msgstr "_Διάταξη"
 
 #: screenlayout/gui.py:128
 msgid "_View"
-msgstr ""
+msgstr "_Προβολή"
 
 #: screenlayout/gui.py:130
 msgid "_Outputs"
@@ -31,11 +34,11 @@ msgstr ""
 
 #: screenlayout/gui.py:131
 msgid "Dummy"
-msgstr ""
+msgstr "Ψεύτικο"
 
 #: screenlayout/gui.py:133
 msgid "_System"
-msgstr ""
+msgstr "_Σύστημα"
 
 #: screenlayout/gui.py:134
 msgid "_Keybindings (Metacity)"
@@ -43,27 +46,27 @@ msgstr ""
 
 #: screenlayout/gui.py:136
 msgid "_Help"
-msgstr ""
+msgstr "_Βοήθεια"
 
 #: screenlayout/gui.py:140
 msgid "1:4"
-msgstr ""
+msgstr "1:4"
 
 #: screenlayout/gui.py:141
 msgid "1:8"
-msgstr ""
+msgstr "1:8"
 
 #: screenlayout/gui.py:142
 msgid "1:16"
-msgstr ""
+msgstr "1:16"
 
 #: screenlayout/gui.py:189
 msgid "Script Properties"
-msgstr ""
+msgstr "Ιδιότητες Σεναρίου"
 
 #: screenlayout/gui.py:201
 msgid "Script"
-msgstr ""
+msgstr "Σενάριο"
 
 #: screenlayout/gui.py:217
 #, python-format
@@ -71,14 +74,16 @@ msgid ""
 "XRandR failed:\n"
 "%s"
 msgstr ""
+"Αποτυχία XRandR:\n"
+"%s"
 
 #: screenlayout/gui.py:227
 msgid "Open Layout"
-msgstr ""
+msgstr "Άνοιγμα Διάταξης"
 
 #: screenlayout/gui.py:239
 msgid "Save Layout"
-msgstr ""
+msgstr "Αποθήκευση Διάταξης"
 
 #: screenlayout/meta.py:23
 msgid "ARandR Screen Layout Editor"
@@ -93,31 +98,31 @@ msgstr ""
 
 #: screenlayout/metacity.py:53
 msgid "Accelerator"
-msgstr ""
+msgstr "Επιταχυντής"
 
 #: screenlayout/metacity.py:54
 msgid "Action"
-msgstr ""
+msgstr "Ενέργεια"
 
 #: screenlayout/metacity.py:120
 msgid "disabled"
-msgstr ""
+msgstr "απενεργοποιημένο"
 
 #: screenlayout/metacity.py:135
 msgid "New accelerator..."
-msgstr ""
+msgstr "Νέος επιταχυντής..."
 
 #: screenlayout/metacity.py:198
 msgid "no action"
-msgstr ""
+msgstr "καμία ενέργεια"
 
 #: screenlayout/metacity.py:228
 msgid "incompatible configuration"
-msgstr ""
+msgstr "ασύμβατες ρυθμίσεις"
 
 #: screenlayout/metacity.py:235
 msgid "other application"
-msgstr ""
+msgstr "άλλη εφαρμογή"
 
 #: screenlayout/metacity.py:255
 #, python-format
@@ -175,7 +180,7 @@ msgstr "Ανάλυση"
 
 #: screenlayout/widget.py:340
 msgid "Orientation"
-msgstr ""
+msgstr "Προσανατολισμός"
 
 #: screenlayout/xrandr.py:222
 msgid "A part of an output is outside the virtual screen."
