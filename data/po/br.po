@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: ARandR\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2011-10-01 14:13+0200\n"
-"PO-Revision-Date: 2013-02-28 13:45+0200\n"
+"PO-Revision-Date: 2013-10-30 11:09+0200\n"
 "Last-Translator: Michal Čihař <michal@cihar.com>\n"
 "Language-Team: Breton "
 "<http://hosted.weblate.org/projects/arandr/translations/br/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 1.5-dev\n"
+"X-Generator: Weblate 1.8-dev\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
@@ -152,7 +152,9 @@ msgstr "Klikit war ur bouton eus ar bann kleiz ha lakait ar berradenn a-zere evi
 msgid ""
 "Your configuration does not include an active monitor. Do you want to apply "
 "the configuration?"
-msgstr "Ho kefluniadur n'eus skramm gweredekaet ebet. C'hoant ho peus arloañ ouzh ar c'hefluniadur memestra ? "
+msgstr ""
+"Ho kefluniadur n'eus skramm gweredekaet ebet. C'hoant ho peus arloañ ouzh ar "
+"c'hefluniadur memestra ?"
 
 #: screenlayout/widget.py:301
 msgid "Active"
