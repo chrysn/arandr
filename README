@@ -125,6 +125,8 @@ If you are fluent with languages not yet supported, you can add translations to 
 
 If you want to contribute code, contact me_ directly or send bug reports, suggestions, patches and git pull requests to the bugtracker_ or the `arandr-users mailing list`_.
 
+If you want to support the project via flattr, you can `flattr this`_.
+
 
 About
 -----
@@ -194,3 +196,4 @@ Translations by
  .. _`report it`: https://alioth.debian.org/tracker/?func=add&group_id=100834&atid=413123
  .. _`subscribe to the general discussion list`: https://lists.alioth.debian.org/mailman/listinfo/arandr-users
  .. _`subscribe to the announce list`: https://lists.alioth.debian.org/mailman/listinfo/arandr-announce
+ .. _`flattr this`: https://flattr.com/submit/auto?user_id=chrysn&url=http%3A%2F%2Fchristian.amsuess.com%2Ftools%2Farandr%2F
