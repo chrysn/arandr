@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: ARandR\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: 2014-06-29 03:33+0200\n"
+"PO-Revision-Date: 2015-11-08 22:00+0000\n"
 "Last-Translator: reza khan <reza_khn@yahoo.com>\n"
-"Language-Team: Persian <https://hosted.weblate.org/projects/arandr/"
-"translations/fa/>\n"
+"Language-Team: Persian "
+"<https://hosted.weblate.org/projects/arandr/translations/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 1.10-dev\n"
+"X-Generator: Weblate 2.5-dev\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
@@ -171,7 +171,7 @@ msgstr "فعال"
 
 #: screenlayout/widget.py:335
 msgid "Primary"
-msgstr ""
+msgstr "اصلی"
 
 #: screenlayout/widget.py:349
 #, python-format
