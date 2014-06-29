@@ -9,14 +9,16 @@ msgstr ""
 "Project-Id-Version: ARandR\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2011-10-01 14:13+0200\n"
-"PO-Revision-Date: 2011-03-25 14:53+0000\n"
-"Last-Translator: Alir3z4 <agahia.com@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2014-06-29 03:33+0200\n"
+"Last-Translator: reza khan <reza_khn@yahoo.com>\n"
+"Language-Team: Persian "
+"<https://hosted.weblate.org/projects/arandr/translations/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 1.10-dev\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
@@ -40,7 +42,7 @@ msgstr "_سيستم"
 
 #: screenlayout/gui.py:134
 msgid "_Keybindings (Metacity)"
-msgstr "_Keybindings (Metacity)"
+msgstr "_اتصالات کلیدی (اطلاعات شهرستان)"
 
 #: screenlayout/gui.py:136
 msgid "_Help"
