@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: ARandR\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2011-10-01 14:13+0200\n"
-"PO-Revision-Date: 2013-02-28 09:26+0200\n"
-"Last-Translator: Michal Čihař <michal@cihar.com>\n"
-"Language-Team: Korean <http://hosted.weblate.org/projects/arandr/master/ko/>\n"
+"PO-Revision-Date: 2014-08-04 13:13+0200\n"
+"Last-Translator: cho bkwon <chobkwon@gmail.com>\n"
+"Language-Team: Korean "
+"<https://hosted.weblate.org/projects/arandr/translations/ko/>\n"
 "Language: ko_KR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 1.5-dev\n"
+"X-Generator: Weblate 1.10-dev\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
@@ -84,14 +85,14 @@ msgstr "레이아웃 저장"
 
 #: screenlayout/meta.py:23
 msgid "ARandR Screen Layout Editor"
-msgstr "ARandR Screen Layout Editor"
+msgstr "ARandR 화면 레이아웃 편집기"
 
 #. # translators, please translate in the style of "Another XRandR GUI
 #. # (ein weiteres GUI für XRandR)" so users get both the explanation of
 #. # the acronym and a localized version.
 #: screenlayout/meta.py:27
 msgid "Another XRandR GUI"
-msgstr "Another XRandR GUI"
+msgstr "또 다른 XRandR GUI"
 
 #: screenlayout/metacity.py:53
 msgid "Accelerator"
@@ -145,7 +146,13 @@ msgid ""
 "Click on a button in the left column and press a key combination you want to bind to a certain screen layout. (Use backspace to clear accelerators, escape to abort editing.) Then, select one or more layouts in the right column.\n"
 "\n"
 "This will only work if you use metacity or another program reading its configuration."
-msgstr "특정 레이아웃에 단축키를 지정하려면 왼쪽 열에서 버튼을 클릭하고 키 조합을 입력 하세요. (단축키 설정을 취소 하려면 백 스페이스 키를 누르세요.) 그 다음 오른쪽 열에서 한 개 이상의 레이아웃을 선택 합니다.\n\n설정된 단축키가 이외 다른 프로그램 설정에서 중복되지 않는지 체크하세요.\n(번역 확인 요망. 원문 - This will only work if you use metacity or another program reading its configuration.)"
+msgstr ""
+"특정 레이아웃에 단축키를 지정하려면 왼쪽 열에서 버튼을 클릭하고 키 조합을 입력 하세요. (단축키 설정을 취소 하려면 백 스페이스 키를 "
+"누르세요.) 그 다음 오른쪽 열에서 한 개 이상의 레이아웃을 선택 합니다.\n"
+"\n"
+"설정된 단축키가 이외 다른 프로그램 설정에서 중복되지 않는지 체크하세요.\n"
+"(번역 확인 요망. 원문 - This will only work if you use metacity or another program "
+"reading its configuration.)."
 
 #: screenlayout/widget.py:61
 msgid ""
