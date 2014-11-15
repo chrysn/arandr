@@ -8,61 +8,64 @@ msgstr ""
 "Project-Id-Version: arandr 0.1.4\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2011-10-01 14:13+0200\n"
-"PO-Revision-Date: 2011-10-01 14:13+0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2014-11-15 01:56+0200\n"
+"Last-Translator: Lu Ca <lmelonimamo@yahoo.it>\n"
+"Language-Team: Sardinian "
+"<https://hosted.weblate.org/projects/arandr/translations/sc/>\n"
 "Language: sc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.1-dev\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
-msgstr ""
+msgstr "_Disponimentu"
 
 #: screenlayout/gui.py:128
 msgid "_View"
-msgstr ""
+msgstr "_Ammustra"
 
 #: screenlayout/gui.py:130
 msgid "_Outputs"
-msgstr ""
+msgstr "_Essidas"
 
 #: screenlayout/gui.py:131
 msgid "Dummy"
-msgstr ""
+msgstr "Simulatzione"
 
 #: screenlayout/gui.py:133
 msgid "_System"
-msgstr ""
+msgstr "_Sistema"
 
 #: screenlayout/gui.py:134
 msgid "_Keybindings (Metacity)"
-msgstr ""
+msgstr "_Incurtziadorjas (Metacity)"
 
 #: screenlayout/gui.py:136
 msgid "_Help"
-msgstr ""
+msgstr "_Agiudu"
 
 #: screenlayout/gui.py:140
 msgid "1:4"
-msgstr ""
+msgstr "1:4"
 
 #: screenlayout/gui.py:141
 msgid "1:8"
-msgstr ""
+msgstr "1:8"
 
 #: screenlayout/gui.py:142
 msgid "1:16"
-msgstr ""
+msgstr "1:16"
 
 #: screenlayout/gui.py:189
 msgid "Script Properties"
-msgstr ""
+msgstr "Propriedades de su script"
 
 #: screenlayout/gui.py:201
 msgid "Script"
-msgstr ""
+msgstr "Script"
 
 #: screenlayout/gui.py:217
 #, python-format
@@ -70,72 +73,77 @@ msgid ""
 "XRandR failed:\n"
 "%s"
 msgstr ""
+"Errore de XRandR:\n"
+"%s"
 
 #: screenlayout/gui.py:227
 msgid "Open Layout"
-msgstr ""
+msgstr "Aperi unu disponimentu"
 
 #: screenlayout/gui.py:239
 msgid "Save Layout"
-msgstr ""
+msgstr "Sarba su disponimentu"
 
 #: screenlayout/meta.py:23
 msgid "ARandR Screen Layout Editor"
-msgstr ""
+msgstr "Editore disponimentu de s'ischermu de ARandR"
 
 #. # translators, please translate in the style of "Another XRandR GUI
 #. # (ein weiteres GUI für XRandR)" so users get both the explanation of
 #. # the acronym and a localized version.
 #: screenlayout/meta.py:27
 msgid "Another XRandR GUI"
-msgstr ""
+msgstr "Another XRandR GUI (Un'àtera interfàtzia XrandR)"
 
 #: screenlayout/metacity.py:53
 msgid "Accelerator"
-msgstr ""
+msgstr "Atzeleradore"
 
 #: screenlayout/metacity.py:54
 msgid "Action"
-msgstr ""
+msgstr "Atzione"
 
 #: screenlayout/metacity.py:120
 msgid "disabled"
-msgstr ""
+msgstr "disabilitadu"
 
 #: screenlayout/metacity.py:135
 msgid "New accelerator..."
-msgstr ""
+msgstr "Atzeleradore nou..."
 
 #: screenlayout/metacity.py:198
 msgid "no action"
-msgstr ""
+msgstr "atzione peruna"
 
 #: screenlayout/metacity.py:228
 msgid "incompatible configuration"
-msgstr ""
+msgstr "Cunfiguratzione non cumpatìbile"
 
 #: screenlayout/metacity.py:235
 msgid "other application"
-msgstr ""
+msgstr "àteru aplicu"
 
 #: screenlayout/metacity.py:255
 #, python-format
 msgid "No files in %(folder)r. Save a layout first."
 msgstr ""
+"Non b'est documentu perunu in %(folder)r. In antis sarba unu disponimentu."
 
 #: screenlayout/metacity.py:284
 msgid "gconf not available."
-msgstr ""
+msgstr "gconf non disponìbile."
 
 #: screenlayout/metacity.py:285
 msgid ""
 "In order to configure metacity, you need to have the python gconf module "
 "installed."
 msgstr ""
+"Pro pòdere cunfigurare metacity, est netzessàriu tènnere su mòdulu gconf "
+"python installadu."
 
 #: screenlayout/metacity.py:292
 msgid "Keybindings (via Metacity)"
-msgstr ""
+msgstr "Incurtziadorjas (tràmite Metacity)"
 
 #: screenlayout/metacity.py:305
 msgid ""
@@ -147,39 +155,49 @@ msgid ""
 "This will only work if you use metacity or another program reading its "
 "configuration."
 msgstr ""
+"Carcare unu pulsante in sa colunna de manca e compònnere una cumbinatzione "
+"de teclas da impreare pro unu disponimentu dislindadu de s'ischermu. ("
+"Impreare backspace pro burrare sos atzeleradores, esc pro annuddare sa "
+"modìfica. A pustis, ischertare unu o prus disponimentos in sa colunna de "
+"destra.\n"
+"\n"
+"Custu at a funtzionare petzi impreande metacity o unu programma cun sa "
+"capatzidade de lèghere sa cunfiguratzione sua."
 
 #: screenlayout/widget.py:61
 msgid ""
 "Your configuration does not include an active monitor. Do you want to apply "
 "the configuration?"
 msgstr ""
+"Sa cunfiguratzione no inclùidi unu mònitor ativu. Boles aplicare sa "
+"cunfiguratzione?"
 
 #: screenlayout/widget.py:301
 msgid "Active"
-msgstr ""
+msgstr "Ativu"
 
 #: screenlayout/widget.py:319
 #, python-format
 msgid "Setting this resolution is not possible here: %s"
-msgstr ""
+msgstr "Impostare sa risolutzione inoghe no est possìbile: %s"
 
 #: screenlayout/widget.py:332
 #, python-format
 msgid "This orientation is not possible here: %s"
-msgstr ""
+msgstr "Custa orientatzione no est possìbile inoghe: %s"
 
 #: screenlayout/widget.py:338
 msgid "Resolution"
-msgstr ""
+msgstr "Risolutzione"
 
 #: screenlayout/widget.py:340
 msgid "Orientation"
-msgstr ""
+msgstr "Orientatzione"
 
 #: screenlayout/xrandr.py:222
 msgid "A part of an output is outside the virtual screen."
-msgstr ""
+msgstr "Un'ala de s'essida est fora de s'ischermu virtuale."
 
 #: screenlayout/xrandr.py:225
 msgid "An output is outside the virtual screen."
-msgstr ""
+msgstr "Un'essida est fora de s'ischermu virtuale."
