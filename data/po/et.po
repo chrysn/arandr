@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: arandr 0.1.4\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: 2014-11-27 15:00+0200\n"
+"PO-Revision-Date: 2015-11-09 09:19+0000\n"
 "Last-Translator: Kristjan Räts <kristjanrats@gmail.com>\n"
-"Language-Team: Estonian <https://hosted.weblate.org/projects/arandr/"
-"translations/et/>\n"
+"Language-Team: Estonian "
+"<https://hosted.weblate.org/projects/arandr/translations/et/>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.1-dev\n"
+"X-Generator: Weblate 2.5-dev\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
@@ -174,7 +174,7 @@ msgstr "Lubatud"
 
 #: screenlayout/widget.py:335
 msgid "Primary"
-msgstr ""
+msgstr "Primaarne"
 
 #: screenlayout/widget.py:349
 #, python-format
