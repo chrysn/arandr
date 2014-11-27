@@ -8,62 +8,64 @@ msgstr ""
 "Project-Id-Version: arandr 0.1.4\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2011-10-01 14:13+0200\n"
-"PO-Revision-Date: 2011-10-01 14:13+0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2014-11-27 15:00+0200\n"
+"Last-Translator: Kristjan Räts <kristjanrats@gmail.com>\n"
+"Language-Team: Estonian "
+"<https://hosted.weblate.org/projects/arandr/translations/et/>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.1-dev\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
-msgstr ""
+msgstr "_Paigutus"
 
 #: screenlayout/gui.py:128
 msgid "_View"
-msgstr ""
+msgstr "_Vaade"
 
 #: screenlayout/gui.py:130
 msgid "_Outputs"
-msgstr ""
+msgstr "Vä_ljundid"
 
 #: screenlayout/gui.py:131
 msgid "Dummy"
-msgstr ""
+msgstr "Kohatäide"
 
 #: screenlayout/gui.py:133
 msgid "_System"
-msgstr ""
+msgstr "_Süsteem"
 
 #: screenlayout/gui.py:134
 msgid "_Keybindings (Metacity)"
-msgstr ""
+msgstr "_Kiirklahvid (Metacity)"
 
 #: screenlayout/gui.py:136
 msgid "_Help"
-msgstr ""
+msgstr "_Abi"
 
 #: screenlayout/gui.py:140
 msgid "1:4"
-msgstr ""
+msgstr "1:4"
 
 #: screenlayout/gui.py:141
 msgid "1:8"
-msgstr ""
+msgstr "1:8"
 
 #: screenlayout/gui.py:142
 msgid "1:16"
-msgstr ""
+msgstr "1:16"
 
 #: screenlayout/gui.py:189
 msgid "Script Properties"
-msgstr ""
+msgstr "Skripti omadused"
 
 #: screenlayout/gui.py:201
 msgid "Script"
-msgstr ""
+msgstr "Skript"
 
 #: screenlayout/gui.py:217
 #, python-format
@@ -71,72 +73,75 @@ msgid ""
 "XRandR failed:\n"
 "%s"
 msgstr ""
+"XRandR nurjus:\n"
+"%s"
 
 #: screenlayout/gui.py:227
 msgid "Open Layout"
-msgstr ""
+msgstr "Ava paigutus"
 
 #: screenlayout/gui.py:239
 msgid "Save Layout"
-msgstr ""
+msgstr "Salvesta paigutus"
 
 #: screenlayout/meta.py:23
 msgid "ARandR Screen Layout Editor"
-msgstr ""
+msgstr "ARandR ekraani paigutuse toimeti"
 
 #. # translators, please translate in the style of "Another XRandR GUI
 #. # (ein weiteres GUI für XRandR)" so users get both the explanation of
 #. # the acronym and a localized version.
 #: screenlayout/meta.py:27
 msgid "Another XRandR GUI"
-msgstr ""
+msgstr "Another XRandR GUI (järgmine XRandR GUI)"
 
 #: screenlayout/metacity.py:53
 msgid "Accelerator"
-msgstr ""
+msgstr "Kiirklahv"
 
 #: screenlayout/metacity.py:54
 msgid "Action"
-msgstr ""
+msgstr "Tegevus"
 
 #: screenlayout/metacity.py:120
 msgid "disabled"
-msgstr ""
+msgstr "keelatud"
 
 #: screenlayout/metacity.py:135
 msgid "New accelerator..."
-msgstr ""
+msgstr "Uus kiirklahv..."
 
 #: screenlayout/metacity.py:198
 msgid "no action"
-msgstr ""
+msgstr "tegevus puudub"
 
 #: screenlayout/metacity.py:228
 msgid "incompatible configuration"
-msgstr ""
+msgstr "häälestust ei toetata"
 
 #: screenlayout/metacity.py:235
 msgid "other application"
-msgstr ""
+msgstr "teine programm"
 
 #: screenlayout/metacity.py:255
 #, python-format
 msgid "No files in %(folder)r. Save a layout first."
-msgstr ""
+msgstr "Kaustast %(folder)r faile ei leitud. Salvesta paigutus kõigepealt."
 
 #: screenlayout/metacity.py:284
 msgid "gconf not available."
-msgstr ""
+msgstr "gconf ei ole kasutatav."
 
 #: screenlayout/metacity.py:285
 msgid ""
 "In order to configure metacity, you need to have the python gconf module "
 "installed."
 msgstr ""
+"Metacity häälestamiseks pead kõigepealt Pythonile paigaldama mooduli gconf."
 
 #: screenlayout/metacity.py:292
 msgid "Keybindings (via Metacity)"
-msgstr ""
+msgstr "Kiirklahvid (Metacity abil)"
 
 #: screenlayout/metacity.py:305
 msgid ""
@@ -148,39 +153,47 @@ msgid ""
 "This will only work if you use metacity or another program reading its "
 "configuration."
 msgstr ""
+"Kliki vasaku veeru nupul ja vajuta klahvikombinatsioon, mida sa soovid "
+"siduda konkreetse erkaanipaigutusega. (Kiirklahvide eemaldamiseks kasuta "
+"tagasivõtu klahvi, paoklahv tühistab toimetamise.) seejärel vali paremast "
+"veerust vähemalt üks paigutus.\n"
+"\n"
+"See töötab ainult siis, kui sa kasutad aknahaldurina metacity't või mõnda "
+"muud programmi, mis ta häälestust loeb."
 
 #: screenlayout/widget.py:61
 msgid ""
 "Your configuration does not include an active monitor. Do you want to apply "
 "the configuration?"
 msgstr ""
+"Su häälestus ei kaasa aktiivset monitori. Kas sa soovid häälestust kasutada?"
 
 #: screenlayout/widget.py:301
 msgid "Active"
-msgstr ""
+msgstr "Lubatud"
 
 #: screenlayout/widget.py:319
 #, python-format
 msgid "Setting this resolution is not possible here: %s"
-msgstr ""
+msgstr "Selle resolutsiooni kasutamine on siin võimatu: %s"
 
 #: screenlayout/widget.py:332
 #, python-format
 msgid "This orientation is not possible here: %s"
-msgstr ""
+msgstr "See orientatsioon on siin võimatu: %s"
 
 #: screenlayout/widget.py:338
 msgid "Resolution"
-msgstr ""
+msgstr "Resolutsioon"
 
 #: screenlayout/widget.py:340
 msgid "Orientation"
-msgstr ""
+msgstr "Orientatsioon"
 
 #: screenlayout/xrandr.py:222
 msgid "A part of an output is outside the virtual screen."
-msgstr ""
+msgstr "Osa väljundit jääb virtuaalsest ekraanist välja."
 
 #: screenlayout/xrandr.py:225
 msgid "An output is outside the virtual screen."
-msgstr ""
+msgstr "Väljund ei asu virtuaalsel ekraanil."
