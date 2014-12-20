@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: arandr\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-10-01 14:13+0200\n"
-"PO-Revision-Date: 2013-02-28 13:46+0200\n"
-"Last-Translator: Michal Čihař <michal@cihar.com>\n"
+"PO-Revision-Date: 2014-12-20 19:42+0200\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian "
-"<http://hosted.weblate.org/projects/arandr/translations/hu/>\n"
+"<https://hosted.weblate.org/projects/arandr/translations/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 1.5-dev\n"
+"X-Generator: Weblate 2.2-dev\n"
 "X-Launchpad-Export-Date: 2012-09-16 04:54+0000\n"
 
 #: screenlayout/gui.py:117
@@ -42,7 +42,7 @@ msgstr "_Rendszer"
 
 #: screenlayout/gui.py:134
 msgid "_Keybindings (Metacity)"
-msgstr "_Gyorsbillentyűk"
+msgstr "_Gyorsbillentyűk (Metacity)"
 
 #: screenlayout/gui.py:136
 msgid "_Help"
@@ -62,7 +62,7 @@ msgstr "1:16"
 
 #: screenlayout/gui.py:189
 msgid "Script Properties"
-msgstr "Szkript beállítások"
+msgstr "Parancsfájl beállítások"
 
 #: screenlayout/gui.py:201
 msgid "Script"
@@ -79,11 +79,11 @@ msgstr ""
 
 #: screenlayout/gui.py:227
 msgid "Open Layout"
-msgstr "Megnyitás"
+msgstr "Elrendezés megnyitása"
 
 #: screenlayout/gui.py:239
 msgid "Save Layout"
-msgstr "Mentés"
+msgstr "Elrendezés mentése"
 
 #: screenlayout/meta.py:23
 msgid "ARandR Screen Layout Editor"
