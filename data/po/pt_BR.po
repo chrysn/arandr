@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2011-10-01 14:13+0200\n"
-"PO-Revision-Date: 2014-11-15 01:15+0200\n"
-"Last-Translator: Lu Ca <lmelonimamo@yahoo.it>\n"
+"PO-Revision-Date: 2015-02-11 18:17+0200\n"
+"Last-Translator: Fred Maranhão <fred.maranhao@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://hosted.weblate.org/projects/arandr/translations/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.1-dev\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
@@ -62,7 +62,7 @@ msgstr "1:16"
 
 #: screenlayout/gui.py:189
 msgid "Script Properties"
-msgstr "Propriedades  de Script"
+msgstr "Propriedades de Script"
 
 #: screenlayout/gui.py:201
 msgid "Script"
@@ -127,7 +127,7 @@ msgstr "outra aplicação"
 #: screenlayout/metacity.py:255
 #, python-format
 msgid "No files in %(folder)r. Save a layout first."
-msgstr "Não há arquivos em %(folder)r. Salve uma dispsição primeiro."
+msgstr "Não há arquivos em %(folder)r. Salve uma disposição primeiro."
 
 #: screenlayout/metacity.py:284
 msgid "gconf not available."
@@ -157,7 +157,7 @@ msgid ""
 msgstr ""
 "Clique em um botão na coluna esquerda e pressione uma combinação de teclas "
 "que deseja associar a alguma disposição de tela. (Use backspace para limpar "
-"aceleradors, escape para abortar a edição). Entãom selecione uma ou mais "
+"aceleradores, esc para abortar a edição). Então, selecione uma ou mais "
 "disposições na coluna correta.\n"
 "\n"
 "Isto somente funcionará se você usar metacity ou outro programa que leia sua "
