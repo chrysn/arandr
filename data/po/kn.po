@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: arandr 0.1.2\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2011-10-01 14:13+0200\n"
-"PO-Revision-Date: 2010-03-06 15:55+0530\n"
-"Last-Translator: gundachandru <gundachandru@gmail.com>\n"
-"Language-Team: Kannada\n"
-"Language: \n"
+"PO-Revision-Date: 2015-03-09 10:37+0200\n"
+"Last-Translator: Michal Čihař <michal@cihar.com>\n"
+"Language-Team: Kannada "
+"<https://hosted.weblate.org/projects/arandr/translations/kn/>\n"
+"Language: kn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.3-dev\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
@@ -128,14 +130,15 @@ msgstr "%(folder)r ನಲ್ಲಿ ಯಾವುದೇ ಕಡತಗಳಿಲ್�
 
 #: screenlayout/metacity.py:284
 msgid "gconf not available."
-msgstr "gconf ಲಭ್ಯವಿಲ್ಲ"
+msgstr "gconf ಲಭ್ಯವಿಲ್ಲ."
 
 #: screenlayout/metacity.py:285
 msgid ""
 "In order to configure metacity, you need to have the python gconf module "
 "installed."
 msgstr ""
-"ಮೆಟಾಸಿಟಿಯನ್ನು ಸಂರಚಿಸುವ ಸಲುವಾಗಿ, ನೀವು python gconf ಮಾಡ್ಯೂಲ್ ವನ್ನು ಸ್ಥಾಪಿಸಿರಬೇಕು"
+"ಮೆಟಾಸಿಟಿಯನ್ನು ಸಂರಚಿಸುವ ಸಲುವಾಗಿ, ನೀವು python gconf ಮಾಡ್ಯೂಲ್ ವನ್ನು "
+"ಸ್ಥಾಪಿಸಿರಬೇಕು."
 
 #: screenlayout/metacity.py:292
 msgid "Keybindings (via Metacity)"
