@@ -19,7 +19,7 @@
 import gettext
 gettext.install('arandr')
 
-__version__ = '0.1.6'
+__version__ = '0.1.7.1'
 PROGRAMNAME = _(u'ARandR Screen Layout Editor')
 ## translators, please translate in the style of "Another XRandR GUI
 ## (ein weiteres GUI für XRandR)" so users get both the explanation of
@@ -53,7 +53,7 @@ TRANSLATORS = [
         'o-157',
         'Ingemar Karlsson <ingemar@ingk.se>',
         'Semsudin Abdic <abdic88@gmail.com>',
-        'R-a-x',
+        'Rax Garfield',
         'Tamás Nagy <kisagy@gmail.com>',
         'Mantas Kriaučiūnas <mantas@akl.lt>',
         'Dimitris Giouroukis',

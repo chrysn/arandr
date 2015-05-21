@@ -21,7 +21,7 @@ import pango
 import pangocairo
 import gobject, gtk
 from .auxiliary import Position, Size, NORMAL, ROTATIONS, InadequateConfiguration
-from .xrandr import XRandR
+from .xrandr import XRandR, Feature
 from .snap import Snap
 
 import gettext
@@ -134,6 +134,21 @@ class ARandRWidget(gtk.DrawingArea):
     def set_resolution(self, on, res):
         self._set_something('mode', on, res)
 
+    def set_primary(self, on, primary):
+        o = self._xrandr.configuration.outputs[on]
+
+        if primary and not o.primary:
+            for o2 in self._xrandr.outputs:
+                self._xrandr.configuration.outputs[o2].primary = False
+            o.primary = True
+        elif not primary and o.primary:
+            o.primary = False
+        else:
+            return
+
+        self._force_repaint()
+        self.emit('changed')
+
     def set_active(self, on, active):
         v = self._xrandr.state.virtual
         o = self._xrandr.configuration.outputs[on]
@@ -219,6 +234,11 @@ class ARandRWidget(gtk.DrawingArea):
             # create text
             layout = cr.create_layout()
             layout.set_font_description(newdescr)
+            if o.primary:
+                attrs = pango.AttrList()
+                attrs.insert(pango.AttrUnderline(pango.UNDERLINE_SINGLE, end_index=-1))
+                layout.set_attributes(attrs)
+
             layout.set_text(on)
 
             # position text
@@ -287,9 +307,15 @@ class ARandRWidget(gtk.DrawingArea):
     def contextmenu(self):
         m = gtk.Menu()
         for on in self._xrandr.outputs:
+            oc = self._xrandr.configuration.outputs[on]
+            os = self._xrandr.state.outputs[on]
+
             i = gtk.MenuItem(on)
             i.props.submenu = self._contextmenu(on)
             m.add(i)
+
+            if not oc.active and not os.connected:
+                i.props.sensitive = False
         m.show_all()
         return m
 
@@ -300,13 +326,17 @@ class ARandRWidget(gtk.DrawingArea):
 
         enabled = gtk.CheckMenuItem(_("Active"))
         enabled.props.active = oc.active
-        if not oc.active and not os.connected:
-            enabled.props.sensitive = False
         enabled.connect('activate', lambda menuitem: self.set_active(on, menuitem.props.active))
 
         m.add(enabled)
 
         if oc.active:
+            if Feature.PRIMARY in self._xrandr.features:
+                primary = gtk.CheckMenuItem(_("Primary"))
+                primary.props.active = oc.primary
+                primary.connect('activate', lambda menuitem: self.set_primary(on, menuitem.props.active))
+                m.add(primary)
+
             res_m = gtk.Menu()
             for r in os.modes:
                 i = gtk.CheckMenuItem(str(r))

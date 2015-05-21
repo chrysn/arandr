@@ -224,7 +224,7 @@ class Application(object):
 
     @actioncallback
     def do_open(self):
-        d = self._new_file_dialog(_("Open Layout"), gtk.FILE_CHOOSER_ACTION_OPEN)
+        d = self._new_file_dialog(_("Open Layout"), gtk.FILE_CHOOSER_ACTION_OPEN, gtk.STOCK_OPEN)
 
         result = d.run()
         filenames = d.get_filenames()
@@ -236,7 +236,7 @@ class Application(object):
 
     @actioncallback
     def do_save_as(self):
-        d = self._new_file_dialog(_("Save Layout"), gtk.FILE_CHOOSER_ACTION_SAVE)
+        d = self._new_file_dialog(_("Save Layout"), gtk.FILE_CHOOSER_ACTION_SAVE, gtk.STOCK_SAVE)
         d.props.do_overwrite_confirmation = True
 
         result = d.run()
@@ -248,10 +248,10 @@ class Application(object):
             if not f.endswith('.sh'): f = f + '.sh'
             self.widget.save_to_file(f, self.filetemplate)
 
-    def _new_file_dialog(self, title, type):
+    def _new_file_dialog(self, title, type, buttontype):
         d = gtk.FileChooserDialog(title, None, type)
         d.add_button(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL)
-        d.add_button(gtk.STOCK_OPEN, gtk.RESPONSE_ACCEPT)
+        d.add_button(buttontype, gtk.RESPONSE_ACCEPT)
 
         layoutdir = os.path.expanduser('~/.screenlayout/')
         try:
