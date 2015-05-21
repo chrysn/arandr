@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XRandR\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
-"POT-Creation-Date: 2011-10-01 14:13+0200\n"
+"POT-Creation-Date: 2015-05-21 10:02+0200\n"
 "PO-Revision-Date: 2010-11-26 21:24+0800\n"
 "Last-Translator: aboodilankaboot\n"
 "Language-Team: Arabic\n"
@@ -109,7 +109,7 @@ msgstr "غير مفعّل"
 msgid "New accelerator..."
 msgstr "مسرّع جديد..."
 
-#: screenlayout/metacity.py:198
+#: screenlayout/metacity.py:192
 msgid "no action"
 msgstr "لا مؤثرات"
 
@@ -162,32 +162,36 @@ msgid ""
 "the configuration?"
 msgstr "إعداداتك لا تحتوي على شاشة نشطة . هل تريد تنشيط الاعدادات؟"
 
-#: screenlayout/widget.py:301
+#: screenlayout/widget.py:327
 msgid "Active"
 msgstr "نشط"
 
-#: screenlayout/widget.py:319
+#: screenlayout/widget.py:335
+msgid "Primary"
+msgstr ""
+
+#: screenlayout/widget.py:349
 #, python-format
 msgid "Setting this resolution is not possible here: %s"
 msgstr "لا يمكن إعداد هذه الدقة هنا : %s"
 
-#: screenlayout/widget.py:332
+#: screenlayout/widget.py:362
 #, python-format
 msgid "This orientation is not possible here: %s"
 msgstr "هذه الاتجاهات غير متاحة هنا : %s"
 
-#: screenlayout/widget.py:338
+#: screenlayout/widget.py:368
 msgid "Resolution"
 msgstr "دقة الشاشة"
 
-#: screenlayout/widget.py:340
+#: screenlayout/widget.py:370
 msgid "Orientation"
 msgstr "إتجاه"
 
-#: screenlayout/xrandr.py:222
+#: screenlayout/xrandr.py:275
 msgid "A part of an output is outside the virtual screen."
 msgstr "جزء من الناتج خارج الشاشة الإفتراضية."
 
-#: screenlayout/xrandr.py:225
+#: screenlayout/xrandr.py:278
 msgid "An output is outside the virtual screen."
 msgstr "الناتج خارج الشاشة الإفتراضية"

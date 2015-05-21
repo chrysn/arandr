@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arandr 0.1.2\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
-"POT-Creation-Date: 2011-10-01 14:13+0200\n"
+"POT-Creation-Date: 2015-05-21 10:02+0200\n"
 "PO-Revision-Date: 2010-04-23 17:30+01:00\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -112,7 +112,7 @@ msgstr "deaktiveret"
 msgid "New accelerator..."
 msgstr "Ny accelerator..."
 
-#: screenlayout/metacity.py:198
+#: screenlayout/metacity.py:192
 msgid "no action"
 msgstr "ingen handling"
 
@@ -171,22 +171,26 @@ msgstr ""
 "Din konfiguration inkluderer ikke nogen aktiv overvågning. Ønsker du at "
 "anvende konfigurationen?"
 
-#: screenlayout/widget.py:301
+#: screenlayout/widget.py:327
 msgid "Active"
 msgstr "Aktiv"
 
-#: screenlayout/widget.py:319
+#: screenlayout/widget.py:335
+msgid "Primary"
+msgstr ""
+
+#: screenlayout/widget.py:349
 #, python-format
 msgid "Setting this resolution is not possible here: %s"
 msgstr "Angivelse af denne opløsning er ikke muligt her: %s"
 
 # retning er brugt i OpenOffice, kunne måske også være opsætning
-#: screenlayout/widget.py:332
+#: screenlayout/widget.py:362
 #, python-format
 msgid "This orientation is not possible here: %s"
 msgstr "Denne retning er ikke mulig her: %s"
 
-#: screenlayout/widget.py:338
+#: screenlayout/widget.py:368
 msgid "Resolution"
 msgstr "Opløsning"
 
@@ -194,7 +198,7 @@ msgstr "Opløsning"
 # Jeg tror Orientering er bedst, da det er hvorvidt skærmen vises drejet
 # 90 grader til venstre, på hovedet eller tilsvarende
 # (jf. xrandr-kommandoen --rotate)
-#: screenlayout/widget.py:340
+#: screenlayout/widget.py:370
 msgid "Orientation"
 msgstr "Orientering"
 
@@ -206,10 +210,10 @@ msgstr "Orientering"
 # Jeg tror derfor "skærm" eller "uddataenhed" vil være gode
 # oversættelser af output.  Der er vist et par tidligere strenge hvori
 # det muligvis skal gøres konsistent.
-#: screenlayout/xrandr.py:222
+#: screenlayout/xrandr.py:275
 msgid "A part of an output is outside the virtual screen."
 msgstr "En del af en skærm er uden for den virtuelle skærm."
 
-#: screenlayout/xrandr.py:225
+#: screenlayout/xrandr.py:278
 msgid "An output is outside the virtual screen."
 msgstr "En skærm er uden for den virtuelle skærm."

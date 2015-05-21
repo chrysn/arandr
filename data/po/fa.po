@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ARandR\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
-"POT-Creation-Date: 2011-10-01 14:13+0200\n"
+"POT-Creation-Date: 2015-05-21 10:02+0200\n"
 "PO-Revision-Date: 2014-06-29 03:33+0200\n"
 "Last-Translator: reza khan <reza_khn@yahoo.com>\n"
-"Language-Team: Persian "
-"<https://hosted.weblate.org/projects/arandr/translations/fa/>\n"
+"Language-Team: Persian <https://hosted.weblate.org/projects/arandr/"
+"translations/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -110,7 +110,7 @@ msgstr "غیرفعال شده"
 msgid "New accelerator..."
 msgstr "شتاب دهنده جدید..."
 
-#: screenlayout/metacity.py:198
+#: screenlayout/metacity.py:192
 msgid "no action"
 msgstr "بدون فعاليت"
 
@@ -153,8 +153,8 @@ msgid ""
 "configuration."
 msgstr ""
 "روی دکمه در ستون چپ کلیک کنید و کلید ترکیبی دلخواه برای تنظیم کردن پوسته "
-"مورد نظر فشار دهید. ( از backcpace برای پاکسازی سرعت‌دهنده‌ها، escape برای "
-"لغو وبرایش استفاده کنید.) سپس یک یا چند پوسته در ستون راست انتخاب کنید.\n"
+"مورد نظر فشار دهید. ( از backcpace برای پاکسازی سرعت‌دهنده‌ها، escape برای لغو "
+"وبرایش استفاده کنید.) سپس یک یا چند پوسته در ستون راست انتخاب کنید.\n"
 "این کار خواهد کرد در صورتی که شما از برای خواندن پیکربندی از metacity یا "
 "دیگر برنامه‌ای استفاده کنید."
 
@@ -165,32 +165,36 @@ msgid ""
 msgstr ""
 "تنظيمات شما شامل مانيتور فعال نيست. آيا ميخواهيد همين تنظيمات را اعمال كنيد؟"
 
-#: screenlayout/widget.py:301
+#: screenlayout/widget.py:327
 msgid "Active"
 msgstr "فعال"
 
-#: screenlayout/widget.py:319
+#: screenlayout/widget.py:335
+msgid "Primary"
+msgstr ""
+
+#: screenlayout/widget.py:349
 #, python-format
 msgid "Setting this resolution is not possible here: %s"
 msgstr "تنظیم این رزولوشن  در اینجا امکان پذیر نیست : %s"
 
-#: screenlayout/widget.py:332
+#: screenlayout/widget.py:362
 #, python-format
 msgid "This orientation is not possible here: %s"
 msgstr "این جهت گیری در اينجا امكان پذير نيست : %s"
 
-#: screenlayout/widget.py:338
+#: screenlayout/widget.py:368
 msgid "Resolution"
 msgstr "رزولوشن"
 
-#: screenlayout/widget.py:340
+#: screenlayout/widget.py:370
 msgid "Orientation"
 msgstr "جهت"
 
-#: screenlayout/xrandr.py:222
+#: screenlayout/xrandr.py:275
 msgid "A part of an output is outside the virtual screen."
 msgstr "بخشی از خروجی خارج از صفحه نمایش مجازی."
 
-#: screenlayout/xrandr.py:225
+#: screenlayout/xrandr.py:278
 msgid "An output is outside the virtual screen."
 msgstr "خروجی خارج از صفحه نمایش مجازی."
