@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: arandr 0.1.2\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: 2013-02-28 13:45+0200\n"
-"Last-Translator: Michal Čihař <michal@cihar.com>\n"
-"Language-Team: Italian <http://hosted.weblate.org/projects/arandr/"
-"translations/it/>\n"
+"PO-Revision-Date: 2015-05-30 10:01+0200\n"
+"Last-Translator: Luca Vetturi <io@lucavettu.com>\n"
+"Language-Team: Italian "
+"<https://hosted.weblate.org/projects/arandr/translations/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 1.5-dev\n"
+"X-Generator: Weblate 2.3-dev\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
@@ -176,7 +176,7 @@ msgstr "Attivo"
 
 #: screenlayout/widget.py:335
 msgid "Primary"
-msgstr ""
+msgstr "Primario"
 
 #: screenlayout/widget.py:349
 #, python-format
