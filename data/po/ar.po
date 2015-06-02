@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: XRandR\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: 2015-06-02 10:23+0200\n"
+"PO-Revision-Date: 2015-06-02 10:30+0200\n"
 "Last-Translator: Bakr Al-Tamimi <Bakr.Tamimi@gmail.com>\n"
 "Language-Team: Arabic "
 "<https://hosted.weblate.org/projects/arandr/translations/ar/>\n"
@@ -128,7 +128,7 @@ msgstr "تطبيق آخر"
 #: screenlayout/metacity.py:255
 #, python-format
 msgid "No files in %(folder)r. Save a layout first."
-msgstr "لا توجد ملفات في %(folder)r احفظ التصميم أولاً"
+msgstr "لا توجد ملفات في %(folder)r احفظ التصميم أولاً."
 
 #: screenlayout/metacity.py:284
 msgid "gconf not available."
@@ -138,7 +138,7 @@ msgstr "gconf  غير متوفر"
 msgid ""
 "In order to configure metacity, you need to have the python gconf module "
 "installed."
-msgstr "من أجل إعداد ميتستي ، يجب تثبيت وحدة  . gconf"
+msgstr "من أجل إعداد ميتستي ، يجب تثبيت وحدة gconf  المبرمجة بلغة بايثون."
 
 #: screenlayout/metacity.py:292
 msgid "Keybindings (via Metacity)"
