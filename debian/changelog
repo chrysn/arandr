@@ -6,8 +6,9 @@ arandr (0.1.8-1) unstable; urgency=medium
   * Change Standards-Version to 3.9.6 (no changes)
   * Update package source addresses
   * Replace shipped license file with symlink to common-licenses
+  * Copyright file updates
 
- -- Christian M. Amsüss <chrysn@fsfe.org>  Fri, 26 Jun 2015 10:58:39 +0200
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Fri, 26 Jun 2015 12:36:06 +0200
 
 arandr (0.1.7.1-1) unstable; urgency=low
 
