@@ -7,9 +7,10 @@ Files: *
 Copyright: 2008–2015, chrysn <chrysn@fsfe.org>
 License: GPL-3+
 
-Files: screenlayout/xrandr.py
-Copyright: 2008–2013, chrysn <chrysn@fsfe.org>
+Files: screenlayout/xrandr.py screenlayout/widget.py
+Copyright: 2008–2015, chrysn <chrysn@fsfe.org>
            2011, Себастьян Gli ţa Κατινα
+           2015, Johannes Holmberg <johannes@update.uu.se>
 License: GPL-3+
 
 Files: data/po/*
@@ -44,6 +45,18 @@ Copyright: 2008–2015, chrysn <chrysn@fsfe.org>
            Tamás Nagy <kisagy@gmail.com>
            Dimitris Giouroukis
            ParkJS <HeavensBus@gmail.com>
+           Michal Čihař <michal@cihar.com>
+           Efstathios Iosifidis <iefstathios@gmail.com>
+           reza khan <reza_khn@yahoo.com>
+           cho bkwon <chobkwon@gmail.com>
+           Lu Ca <lmelonimamo@yahoo.it>
+           Kristjan Räts <kristjanrats@gmail.com>
+           Piotr Strebski <strebski@o2.pl>
+           Ivan Vantu5z <vantu5z@mail.ru>
+           Igor <vmta@yahoo.com>
+           Balázs Úr <urbalazs@gmail.com>
+           Fred Maranhão <fred.maranhao@gmail.com>
+           Tuux <tuxa@galaxie.eu.org>
 License: GPL-3+
 
 License: GPL-3+
