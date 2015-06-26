@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-"""Wrapper around command line xrandr (only 1.2 per output features supported)"""
+"""Wrapper around command line xrandr (mostly 1.2 per output features supported)"""
 
 import os
 import subprocess
@@ -26,6 +26,9 @@ import gettext
 gettext.install('arandr')
 
 SHELLSHEBANG='#!/bin/sh'
+
+class Feature(object):
+    PRIMARY = 1
 
 class XRandR(object):
     DEFAULTTEMPLATE = [SHELLSHEBANG, '%(xrandr)s']
@@ -40,6 +43,10 @@ class XRandR(object):
         version_output = self._output("--version")
         if not ("1.2" in version_output or "1.3" in version_output or "1.4" in version_output) and not force_version:
             raise Exception("XRandR 1.2/1.3 required.")
+
+        self.features = set()
+        if not " 1.2" in version_output:
+            self.features.add(Feature.PRIMARY)
 
     def _get_outputs(self):
         assert self.state.outputs.keys() == self.configuration.outputs.keys()
@@ -92,9 +99,14 @@ class XRandR(object):
         for on,oa in options.items():
             o = self.configuration.outputs[on]
             os = self.state.outputs[on]
+            o.primary = False
             if oa == ['--off']:
                 o.active = False
             else:
+                if '--primary' in oa:
+                    if Feature.PRIMARY in self.features:
+                        o.primary = True
+                    oa.remove('--primary')
                 if len(oa)%2 != 0:
                     raise FileSyntaxError()
                 parts = [(oa[2*i],oa[2*i+1]) for i in range(len(oa)//2)]
@@ -117,7 +129,7 @@ class XRandR(object):
                 o.active = True
 
     def load_from_x(self): # FIXME -- use a library
-        self.configuration = self.Configuration()
+        self.configuration = self.Configuration(self)
         self.state = self.State()
 
         screenline, items = self._load_raw_lines()
@@ -135,7 +147,10 @@ class XRandR(object):
 
             o.connected = (hsplit[1] in ('connected', 'unknown-connection'))
 
+            primary = False
             if 'primary' in hsplit:
+                if Feature.PRIMARY in self.features:
+                    primary = True
                 hsplit.remove('primary')
 
             if not hsplit[2].startswith("("):
@@ -181,7 +196,7 @@ class XRandR(object):
                     o.modes.append(NamedSize(r, name=n))
 
             self.state.outputs[o.name] = o
-            self.configuration.outputs[o.name] = self.configuration.OutputConfiguration(active, geometry, rotation, currentname)
+            self.configuration.outputs[o.name] = self.configuration.OutputConfiguration(active, primary, geometry, rotation, currentname)
 
     def _load_raw_lines(self):
         output = self._output("--verbose")
@@ -287,8 +302,9 @@ class XRandR(object):
 
     class Configuration(object):
         """Represents everything that can be set by xrandr (and is therefore subject to saving and loading from files)"""
-        def __init__(self):
+        def __init__(self, xrandr):
             self.outputs = {}
+            self._xrandr = xrandr
 
         def __repr__(self):
             return '<%s for %d Outputs, %d active>'%(type(self).__name__, len(self.outputs), len([x for x in self.outputs.values() if x.active]))
@@ -301,6 +317,9 @@ class XRandR(object):
                 if not o.active:
                     args.append("--off")
                 else:
+                    if Feature.PRIMARY in self._xrandr.features:
+                        if o.primary:
+                            args.append("--primary")
                     args.append("--mode")
                     args.append(str(o.mode.name))
                     args.append("--pos")
@@ -310,8 +329,9 @@ class XRandR(object):
             return args
 
         class OutputConfiguration(object):
-            def __init__(self, active, geometry, rotation, modename):
+            def __init__(self, active, primary, geometry, rotation, modename):
                 self.active = active
+                self.primary = primary
                 if active:
                     self.position = geometry.position
                     self.rotation = rotation

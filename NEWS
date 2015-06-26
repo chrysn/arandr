@@ -1,3 +1,20 @@
+Version 0.1.8
+* Allow setting the primary output
+* New translations:
+  - Sardinian (by Lu Ca)
+  - Estonian (by Kristjan Räts)
+  - Czech (by Michal Čihař)
+* Updated translations
+  - Brazilian (by Fred Maranhão)
+  - Russian (by Ivan Vantu5z)
+  - French (by Tuux)
+  - Polish (by Piotr Strebski)
+  - Persian (by reza khan)
+  - Ukrainian (by Igor)
+  - Hungarian (by Balázs Úr)
+  - Greek (by Efstathios Iosifidis)
+  - Korean (by cho bkwon)
+
 Version 0.1.7.1
 * Build even with no translations present
 * Fix AttributeError when modes with same name have different resolutions

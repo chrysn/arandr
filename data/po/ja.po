@@ -6,11 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: arandr\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-10-01 14:13+0200\n"
+"Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
+"POT-Creation-Date: 2015-05-21 10:02+0200\n"
 "PO-Revision-Date: 2011-12-12 08:10+0000\n"
 "Last-Translator: o-157 <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -107,7 +108,7 @@ msgstr "無効"
 msgid "New accelerator..."
 msgstr "新しいアクセラレータ..."
 
-#: screenlayout/metacity.py:198
+#: screenlayout/metacity.py:192
 msgid "no action"
 msgstr "アクションなし"
 
@@ -153,34 +154,40 @@ msgstr ""
 msgid ""
 "Your configuration does not include an active monitor. Do you want to apply "
 "the configuration?"
-msgstr "あなたのコンフィグはアクティブなモニターを含んでいません。このコンフィグを適用してよろしいですか？"
+msgstr ""
+"あなたのコンフィグはアクティブなモニターを含んでいません。このコンフィグを適"
+"用してよろしいですか？"
 
-#: screenlayout/widget.py:301
+#: screenlayout/widget.py:327
 msgid "Active"
 msgstr "アクティブ"
 
-#: screenlayout/widget.py:319
+#: screenlayout/widget.py:335
+msgid "Primary"
+msgstr ""
+
+#: screenlayout/widget.py:349
 #, python-format
 msgid "Setting this resolution is not possible here: %s"
 msgstr "この解像度は可能ではありません: %s"
 
-#: screenlayout/widget.py:332
+#: screenlayout/widget.py:362
 #, python-format
 msgid "This orientation is not possible here: %s"
 msgstr "この向きは可能ではありません: %s"
 
-#: screenlayout/widget.py:338
+#: screenlayout/widget.py:368
 msgid "Resolution"
 msgstr "解像度"
 
-#: screenlayout/widget.py:340
+#: screenlayout/widget.py:370
 msgid "Orientation"
 msgstr "向き"
 
-#: screenlayout/xrandr.py:222
+#: screenlayout/xrandr.py:275
 msgid "A part of an output is outside the virtual screen."
 msgstr "出力位置の一部が仮想スクリーンからはみ出しています。"
 
-#: screenlayout/xrandr.py:225
+#: screenlayout/xrandr.py:278
 msgid "An output is outside the virtual screen."
 msgstr "出力位置が仮想スクリーンからはみ出しています。"

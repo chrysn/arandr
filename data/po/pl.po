@@ -6,19 +6,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arandr 0.1\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
-"POT-Creation-Date: 2011-10-01 14:13+0200\n"
-"PO-Revision-Date: 2010-05-30 15:50+0100\n"
-"Last-Translator: Maciej 'RooTer' Urbański <rooter@kyberian.net>\n"
-"Language-Team: German\n"
-"Language: \n"
+"POT-Creation-Date: 2015-05-21 10:02+0200\n"
+"PO-Revision-Date: 2014-11-25 10:17+0200\n"
+"Last-Translator: Piotr Strebski <strebski@o2.pl>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/arandr/"
+"translations/pl/>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.1-dev\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
-msgstr "_Layout"
+msgstr "_Układ"
 
 #: screenlayout/gui.py:128
 msgid "_View"
@@ -75,22 +78,22 @@ msgstr ""
 
 #: screenlayout/gui.py:227
 msgid "Open Layout"
-msgstr "Otwórz Layout"
+msgstr "Otwórz układ"
 
 #: screenlayout/gui.py:239
 msgid "Save Layout"
-msgstr "Zapisz Layout"
+msgstr "Zapisz układ"
 
 #: screenlayout/meta.py:23
 msgid "ARandR Screen Layout Editor"
-msgstr "ARandR Edytor layoutu ekranu"
+msgstr "ARandR Edytor układu ekranu"
 
 #. # translators, please translate in the style of "Another XRandR GUI
 #. # (ein weiteres GUI für XRandR)" so users get both the explanation of
 #. # the acronym and a localized version.
 #: screenlayout/meta.py:27
 msgid "Another XRandR GUI"
-msgstr "Another XRandR GUI (Kolejne GUI dla XRandR)"
+msgstr "Kolejne GUI dla XRandR"
 
 #: screenlayout/metacity.py:53
 msgid "Accelerator"
@@ -98,7 +101,7 @@ msgstr "Kombinacja"
 
 #: screenlayout/metacity.py:54
 msgid "Action"
-msgstr "Akcja"
+msgstr "Działanie"
 
 #: screenlayout/metacity.py:120
 msgid "disabled"
@@ -108,9 +111,9 @@ msgstr "wyłączone"
 msgid "New accelerator..."
 msgstr "Nowa kombinacja…"
 
-#: screenlayout/metacity.py:198
+#: screenlayout/metacity.py:192
 msgid "no action"
-msgstr "brak akcji"
+msgstr "brak działania"
 
 #: screenlayout/metacity.py:228
 msgid "incompatible configuration"
@@ -123,7 +126,7 @@ msgstr "kolejna aplikacja"
 #: screenlayout/metacity.py:255
 #, python-format
 msgid "No files in %(folder)r. Save a layout first."
-msgstr "Brak plików w %(folder)r. Zapisz najpierw layout."
+msgstr "Brak plików w %(folder)r. Zapisz najpierw układ."
 
 #: screenlayout/metacity.py:284
 msgid "gconf not available."
@@ -149,12 +152,12 @@ msgid ""
 "This will only work if you use metacity or another program reading its "
 "configuration."
 msgstr ""
-"Kliknij przycisk z lewej kolumny oraz wciśnij kombinacje klawiszy którą "
-"chcesz przypisać do danego layout ekranu. (Użyj klawisza backspace w celu "
-"usunięcia skrótu klawiszowego, escape w celu anulowania edycji.) Nastpęnie "
-"wybierz jeden lub więcej layoutów z prawej kolumny.\n"
+"Kliknij przycisk z lewej kolumny oraz wciśnij kombinację klawiszy, którą "
+"chcesz przypisać do danego układu ekranu. (Użyj klawisza backspace w celu "
+"usunięcia skrótu klawiszowego, escape w celu anulowania edycji.) Następnie "
+"wybierz jeden lub więcej układów z prawej kolumny.\n"
 "\n"
-"Będzie to działać jedynie, gdy użyjesz metacity lub inny program "
+"Będzie to działać jedynie, gdy użyjesz metacity lub innego programu "
 "korzystający z jego konfiguracji."
 
 #: screenlayout/widget.py:61
@@ -163,34 +166,38 @@ msgid ""
 "the configuration?"
 msgstr ""
 "Twoja konfiguracja nie obejmuje aktywnego monitora. Chcesz zastosować "
-"konfiguracje?"
+"konfigurację?"
 
-#: screenlayout/widget.py:301
+#: screenlayout/widget.py:327
 msgid "Active"
 msgstr "Aktywny"
 
-#: screenlayout/widget.py:319
+#: screenlayout/widget.py:335
+msgid "Primary"
+msgstr ""
+
+#: screenlayout/widget.py:349
 #, python-format
 msgid "Setting this resolution is not possible here: %s"
-msgstr "Ustawienie tej rozdzielczości nie jest tutaj możliwa: %s"
+msgstr "Ustawienie tej rozdzielczości nie jest tutaj możliwe: %s"
 
-#: screenlayout/widget.py:332
+#: screenlayout/widget.py:362
 #, python-format
 msgid "This orientation is not possible here: %s"
 msgstr "Ta orientacja nie jest tutaj możliwa: %s"
 
-#: screenlayout/widget.py:338
+#: screenlayout/widget.py:368
 msgid "Resolution"
 msgstr "Rozdzielczość"
 
-#: screenlayout/widget.py:340
+#: screenlayout/widget.py:370
 msgid "Orientation"
 msgstr "Orientacja"
 
-#: screenlayout/xrandr.py:222
+#: screenlayout/xrandr.py:275
 msgid "A part of an output is outside the virtual screen."
 msgstr "Część wyjścia jest poza wirtualnym ekranem."
 
-#: screenlayout/xrandr.py:225
+#: screenlayout/xrandr.py:278
 msgid "An output is outside the virtual screen."
 msgstr "Wyjście jest poza wirtualnym ekranem."
