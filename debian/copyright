@@ -4,7 +4,7 @@ Upstream-Contact: Christian M. Amsüss <chrysn@fsfe.org>
 Source: http://christian.amsuess.com/tools/arandr/
 
 Files: *
-Copyright: 2008–2013, chrysn <chrysn@fsfe.org>
+Copyright: 2008–2015, chrysn <chrysn@fsfe.org>
 License: GPL-3+
 
 Files: screenlayout/xrandr.py
@@ -12,138 +12,38 @@ Copyright: 2008–2013, chrysn <chrysn@fsfe.org>
            2011, Себастьян Gli ţa Κατινα
 License: GPL-3+
 
-Files: data/po/da.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2010, Joe Hansen <joedalton2@yahoo.dk>
-License: GPL-3+
-
-Files: data/po/it.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2010, Marco Paolone <marcopaolone@gmail.com>
-License: GPL-3+
-
-Files: data/po/kn.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2010, gundachandru <gundachandru@gmail.com>
-License: GPL-3+
-
-Files: data/po/nl.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2011, wimfeijen <wimfeijen@gmail.com>
-License: GPL-3+
-
-Files: data/po/pt_BR.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2010, Phantom X <megaphantomx@bol.com.br>
-License: GPL-3+
-
-Files: data/po/ro.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2010–2011, Себастьян Gli ţa Κατινα <gseba@users.sourceforge.net>
-License: GPL-3+
-
-Files: data/po/ru.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2010, HsH <hsh@runtu.org>
-License: GPL-3+
-
-Files: data/po/fr.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2010, Clément Démoulins <clement@archivel.fr>
-           2011, Bruno Patri <bruno.patri@gmail.com>
-License: GPL-3+
-
-Files: data/po/pl.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2010, RooTer <rooter@kyberian.net>
-License: GPL-3+
-
-Files: data/po/ar.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2010, Mohammad Alhargan <malham1@gmail.com>
-           2010, aboodilankaboot <shiningmoon25@gmail.com>
-License: GPL-3+
-
-Files: data/po/tr.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2010, Mehmet Gülmen <memetgulmen@gmail.com>
-License: GPL-3+
-
-Files: data/po/es.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2010, Ricardo A. Hermosilla Carrillo <ra.hermosillac@gmail.com>
-           2012, Miguel Anxo Bouzada <mbouzada@gmail.com>
-License: GPL-3+
-
-Files: data/po/ca.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2010, el_libre <el.libre@gmail.com>
-License: GPL-3+
-
-Files: data/po/zh_CN.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2010, Carezero <carezero@qq.com>
-License: GPL-3+
-
-Files: data/po/sk.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2011, Slavko <linux@slavino.sk>
-License: GPL-3+
-
-Files: data/po/fa.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2012, Alireza Savand <agahia.com@gmail.com>
-License: GPL-3+
-
-Files: data/po/br.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2012, Belvar <glasbarg@gmail.com>
-License: GPL-3+
-
-Files: data/po/lt.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2012, Algimantas Margevičius <margevicius.algimantas@gmail.com>
-           2012, Mantas Kriaučiūnas <mantas@akl.lt>
-License: GPL-3+
-
-Files: data/po/gl.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2012, Miguel Anxo Bouzada <mbouzada@gmail.com>
-License: GPL-3+
-
-Files: data/po/ja.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2012, o-157
-License: GPL-3+
-
-Files: data/po/sv.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2012, Ingemar Karlsson <ingemar@ingk.se>
-License: GPL-3+
-
-Files: data/po/bs.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2012, Semsudin Abdic <abdic88@gmail.com>
-License: GPL-3+
-
-Files: data/po/uk.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2012, Rax Garfield
-License: GPL-3+
-
-Files: data/po/hu.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2012, Tamás Nagy <kisagy@gmail.com>
-License: GPL-3+
-
-Files: data/po/el.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2012, Dimitris Giouroukis
-License: GPL-3+
-
-Files: data/po/ko_KR.po
-Copyright: 2008–2010, chrysn <chrysn@fsfe.org>
-           2013, ParkJS <HeavensBus@gmail.com>
+Files: data/po/*
+Copyright: 2008–2015, chrysn <chrysn@fsfe.org>
+           Joe Hansen <joedalton2@yahoo.dk>
+           Marco Paolone <marcopaolone@gmail.com>
+           gundachandru <gundachandru@gmail.com>
+           wimfeijen <wimfeijen@gmail.com>
+           Phantom X <megaphantomx@bol.com.br>
+           Себастьян Gli ţa Κατινα <gseba@users.sourceforge.net>
+           HsH <hsh@runtu.org>
+           Clément Démoulins <clement@archivel.fr>
+           Bruno Patri <bruno.patri@gmail.com>
+           RooTer <rooter@kyberian.net>
+           Mohammad Alhargan <malham1@gmail.com>
+           aboodilankaboot <shiningmoon25@gmail.com>
+           Mehmet Gülmen <memetgulmen@gmail.com>
+           Ricardo A. Hermosilla Carrillo <ra.hermosillac@gmail.com>
+           Miguel Anxo Bouzada <mbouzada@gmail.com>
+           el_libre <el.libre@gmail.com>
+           Carezero <carezero@qq.com>
+           Slavko <linux@slavino.sk>
+           Alireza Savand <agahia.com@gmail.com>
+           Belvar <glasbarg@gmail.com>
+           Algimantas Margevičius <margevicius.algimantas@gmail.com>
+           Mantas Kriaučiūnas <mantas@akl.lt>
+           Miguel Anxo Bouzada <mbouzada@gmail.com>
+           o-157
+           Ingemar Karlsson <ingemar@ingk.se>
+           Semsudin Abdic <abdic88@gmail.com>
+           Rax Garfield
+           Tamás Nagy <kisagy@gmail.com>
+           Dimitris Giouroukis
+           ParkJS <HeavensBus@gmail.com>
 License: GPL-3+
 
 License: GPL-3+
