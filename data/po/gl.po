@@ -6,11 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: arandr\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-10-01 14:13+0200\n"
+"Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
+"POT-Creation-Date: 2015-05-21 10:02+0200\n"
 "PO-Revision-Date: 2011-12-09 23:40+0000\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <gl@li.org>\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -109,7 +110,7 @@ msgstr "desactivado"
 msgid "New accelerator..."
 msgstr "Nova tecla rápida..."
 
-#: screenlayout/metacity.py:198
+#: screenlayout/metacity.py:192
 msgid "no action"
 msgstr "sen acción"
 
@@ -169,32 +170,36 @@ msgstr ""
 "A súa configuración non inclúe un monitor activo. Desexa aplicar a "
 "configuración?"
 
-#: screenlayout/widget.py:301
+#: screenlayout/widget.py:327
 msgid "Active"
 msgstr "Activo"
 
-#: screenlayout/widget.py:319
+#: screenlayout/widget.py:335
+msgid "Primary"
+msgstr ""
+
+#: screenlayout/widget.py:349
 #, python-format
 msgid "Setting this resolution is not possible here: %s"
 msgstr "Non é posíbel estabelecer aquí esta resolución: %s"
 
-#: screenlayout/widget.py:332
+#: screenlayout/widget.py:362
 #, python-format
 msgid "This orientation is not possible here: %s"
 msgstr "Esta orientación non é posíbel aquí: %s"
 
-#: screenlayout/widget.py:338
+#: screenlayout/widget.py:368
 msgid "Resolution"
 msgstr "Resolución"
 
-#: screenlayout/widget.py:340
+#: screenlayout/widget.py:370
 msgid "Orientation"
 msgstr "Orientación"
 
-#: screenlayout/xrandr.py:222
+#: screenlayout/xrandr.py:275
 msgid "A part of an output is outside the virtual screen."
 msgstr "Unha parte dunha saída está fora da pantalla virtual."
 
-#: screenlayout/xrandr.py:225
+#: screenlayout/xrandr.py:278
 msgid "An output is outside the virtual screen."
 msgstr "Unha saída está fora da pantalla virtual."

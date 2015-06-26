@@ -6,16 +6,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: arandr\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-10-01 14:13+0200\n"
-"PO-Revision-Date: 2012-03-22 18:04+0000\n"
-"Last-Translator: Ingemar Karlsson <ingemar@ingk.se>\n"
-"Language-Team: Swedish <sv@li.org>\n"
+"Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
+"POT-Creation-Date: 2015-05-21 10:02+0200\n"
+"PO-Revision-Date: 2013-02-28 13:45+0200\n"
+"Last-Translator: Michal Čihař <michal@cihar.com>\n"
+"Language-Team: Swedish <http://hosted.weblate.org/projects/arandr/"
+"translations/sv/>\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 1.5-dev\n"
 "X-Launchpad-Export-Date: 2012-03-23 05:10+0000\n"
-"X-Generator: Launchpad (build 14996)\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
@@ -109,7 +112,7 @@ msgstr "inaktiverad"
 msgid "New accelerator..."
 msgstr "Ny snabbtangent..."
 
-#: screenlayout/metacity.py:198
+#: screenlayout/metacity.py:192
 msgid "no action"
 msgstr "ingen åtgärd"
 
@@ -128,7 +131,7 @@ msgstr "Ingen fil i %(folder)r. Spara en layout först."
 
 #: screenlayout/metacity.py:284
 msgid "gconf not available."
-msgstr "gconf är inte tillgänglig"
+msgstr "gconf är inte tillgänglig."
 
 #: screenlayout/metacity.py:285
 msgid ""
@@ -168,32 +171,36 @@ msgstr ""
 "Din konfiguration inkluderar inte någon aktiv bildskärm. Vill du verkställa "
 "konfigurationen?"
 
-#: screenlayout/widget.py:301
+#: screenlayout/widget.py:327
 msgid "Active"
 msgstr "Aktiv"
 
-#: screenlayout/widget.py:319
+#: screenlayout/widget.py:335
+msgid "Primary"
+msgstr ""
+
+#: screenlayout/widget.py:349
 #, python-format
 msgid "Setting this resolution is not possible here: %s"
 msgstr "Denna upplösning är inte möjlig här: %s"
 
-#: screenlayout/widget.py:332
+#: screenlayout/widget.py:362
 #, python-format
 msgid "This orientation is not possible here: %s"
 msgstr "Denna orienteringen är inte möjlig här: %s"
 
-#: screenlayout/widget.py:338
+#: screenlayout/widget.py:368
 msgid "Resolution"
 msgstr "Upplösning"
 
-#: screenlayout/widget.py:340
+#: screenlayout/widget.py:370
 msgid "Orientation"
 msgstr "Orientering"
 
-#: screenlayout/xrandr.py:222
+#: screenlayout/xrandr.py:275
 msgid "A part of an output is outside the virtual screen."
 msgstr "En del av utmatningen ligger utanför den virtuella bildskärmen."
 
-#: screenlayout/xrandr.py:225
+#: screenlayout/xrandr.py:278
 msgid "An output is outside the virtual screen."
 msgstr "En utmatning ligger utanför den virtuella bildskärmen."

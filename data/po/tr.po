@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1.3\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
-"POT-Creation-Date: 2011-10-01 14:13+0200\n"
+"POT-Creation-Date: 2015-05-21 10:02+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Mehmet Gülmen <memetgulmen@gmail.com>\n"
 "Language-Team: tr <tr@li.org>\n"
@@ -109,7 +109,7 @@ msgstr "devre dışı"
 msgid "New accelerator..."
 msgstr "Yeni Hızlandırıcı..."
 
-#: screenlayout/metacity.py:198
+#: screenlayout/metacity.py:192
 msgid "no action"
 msgstr "eylem yok"
 
@@ -168,32 +168,36 @@ msgstr ""
 "Yapılandırmanız etkin bir ekran içermiyor. Yine de yapılandırmayı kaydetmek "
 "istiyor musunuz?"
 
-#: screenlayout/widget.py:301
+#: screenlayout/widget.py:327
 msgid "Active"
 msgstr "Etkin"
 
-#: screenlayout/widget.py:319
+#: screenlayout/widget.py:335
+msgid "Primary"
+msgstr ""
+
+#: screenlayout/widget.py:349
 #, python-format
 msgid "Setting this resolution is not possible here: %s"
 msgstr "Bu çözünürlüğü atamak mümkün değil: %s"
 
-#: screenlayout/widget.py:332
+#: screenlayout/widget.py:362
 #, python-format
 msgid "This orientation is not possible here: %s"
 msgstr "Bu yön ayarı mümkün değil: %s"
 
-#: screenlayout/widget.py:338
+#: screenlayout/widget.py:368
 msgid "Resolution"
 msgstr "Çözünürlük"
 
-#: screenlayout/widget.py:340
+#: screenlayout/widget.py:370
 msgid "Orientation"
 msgstr "Yön Ayarı"
 
-#: screenlayout/xrandr.py:222
+#: screenlayout/xrandr.py:275
 msgid "A part of an output is outside the virtual screen."
 msgstr "Bir çıktının bir kısmı sanal ekranın dışında."
 
-#: screenlayout/xrandr.py:225
+#: screenlayout/xrandr.py:278
 msgid "An output is outside the virtual screen."
 msgstr "Bir çıktı sanal ekranın dışında."
