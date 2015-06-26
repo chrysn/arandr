@@ -1,3 +1,134 @@
+commit 465df4eb26979ccfbcd747755c95e26c0500d6ab (HEAD, master)
+Author: chrysn <chrysn@fsfe.org>
+Date:   Fri Jun 26 11:02:46 2015 +0200
+
+    Ready for relase 0.1.8
+
+commit 879afd50f6026ebcc98719e613d4121bb17790be
+Author: chrysn <chrysn@fsfe.org>
+Date:   Fri Jun 26 08:27:07 2015 +0200
+
+    List Johannes as contributor
+    
+    he added the --primary feature and OK'd email inclusion on the web page
+    in <mid:555E469F.1010902@update.uu.se>
+
+commit 77434dc914f2dfa3dcb955cbff3f5a57e6fdcd17
+Merge: 88ecf3b 72fb31a
+Author: chrysn <chrysn@fsfe.org>
+Date:   Fri Jun 26 10:11:28 2015 +0200
+
+    README / Website updates
+
+commit 88ecf3ba61e95f5714afbc4f3c3753ee93d4f5e3
+Author: chrysn <chrysn@fsfe.org>
+Date:   Fri Jun 26 10:10:19 2015 +0200
+
+    Update translator acknowledgements in credits
+
+commit 500f021bf5b87a4fe08765732bf82e3d34c58aea (origin/master)
+Merge: 67093a8 2e6cffa
+Author: chrysn <chrysn@fsfe.org>
+Date:   Fri Jun 26 09:23:45 2015 +0200
+
+    New translations from weblate after introducing new string
+    
+    New languages:
+    
+    * Serbian (sr)
+    
+    Updates:
+    
+    * Arabig (ar)
+    
+    Covering new strings:
+    
+    * German (de)
+    * Italian (it)
+    * Portuguese (Brazil) (pt_BR)
+    * Korean (kr)
+    
+    Bugfixes:
+    
+    * French (fr)
+
+commit 67093a84f7d6754aaed35e498cd539aabcdb0cd2
+Merge: e001776 53fc666
+Author: chrysn <chrysn@fsfe.org>
+Date:   Fri Jun 26 08:45:14 2015 +0200
+
+    New translations from weblate
+    
+    New languages:
+    
+    * Sardian (sc)
+    * Estonian (et)
+    * Czech (cs)
+    
+    Updated translations:
+    
+    * Greek (el)
+    * Persian (fa)
+    * Korean (ko_KR)
+    * Polish (pl)
+    * Russian (ru)
+    * Hungarian (hu)
+    * French (fr)
+    
+    Bugfixes:
+    
+    * Breton (br)
+    * Romanian (ro)
+    * Italian (it)
+    * Swedish (sv)
+    * German (de)
+    * Portuguese (Brazil) (pt_BR)
+    * Ukrainian (uk)
+    * Kannada (kn)
+
+commit e001776260dbddb26337f8b9d4bead0a68a99e00
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu Jun 4 12:31:11 2015 +0200
+
+    Work around plain text formatting conflict between GPL and GTK
+    
+    GtkAboutDialog formats the plain text license by matching angular
+    brackets as email addresses, while the GPL is formatted to wrap all URLs
+    (and some other text) in them.
+    
+    This patch re-formats the license text to use different angular bracket
+    characters, and set them off from the URLs (otherwise they'd be part of
+    the requested address).
+    
+    This patch does not apply to the 0.2 branch, as GTK3 has different
+    license handling anyway.
+    
+    Closes: https://bugs.launchpad.net/ubuntu/+source/arandr/+bug/1461749
+
+commit 80878ca78f223d5f9eb0515588a7c7631b16dca8
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu May 21 10:04:34 2015 +0200
+
+    new strin in messages.pot: 'Primary'
+    
+    this commit was created after ./setup.py update_pot
+
+commit 227dafa67593b48cdb2c5e8f6781024a0877fe30
+Author: Johannes Holmberg <johannes@update.uu.se>
+Date:   Sun May 3 22:54:32 2015 +0100
+
+    Add support for choosing the primary output
+    
+    Introduces a simple feature structure to keep track of features supported
+    by the system. Currently the only known feature is "PRIMARY" which is
+    supported by xrandr 1.3 and newer.
+
+commit 34c0bbbcef350631c8284d1c77e0024cfa43be1e
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu Jun 27 20:34:02 2013 +0200
+
+    use "save" button in the file-save dialog
+
 commit 846451d14cfde701277d6ec0d9ebce0600dcbab1
 Author: chrysn <chrysn@fsfe.org>
 Date:   Mon Mar 4 18:15:55 2013 +0100
@@ -49,7 +180,7 @@ Date:   Thu Feb 28 19:12:46 2013 +0100
 
     ready for release 0.1.7
 
-commit 615607eb6796345d946e0fae8fdaf8680758b95e
+commit 615607eb6796345d946e0fae8fdaf8680758b95e (weblate/master)
 Author: chrysn <chrysn@fsfe.org>
 Date:   Thu Feb 28 18:27:48 2013 +0100
 
