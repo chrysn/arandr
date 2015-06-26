@@ -75,7 +75,7 @@ msgid ""
 "XRandR failed:\n"
 "%s"
 msgstr ""
-"Échec de XRandR :↵\n"
+"Échec de XRandR :\n"
 "%s"
 
 #: screenlayout/gui.py:227
@@ -95,7 +95,7 @@ msgstr "ARandR, configuration de la disposition des écrans"
 #. # the acronym and a localized version.
 #: screenlayout/meta.py:27
 msgid "Another XRandR GUI"
-msgstr "Un autre interface graphique pour XRandR"
+msgstr "Another XRandR GUI (Un autre interface graphique pour XRandR)"
 
 #: screenlayout/metacity.py:53
 msgid "Accelerator"
@@ -156,8 +156,8 @@ msgid ""
 msgstr ""
 "Cliquez sur un bouton de la colonne de gauche puis saisissez le raccourci "
 "voulu pour une disposition des écrans (utilisez la touche RetArr pour "
-"supprimer un raccourci ou Echap. pour annuler).↵\n"
-"↵\n"
+"supprimer un raccourci ou Echap. pour annuler).\n"
+"\n"
 "Cela ne fonctionnera que si vous utilisez metacity ou un autre programme "
 "utilisant sa configuration."
 

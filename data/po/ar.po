@@ -8,13 +8,17 @@ msgstr ""
 "Project-Id-Version: XRandR\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: 2010-11-26 21:24+0800\n"
-"Last-Translator: aboodilankaboot\n"
-"Language-Team: Arabic\n"
-"Language: \n"
+"PO-Revision-Date: 2015-06-02 10:30+0200\n"
+"Last-Translator: Bakr Al-Tamimi <Bakr.Tamimi@gmail.com>\n"
+"Language-Team: Arabic "
+"<https://hosted.weblate.org/projects/arandr/translations/ar/>\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 2.3-dev\n"
 "X-Poedit-Language: Arabic\n"
 
 #: screenlayout/gui.py:117
@@ -124,7 +128,7 @@ msgstr "تطبيق آخر"
 #: screenlayout/metacity.py:255
 #, python-format
 msgid "No files in %(folder)r. Save a layout first."
-msgstr "لا توجد ملفات في %(folder)r احفظ التصميم أولاً"
+msgstr "لا توجد ملفات في %(folder)r احفظ التصميم أولاً."
 
 #: screenlayout/metacity.py:284
 msgid "gconf not available."
@@ -134,7 +138,7 @@ msgstr "gconf  غير متوفر"
 msgid ""
 "In order to configure metacity, you need to have the python gconf module "
 "installed."
-msgstr "من أجل إعداد ميتستي ، يجب تثبيت وحدة  . gconf"
+msgstr "من أجل إعداد ميتستي ، يجب تثبيت وحدة gconf  المبرمجة بلغة بايثون."
 
 #: screenlayout/metacity.py:292
 msgid "Keybindings (via Metacity)"
@@ -168,7 +172,7 @@ msgstr "نشط"
 
 #: screenlayout/widget.py:335
 msgid "Primary"
-msgstr ""
+msgstr "رئيسي"
 
 #: screenlayout/widget.py:349
 #, python-format
