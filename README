@@ -95,6 +95,22 @@ Bugs / Communication
 * For general discussion, you can `subscribe to the general discussion list`_ <arandr-users@lists.alioth.debian.org>.
 * To stay informed about new releases, `subscribe to the announce list`_ <arandr-announce@lists.alioth.debian.org>.
 
+Ongoing development
+-------------------
+
+An overhauled version of ARandR is in the works in the `verbose` and `gtk3` branches found in the git repository. Feature parity with the current releases has not been reached, but some interesting features are already implemented:
+
+* Parsing of the complete `--verbose` output, including properties
+* Setting refresh rates
+* Switch to Python 3 and GTK 3
+* Auto-discovery of DISPLAY in remote contexts 
+* Simulation and regression test infrastructure
+
+Features targetted for the first release from the new branch:
+
+* Setting properties
+* Parsing EDID information
+
 
 Similar projects
 ----------------
