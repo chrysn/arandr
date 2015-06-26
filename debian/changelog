@@ -1,3 +1,11 @@
+arandr (0.1.8-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+    - Allow setting the primary output
+    - New translations
+
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Fri, 26 Jun 2015 10:31:51 +0200
+
 arandr (0.1.7.1-1) unstable; urgency=low
 
   * New upstream release
