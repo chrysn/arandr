@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: arandr 0.1.2\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: 2015-08-05 20:11+0200\n"
+"PO-Revision-Date: 2015-08-05 20:24+0200\n"
 "Last-Translator: Sebastian Wahl <swahl11@student.aau.dk>\n"
 "Language-Team: Danish "
 "<https://hosted.weblate.org/projects/arandr/translations/da/>\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
-msgstr "_Udseende"
+msgstr "_Opsætning"
 
 #: screenlayout/gui.py:128
 msgid "_View"
@@ -80,11 +80,11 @@ msgstr ""
 
 #: screenlayout/gui.py:227
 msgid "Open Layout"
-msgstr "Åbn udseende"
+msgstr "Åbn Opsætning"
 
 #: screenlayout/gui.py:239
 msgid "Save Layout"
-msgstr "Gem udseende"
+msgstr "Gem Opsætning"
 
 # skærmudseende. Muligvis er "skærmopsætning" mere dækkende.  XRandR,
 # som ARandR vist er en grænseflade til, styrer skærmopløsning, rotation osv.
@@ -130,11 +130,11 @@ msgstr "andet program"
 #: screenlayout/metacity.py:255
 #, python-format
 msgid "No files in %(folder)r. Save a layout first."
-msgstr "Ingen filer i %(folder)r. Gem et udseende først."
+msgstr "Ingen filer i %(folder)r. Gem en opsætning først."
 
 #: screenlayout/metacity.py:284
 msgid "gconf not available."
-msgstr "gconf ikke tilgængelig."
+msgstr "gconf er ikke tilgængelig."
 
 #: screenlayout/metacity.py:285
 msgid ""
