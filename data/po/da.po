@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: arandr 0.1.2\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: 2015-08-05 19:53+0200\n"
+"PO-Revision-Date: 2015-08-05 20:11+0200\n"
 "Last-Translator: Sebastian Wahl <swahl11@student.aau.dk>\n"
 "Language-Team: Danish "
 "<https://hosted.weblate.org/projects/arandr/translations/da/>\n"
@@ -43,7 +43,7 @@ msgstr "_System"
 
 #: screenlayout/gui.py:134
 msgid "_Keybindings (Metacity)"
-msgstr "_Nøgletildelinger (Metacity)"
+msgstr "_Tastaturgenveje (Metacity)"
 
 #: screenlayout/gui.py:136
 msgid "_Help"
@@ -101,7 +101,7 @@ msgstr "Another XRandR GUI (en anden XRandR-grænseflade)"
 
 #: screenlayout/metacity.py:53
 msgid "Accelerator"
-msgstr "Accelerator"
+msgstr "Genvejstast"
 
 #: screenlayout/metacity.py:54
 msgid "Action"
@@ -113,7 +113,7 @@ msgstr "deaktiveret"
 
 #: screenlayout/metacity.py:135
 msgid "New accelerator..."
-msgstr "Ny accelerator..."
+msgstr "Ny genvejstast..."
 
 #: screenlayout/metacity.py:192
 msgid "no action"
