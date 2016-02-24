@@ -1,4 +1,63 @@
-commit 465df4eb26979ccfbcd747755c95e26c0500d6ab (HEAD, master)
+commit 790cd346bbd57426930a2b3beb654cf3a39712fd (HEAD -> master)
+Author: chrysn <chrysn@fsfe.org>
+Date:   Wed Feb 24 13:46:20 2016 +0100
+
+    ready for release 0.1.9
+
+commit 655ba80b7123acb327244cd891add32a6dea552c
+Merge: 05e9175 9110440
+Author: chrysn <chrysn@fsfe.org>
+Date:   Wed Feb 24 13:38:39 2016 +0100
+
+    Update copyright notes, acknowledge new translators
+    
+    This is now done semi-automatically, supported by setup.py
+
+commit 05e9175affefbea12f11ad93510ca40025176dec
+Merge: 204b9f0 2394f0f
+Author: chrysn <chrysn@fsfe.org>
+Date:   Wed Feb 24 10:12:27 2016 +0100
+
+    Add xrandr 1.5 to the list of supported versions
+    
+    This does not include GUI for xrandr's new features, but the classical
+    XRandR features are unaffected.
+
+commit 204b9f0925f1cfd787bf2199a320ba1be208fd15
+Merge: f59a06c da6d617
+Author: chrysn <chrysn@fsfe.org>
+Date:   Wed Feb 24 10:06:58 2016 +0100
+
+    README / Website updates
+
+commit f59a06c3ebe0c65696fdfddbbb69cac8630a9ccb
+Merge: 465df4e 7b81d62
+Author: chrysn <chrysn@fsfe.org>
+Date:   Wed Feb 24 10:02:54 2016 +0100
+
+    New translations from weblate after introducing new string
+    
+    New languages:
+    
+    * Albanian (sq)
+    
+    Updates:
+    
+    * Danish (da)
+    * Ukrainian (uk)
+    
+    Covering new strings:
+    
+    * Catalan (ca)
+    * Russian ru)
+    * Spanish (es)
+    * Polish (pl)
+    * Persian (fa)
+    * Estonian (et)
+    * Chinese (China; zh_CN)
+    * Dutch (nl)
+
+commit 465df4eb26979ccfbcd747755c95e26c0500d6ab (origin/translations, origin/master, translations)
 Author: chrysn <chrysn@fsfe.org>
 Date:   Fri Jun 26 11:02:46 2015 +0200
 
@@ -26,7 +85,7 @@ Date:   Fri Jun 26 10:10:19 2015 +0200
 
     Update translator acknowledgements in credits
 
-commit 500f021bf5b87a4fe08765732bf82e3d34c58aea (origin/master)
+commit 500f021bf5b87a4fe08765732bf82e3d34c58aea
 Merge: 67093a8 2e6cffa
 Author: chrysn <chrysn@fsfe.org>
 Date:   Fri Jun 26 09:23:45 2015 +0200
