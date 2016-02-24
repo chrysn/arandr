@@ -1,52 +1,51 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR chrysn
-# This file is distributed under the same license as the PACKAGE package.
+# Albanian translations for arandr package.
+# Copyright (C) 2015 chrysn
+# This file is distributed under the same license as the arandr package.
+# Automatically generated, 2015.
 #
-# Translators:
-# Alireza Savand <agahia.com@gmail.com>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: ARandR\n"
+"Project-Id-Version: arandr 0.1.7.1\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: 2015-11-08 22:00+0000\n"
-"Last-Translator: reza khan <reza_khn@yahoo.com>\n"
-"Language-Team: Persian "
-"<https://hosted.weblate.org/projects/arandr/translations/fa/>\n"
-"Language: fa\n"
+"PO-Revision-Date: 2015-08-21 19:05+0200\n"
+"Last-Translator: Denis Jukni <deblenden8@gmail.com>\n"
+"Language-Team: Albanian "
+"<https://hosted.weblate.org/projects/arandr/translations/sq/>\n"
+"Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.5-dev\n"
+"X-Generator: Weblate 2.4-dev\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
-msgstr "_پوسته"
+msgstr "_Korniza"
 
 #: screenlayout/gui.py:128
 msgid "_View"
-msgstr "_نما"
+msgstr "_Pamja"
 
 #: screenlayout/gui.py:130
 msgid "_Outputs"
-msgstr "_خروجي ها"
+msgstr "_Daljet"
 
 #: screenlayout/gui.py:131
 msgid "Dummy"
-msgstr "ساختگی"
+msgstr "Pa funksion"
 
 #: screenlayout/gui.py:133
 msgid "_System"
-msgstr "_سيستم"
+msgstr "_Sistemi"
 
 #: screenlayout/gui.py:134
 msgid "_Keybindings (Metacity)"
-msgstr "_اتصالات کلیدی (اطلاعات شهرستان)"
+msgstr "_Lidhjet_me_butonat (Metacity)"
 
 #: screenlayout/gui.py:136
 msgid "_Help"
-msgstr "_راهنمايي"
+msgstr "_Ndihmë"
 
 #: screenlayout/gui.py:140
 msgid "1:4"
@@ -62,85 +61,88 @@ msgstr "1:16"
 
 #: screenlayout/gui.py:189
 msgid "Script Properties"
-msgstr "تنظيمات اسكريپت"
+msgstr "Cilësitë e tekstimit"
 
 #: screenlayout/gui.py:201
 msgid "Script"
-msgstr "اسكريپت"
+msgstr "Tekstim"
 
 #: screenlayout/gui.py:217
 #, python-format
 msgid ""
 "XRandR failed:\n"
 "%s"
-msgstr "XRandR شکست خورد :  %s"
+msgstr ""
+"Gabim në XRandR:\n"
+"%s"
 
 #: screenlayout/gui.py:227
 msgid "Open Layout"
-msgstr "باز کردن لایه"
+msgstr "Hap kornizën"
 
 #: screenlayout/gui.py:239
 msgid "Save Layout"
-msgstr "ذخيره لايه"
+msgstr "Ruaj kornizën"
 
 #: screenlayout/meta.py:23
 msgid "ARandR Screen Layout Editor"
-msgstr "ARandR صفحه ویرایشگر لايه"
+msgstr "Ndryshues për kornizën e ekranit të ARandR"
 
 #. # translators, please translate in the style of "Another XRandR GUI
 #. # (ein weiteres GUI für XRandR)" so users get both the explanation of
 #. # the acronym and a localized version.
 #: screenlayout/meta.py:27
 msgid "Another XRandR GUI"
-msgstr "یکی دیگر از رابط کاربری گرافیکی XRandR"
+msgstr "Një tjetër pamje e XRandR"
 
 #: screenlayout/metacity.py:53
 msgid "Accelerator"
-msgstr "شتاب دهنده"
+msgstr "Përshpejtues"
 
 #: screenlayout/metacity.py:54
 msgid "Action"
-msgstr "عمل"
+msgstr "Veprim"
 
 #: screenlayout/metacity.py:120
 msgid "disabled"
-msgstr "غیرفعال شده"
+msgstr "ç'aktivizuar"
 
 #: screenlayout/metacity.py:135
 msgid "New accelerator..."
-msgstr "شتاب دهنده جدید..."
+msgstr "Përshpejtues i ri ..."
 
 #: screenlayout/metacity.py:192
 msgid "no action"
-msgstr "بدون فعاليت"
+msgstr "asnjë veprim"
 
 #: screenlayout/metacity.py:228
 msgid "incompatible configuration"
-msgstr "پیکربندی ناسازگار"
+msgstr "konfigurim i papërshtatshëm"
 
 #: screenlayout/metacity.py:235
 msgid "other application"
-msgstr "سایر نرم افزارها"
+msgstr "tjetër program"
 
 #: screenlayout/metacity.py:255
 #, python-format
 msgid "No files in %(folder)r. Save a layout first."
-msgstr "هیچ فایل در %(folder)r. ذخیره طرح بندی اول."
+msgstr "Asnjë skedar në %(folder)r. Ruaj një kornizë në fillim."
 
 #: screenlayout/metacity.py:284
 msgid "gconf not available."
-msgstr "gconf در دسترس نیست."
+msgstr "gconf nuk është i pranishëm."
 
 #: screenlayout/metacity.py:285
 msgid ""
 "In order to configure metacity, you need to have the python gconf module "
 "installed."
 msgstr ""
-"به منظور پیکربندی metacity ، شما نیاز به gconf پایتون ماژول نصب شده است."
+"Në rastin e konfigurimit të metacity, ju duhet të instaloni pjesën e python "
+"gconf."
 
 #: screenlayout/metacity.py:292
 msgid "Keybindings (via Metacity)"
-msgstr "Keybindings (از طریق Metacity)"
+msgstr "Lidhja e butonave (nëpërmjet Metacity)"
 
 #: screenlayout/metacity.py:305
 msgid ""
@@ -152,49 +154,52 @@ msgid ""
 "This will only work if you use metacity or another program reading its "
 "configuration."
 msgstr ""
-"روی دکمه در ستون چپ کلیک کنید و کلید ترکیبی دلخواه برای تنظیم کردن پوسته "
-"مورد نظر فشار دهید. ( از backcpace برای پاکسازی سرعت‌دهنده‌ها، escape برای لغو "
-"وبرایش استفاده کنید.) سپس یک یا چند پوسته در ستون راست انتخاب کنید.\n"
-"این کار خواهد کرد در صورتی که شما از برای خواندن پیکربندی از metacity یا "
-"دیگر برنامه‌ای استفاده کنید."
+"Klikoni një buton në kolonën e majtë dhe shtypni një kombinacion butonash që "
+"dëshironi për të krijuar një kornizë të caktuar të ekranit. (Përdorni "
+"butonin BACKSPACE për të pastruar përshpejtuesit, ESCAPE për të ndërprerë "
+"ndryshimet.) Pastaj, seleksiononi një ose më shumë korniza në kolonën e "
+"djathtë.\n"
+"Kjo do të funksionojë vetëm nqs ju përdorni METACITY ose një program tjetër "
+"për të lexuar konfigurimet."
 
 #: screenlayout/widget.py:61
 msgid ""
 "Your configuration does not include an active monitor. Do you want to apply "
 "the configuration?"
 msgstr ""
-"تنظيمات شما شامل مانيتور فعال نيست. آيا ميخواهيد همين تنظيمات را اعمال كنيد؟"
+"Konfigurimi juaj nuk përmban një ekran aktiv. Dëshironi të vlejnë "
+"konfigurimet e deritanishme?"
 
 #: screenlayout/widget.py:327
 msgid "Active"
-msgstr "فعال"
+msgstr "Aktiv"
 
 #: screenlayout/widget.py:335
 msgid "Primary"
-msgstr "اصلی"
+msgstr "Kryesor"
 
 #: screenlayout/widget.py:349
 #, python-format
 msgid "Setting this resolution is not possible here: %s"
-msgstr "تنظیم این رزولوشن  در اینجا امکان پذیر نیست : %s"
+msgstr "Ndryshimet e këtij rezolucioni nuk janë të mundura këtu: %s"
 
 #: screenlayout/widget.py:362
 #, python-format
 msgid "This orientation is not possible here: %s"
-msgstr "این جهت گیری در اينجا امكان پذير نيست : %s"
+msgstr "Ky orientim rezolucioni nuk është i mundur këtu: %s"
 
 #: screenlayout/widget.py:368
 msgid "Resolution"
-msgstr "رزولوشن"
+msgstr "Rezolucioni"
 
 #: screenlayout/widget.py:370
 msgid "Orientation"
-msgstr "جهت"
+msgstr "Orientacioni"
 
 #: screenlayout/xrandr.py:275
 msgid "A part of an output is outside the virtual screen."
-msgstr "بخشی از خروجی خارج از صفحه نمایش مجازی."
+msgstr "Një pjesë e rezultatit dalës është jashtë kornizave të ekranit virtual."
 
 #: screenlayout/xrandr.py:278
 msgid "An output is outside the virtual screen."
-msgstr "خروجی خارج از صفحه نمایش مجازی."
+msgstr "Kjo dalje është jashtë ekranit virtual."

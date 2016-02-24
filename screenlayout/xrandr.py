@@ -41,8 +41,9 @@ class XRandR(object):
             self.environ['DISPLAY'] = display
 
         version_output = self._output("--version")
-        if not ("1.2" in version_output or "1.3" in version_output or "1.4" in version_output) and not force_version:
-            raise Exception("XRandR 1.2/1.3 required.")
+        supported_versions = ["1.2", "1.3", "1.4", "1.5"]
+        if not any(x in version_output for x in supported_versions) and not force_version:
+            raise Exception("XRandR %s required."%"/".join(supported_versions))
 
         self.features = set()
         if not " 1.2" in version_output:
