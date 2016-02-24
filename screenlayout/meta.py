@@ -19,13 +19,13 @@
 import gettext
 gettext.install('arandr')
 
-__version__ = '0.1.8'
+__version__ = '0.1.9'
 PROGRAMNAME = _(u'ARandR Screen Layout Editor')
 ## translators, please translate in the style of "Another XRandR GUI
 ## (ein weiteres GUI für XRandR)" so users get both the explanation of
 ## the acronym and a localized version.
 PROGRAMDESCRIPTION = _(u'Another XRandR GUI')
-COPYRIGHT = u'© chrysn 2008 – 2015, Себастьян Gli ţa Κατινα 2011, Johannes Holmberg 2015'
+COPYRIGHT = u'© chrysn 2008 – 2016, Себастьян Gli ţa Κατινα 2011, Johannes Holmberg 2015'
 
 # other names of contributors found in the git history. mailmap (see
 # git-shortlog(1)) won't cut it, because some contributors don't have any email
