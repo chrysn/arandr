@@ -114,6 +114,29 @@ class build_man(NoOptionCommand):
                     compressed.write(manpage)
                     compressed.close()
 
+class update_translator_credits(NoOptionCommand):
+    description = 'Examine the git history to produce an updated metadata file.'
+
+    def run(self):
+        contributions = {}
+
+        from screenlayout.meta import COMMITTER_ALIASES, TRANSLATORS_OVERRIDES
+
+        for po in glob.glob(os.path.join(PO_DIR, '*.po')):
+            contributors = set(subprocess.check_output(['git', 'log', '--pretty=format:%aN <%aE>', po]).split('\n'))
+            contributors = [COMMITTER_ALIASES.get(c, c) for c in contributors]
+
+            for c in contributors:
+                contributions.setdefault(c, set()).add(po)
+
+        contributions.update(TRANSLATORS_OVERRIDES)
+
+        print "====================== for screenlayout/meta.py ================"
+        print
+        print "TRANSLATORS = [\n        " + ",\n        ".join("'%s'"%c for c in sorted(contributions)) + "\n        ]"
+        print
+        print
+
 class build(_build):
     sub_commands = _build.sub_commands + [('build_trans', None), ('build_man', None)]
     def run(self):
@@ -174,6 +197,7 @@ setup(name = PACKAGENAME,
             'clean': clean,
             'update_pot': update_pot,
             'update_po': update_po,
+            'update_translator_credits': update_translator_credits,
             },
         data_files = [
             ('share/applications', ['data/arandr.desktop']), # FIXME: use desktop-file-install?
