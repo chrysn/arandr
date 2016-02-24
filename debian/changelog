@@ -1,3 +1,15 @@
+arandr (0.1.9-1) unstable; urgency=medium
+
+  * New upstream release
+    - Declare compatibility with xrandr 0.1.5 (Closes: #815731)
+    - New translations
+  * Copyright file updates
+  * Drop .menu file (Closes: #797973)
+  * Change Standards-Version to 3.9.7 (no changes)
+  * Switch to secure Vcs- URIs
+
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Wed, 24 Feb 2016 14:00:35 +0100
+
 arandr (0.1.8-1) unstable; urgency=medium
 
   * New upstream release
