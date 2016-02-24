@@ -27,6 +27,22 @@ PROGRAMNAME = _(u'ARandR Screen Layout Editor')
 PROGRAMDESCRIPTION = _(u'Another XRandR GUI')
 COPYRIGHT = u'© chrysn 2008 – 2015, Себастьян Gli ţa Κατινα 2011, Johannes Holmberg 2015'
 
+# other names of contributors found in the git history. mailmap (see
+# git-shortlog(1)) won't cut it, because some contributors don't have any email
+# address at all (or might want to be attributed without address).
+COMMITTER_ALIASES = {
+        'chrysn <chrysn@84c1553d-868a-485e-9ebb-c7de0e225ff1>': 'chrysn <chrysn@fsfe.org>',
+        'Rax <r-a-x@launchpad>': 'Rax Garfield',
+        'o-157 <Unknown>': 'o-157',
+        'cdemoulins <clement@archivel.fr>': 'Clément Démoulins <clement@archivel.fr>',
+        'sjb <gseba@users.sourceforge.net>': 'Себастьян Gli ţa Κατινα <gseba@users.sourceforge.net>',
+        'Chandru <gundachandru@gmail.com>': 'gundachandru <gundachandru@gmail.com>',
+        'Dimitris Giouroukis <digitalbckp@launchpad>': 'Dimitris Giouroukis',
+        'Alir3z4 <agahia.com@gmail.com>': 'Alireza Savand <agahia.com@gmail.com>',
+        'el_libre como el chaval <el.libre@gmail.com>': 'el_libre <el.libre@gmail.com>',
+        'phantomx <megaphantomx@bol.com.br>': 'Phantom X <megaphantomx@bol.com.br>',
+        }
+
 TRANSLATORS = [
         'chrysn <chrysn@fsfe.org>',
         'Quizzlo <paolone.marco@gmail.com>',
