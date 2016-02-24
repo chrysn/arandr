@@ -41,7 +41,7 @@ class XRandR(object):
             self.environ['DISPLAY'] = display
 
         version_output = self._output("--version")
-        supported_versions = ["1.2", "1.3", "1.4"]
+        supported_versions = ["1.2", "1.3", "1.4", "1.5"]
         if not any(x in version_output for x in supported_versions) and not force_version:
             raise Exception("XRandR %s required."%"/".join(supported_versions))
 
