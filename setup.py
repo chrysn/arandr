@@ -21,6 +21,7 @@ import operator
 import subprocess
 import glob
 import gzip
+import datetime
 
 import docutils.core
 import docutils.writers.manpage
@@ -118,16 +119,18 @@ class update_translator_credits(NoOptionCommand):
     description = 'Examine the git history to produce an updated metadata file.'
 
     def run(self):
+        from screenlayout.meta import COMMITTER_ALIASES, TRANSLATORS_OVERRIDES
+
         contributions = {}
 
-        from screenlayout.meta import COMMITTER_ALIASES, TRANSLATORS_OVERRIDES
+        file2language = lambda f: f[len(PO_DIR)+1:-3]
 
         for po in glob.glob(os.path.join(PO_DIR, '*.po')):
             contributors = set(subprocess.check_output(['git', 'log', '--pretty=format:%aN <%aE>', po]).split('\n'))
             contributors = [COMMITTER_ALIASES.get(c, c) for c in contributors]
 
             for c in contributors:
-                contributions.setdefault(c, set()).add(po)
+                contributions.setdefault(c, set()).add(file2language(po))
 
         contributions.update(TRANSLATORS_OVERRIDES)
 
@@ -136,6 +139,55 @@ class update_translator_credits(NoOptionCommand):
         print "TRANSLATORS = [\n        " + ",\n        ".join("'%s'"%c for c in sorted(contributions)) + "\n        ]"
         print
         print
+
+        by_language_set = {}
+        for name, languages in contributions.items():
+            by_language_set.setdefault(frozenset(languages), set()).add(name)
+        strip_address = lambda c: (c[:c.index('<')] if '<' in c else c).strip()
+        def language2name(lang):
+            import pycountry
+
+            if '_' in lang:
+                lang, country = lang.split('_')
+            else:
+                country = None
+            lang = pycountry.languages.get(alpha2=lang).name
+
+            try:
+                # strip suffixes like 'Catalan; Valencian'
+                lang = lang[:lang.index('; ')]
+            except:
+                pass
+            try:
+                # strip suffixes like 'Greek, Modern (...)'
+                lang = lang[:lang.index(', ')]
+            except:
+                pass
+
+            if country:
+                country = pycountry.countries.get(alpha2=country).name
+                return u"%s (%s)"%(lang, country)
+            else:
+                return lang
+
+        print "====================== for README ================"
+        print
+        print "\n".join(sorted("* %s (%s)"%(", ".join(strip_address(c) for c in sorted(contributors)), ", ".join(sorted(language2name(l).encode('utf8') for l in languages))) for (languages, contributors) in by_language_set.items()))
+        print
+
+        by_language = {}
+        for name, languages in contributions.items():
+            for l in languages:
+                by_language.setdefault(l, set()).add(name)
+        print "====================== for debian/copyright ================"
+        print
+        for l, names in sorted(by_language.items()):
+            print "Files: data/po/%s.po"%l
+            print "Copyright: 2008-%s, chrysn <chrysn@fsfe.org>"%datetime.datetime.now().year
+            for n in sorted(names):
+                print "          %s"%n
+            print "License: GPL-3+"
+            print
 
 class build(_build):
     sub_commands = _build.sub_commands + [('build_trans', None), ('build_man', None)]
