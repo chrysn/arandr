@@ -51,18 +51,12 @@ License: GPL-3+
 
 Files: data/po/de.po
 Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
-          chrysn <chrysn@fsfe.org>
 License: GPL-3+
 
 Files: data/po/el.po
 Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
           Dimitris Giouroukis
           Efstathios Iosifidis <iefstathios@gmail.com>
-License: GPL-3+
-
-Files: data/po/en.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
-          chrysn <chrysn@fsfe.org>
 License: GPL-3+
 
 Files: data/po/es.po
