@@ -43,6 +43,14 @@ COMMITTER_ALIASES = {
         'phantomx <megaphantomx@bol.com.br>': 'Phantom X <megaphantomx@bol.com.br>',
         }
 
+TRANSLATORS_OVERRIDES = {
+        # fixing stuff all over the place
+        'chrysn <chrysn@fsfe.org>': ['de', 'en'],
+        'Michal Čihař <michal@cihar.com>': ['cs'],
+        # see 3b0b47b3665 / c1a7b7edad34
+        'Mohammad Alhargan <malham1@gmail.com>': ['ar'],
+        }
+
 TRANSLATORS = [
         'chrysn <chrysn@fsfe.org>',
         'Quizzlo <paolone.marco@gmail.com>',
