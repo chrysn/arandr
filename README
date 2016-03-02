@@ -35,13 +35,6 @@ Installation
 
       pacman -S arandr
 
-  * Slackware using a `slackbuild by PhantomX`_::
-
-      wget http://cloud.github.com/downloads/PhantomX/slackbuilds/arandr-0.1.4.tar.bz2
-      tar xjf arandr-0.1.4.tar.bz2
-      cd arandr
-      ./arandr.SlackBuild 2>&1 | tee build.log
-
   * Gentoo_::
 
       emerge arandr
@@ -53,6 +46,8 @@ Installation
   * OpenSUSE_::
 
       zypper in arandr
+
+  * Slackware: see slackbuilds.org_
 
 * From source:
 
@@ -207,7 +202,7 @@ Translations by
  .. _`arandr-users mailing list`: https://lists.alioth.debian.org/mailman/listinfo/arandr-users
  .. _python: http://www.python.org/
  .. _PyGTK: http://www.pygtk.org/
- .. _`slackbuild by PhantomX`: http://github.com/PhantomX/slackbuilds/tree/master/arandr/
+ .. _slackbuilds.org: https://slackbuilds.org/repository/14.1/desktop/arandr/
  .. _Gentoo: http://packages.gentoo.org/package/x11-misc/arandr
  .. _Fedora: https://apps.fedoraproject.org/packages/arandr
  .. _OpenSUSE: https://software.opensuse.org/package/arandr
