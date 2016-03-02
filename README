@@ -50,7 +50,9 @@ Installation
 
       yum install arandr
 
-  * SuSE users can use the `X11:Utilities repository`_; ARandR can be found in the ``noarch`` directory of their distribution version.
+  * OpenSUSE_::
+
+      zypper in arandr
 
 * From source:
 
@@ -208,6 +210,7 @@ Translations by
  .. _`slackbuild by PhantomX`: http://github.com/PhantomX/slackbuilds/tree/master/arandr/
  .. _Gentoo: http://packages.gentoo.org/package/x11-misc/arandr
  .. _Fedora: https://apps.fedoraproject.org/packages/arandr
+ .. _OpenSUSE: https://software.opensuse.org/package/arandr
  .. _docutils: http://docutils.sourceforge.net/
  .. _`debian bug #507521`: http://bugs.debian.org/507521
  .. _`X11:Utilities repository`: http://download.opensuse.org/repositories/X11:/Utilities/
