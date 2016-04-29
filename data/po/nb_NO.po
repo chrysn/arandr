@@ -8,61 +8,64 @@ msgstr ""
 "Project-Id-Version: arandr 0.1.7.1\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2016-04-29 04:39+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål "
+"<https://hosted.weblate.org/projects/arandr/translations/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.6\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
-msgstr ""
+msgstr "_Oppsett"
 
 #: screenlayout/gui.py:128
 msgid "_View"
-msgstr ""
+msgstr "_Vis"
 
 #: screenlayout/gui.py:130
 msgid "_Outputs"
-msgstr ""
+msgstr "_Skjermer"
 
 #: screenlayout/gui.py:131
 msgid "Dummy"
-msgstr ""
+msgstr "Simulering"
 
 #: screenlayout/gui.py:133
 msgid "_System"
-msgstr ""
+msgstr "_System"
 
 #: screenlayout/gui.py:134
 msgid "_Keybindings (Metacity)"
-msgstr ""
+msgstr "_Tastatursnarveier (Metacity)"
 
 #: screenlayout/gui.py:136
 msgid "_Help"
-msgstr ""
+msgstr "_Hjelp"
 
 #: screenlayout/gui.py:140
 msgid "1:4"
-msgstr ""
+msgstr "1:4"
 
 #: screenlayout/gui.py:141
 msgid "1:8"
-msgstr ""
+msgstr "1:8"
 
 #: screenlayout/gui.py:142
 msgid "1:16"
-msgstr ""
+msgstr "1:16"
 
 #: screenlayout/gui.py:189
 msgid "Script Properties"
-msgstr ""
+msgstr "Skriptegenskaper"
 
 #: screenlayout/gui.py:201
 msgid "Script"
-msgstr ""
+msgstr "Skript"
 
 #: screenlayout/gui.py:217
 #, python-format
@@ -70,72 +73,75 @@ msgid ""
 "XRandR failed:\n"
 "%s"
 msgstr ""
+"XRandR feilet:\n"
+"%s"
 
 #: screenlayout/gui.py:227
 msgid "Open Layout"
-msgstr ""
+msgstr "Åpne oppsett"
 
 #: screenlayout/gui.py:239
 msgid "Save Layout"
-msgstr ""
+msgstr "Lagre oppsett"
 
 #: screenlayout/meta.py:23
 msgid "ARandR Screen Layout Editor"
-msgstr ""
+msgstr "ARandR oppsettsbehandler"
 
 #. # translators, please translate in the style of "Another XRandR GUI
 #. # (ein weiteres GUI für XRandR)" so users get both the explanation of
 #. # the acronym and a localized version.
 #: screenlayout/meta.py:27
 msgid "Another XRandR GUI"
-msgstr ""
+msgstr "Another XRandR GUI (et annet grensesnitt for XRandR)"
 
 #: screenlayout/metacity.py:53
 msgid "Accelerator"
-msgstr ""
+msgstr "Snarveitast"
 
 #: screenlayout/metacity.py:54
 msgid "Action"
-msgstr ""
+msgstr "Handling"
 
 #: screenlayout/metacity.py:120
 msgid "disabled"
-msgstr ""
+msgstr "avskrudd"
 
 #: screenlayout/metacity.py:135
 msgid "New accelerator..."
-msgstr ""
+msgstr "Ny snarveitast…"
 
 #: screenlayout/metacity.py:192
 msgid "no action"
-msgstr ""
+msgstr "ingen handling"
 
 #: screenlayout/metacity.py:228
 msgid "incompatible configuration"
-msgstr ""
+msgstr "ukompatibelt oppsett"
 
 #: screenlayout/metacity.py:235
 msgid "other application"
-msgstr ""
+msgstr "annet program"
 
 #: screenlayout/metacity.py:255
 #, python-format
 msgid "No files in %(folder)r. Save a layout first."
-msgstr ""
+msgstr "Ingen fil i %(folder)r. Lagre ett oppsett først."
 
 #: screenlayout/metacity.py:284
 msgid "gconf not available."
-msgstr ""
+msgstr "gconf er ikke tilgjengelig."
 
 #: screenlayout/metacity.py:285
 msgid ""
 "In order to configure metacity, you need to have the python gconf module "
 "installed."
 msgstr ""
+"For å kunne sette opp Metacity må du ha python gconf-modulen installert."
 
 #: screenlayout/metacity.py:292
 msgid "Keybindings (via Metacity)"
-msgstr ""
+msgstr "Tastatursnarveier (via Metacity)"
 
 #: screenlayout/metacity.py:305
 msgid ""
@@ -147,43 +153,52 @@ msgid ""
 "This will only work if you use metacity or another program reading its "
 "configuration."
 msgstr ""
+"Klikk på en knapp i den venstre kolonne og trykk på en tastekombinasjon du "
+"ønsker å tildele til et bestemt skjermoppsett. (Bruk backspace for at bli "
+"kvitt snarveitaster, Esc-tasten for å avbryte redigering.) Velg så en eller "
+"flere oppsett i høyre kolonne.\n"
+"\n"
+"Dette vil kun virke, hvis du bruker Metacity eller et andet program som "
+"leser Metacity sitt oppsett."
 
 #: screenlayout/widget.py:61
 msgid ""
 "Your configuration does not include an active monitor. Do you want to apply "
 "the configuration?"
 msgstr ""
+"Ditt oppsett inneholder ingen aktiv monitor. Ønsker du å anvende dette "
+"oppsettet?"
 
 #: screenlayout/widget.py:327
 msgid "Active"
-msgstr ""
+msgstr "Aktiv"
 
 #: screenlayout/widget.py:335
 msgid "Primary"
-msgstr ""
+msgstr "Primær"
 
 #: screenlayout/widget.py:349
 #, python-format
 msgid "Setting this resolution is not possible here: %s"
-msgstr ""
+msgstr "Å velge denne oppløsningen er ikke mulig her: %s"
 
 #: screenlayout/widget.py:362
 #, python-format
 msgid "This orientation is not possible here: %s"
-msgstr ""
+msgstr "Denne sideretningen er ikke mulig her: %s"
 
 #: screenlayout/widget.py:368
 msgid "Resolution"
-msgstr ""
+msgstr "Oppløsning"
 
 #: screenlayout/widget.py:370
 msgid "Orientation"
-msgstr ""
+msgstr "Sideretning"
 
 #: screenlayout/xrandr.py:275
 msgid "A part of an output is outside the virtual screen."
-msgstr ""
+msgstr "En del av utmatningen er utenfor den virtuelle skjermen"
 
 #: screenlayout/xrandr.py:278
 msgid "An output is outside the virtual screen."
-msgstr ""
+msgstr "En utmatning er utenfor den virtuelle skjermen."
