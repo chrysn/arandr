@@ -197,7 +197,7 @@ msgstr "Sideretning"
 
 #: screenlayout/xrandr.py:275
 msgid "A part of an output is outside the virtual screen."
-msgstr "En del av utmatningen er utenfor den virtuelle skjermen"
+msgstr "En del av utmatningen er utenfor den virtuelle skjermen."
 
 #: screenlayout/xrandr.py:278
 msgid "An output is outside the virtual screen."
