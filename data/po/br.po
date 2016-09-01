@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: ARandR\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: 2013-10-30 11:09+0200\n"
-"Last-Translator: Michal Čihař <michal@cihar.com>\n"
-"Language-Team: Breton <http://hosted.weblate.org/projects/arandr/"
-"translations/br/>\n"
+"PO-Revision-Date: 2016-09-01 16:58+0000\n"
+"Last-Translator: tornoz <tornoz@laposte.net>\n"
+"Language-Team: Breton "
+"<https://hosted.weblate.org/projects/arandr/translations/br/>\n"
 "Language: br\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 1.8-dev\n"
+"X-Generator: Weblate 2.8\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
@@ -38,11 +38,11 @@ msgstr "Skramm"
 
 #: screenlayout/gui.py:133
 msgid "_System"
-msgstr "_Reizhad"
+msgstr "_Reizhiad"
 
 #: screenlayout/gui.py:134
 msgid "_Keybindings (Metacity)"
-msgstr "_Berradenn (Metacity)"
+msgstr "_Berradennoù (Metacity)"
 
 #: screenlayout/gui.py:136
 msgid "_Help"
@@ -116,7 +116,7 @@ msgstr "Gwered ebet"
 
 #: screenlayout/metacity.py:228
 msgid "incompatible configuration"
-msgstr "Kefluniadur digendere"
+msgstr "Kefluniadur digeverlec'h"
 
 #: screenlayout/metacity.py:235
 msgid "other application"
@@ -151,9 +151,9 @@ msgid ""
 "This will only work if you use metacity or another program reading its "
 "configuration."
 msgstr ""
-"Klikit war ur bouton eus ar bann kleiz ha lakait ar berradenn a-zere evit un "
-"aozadur eus ar skrammoù (implijit an douchenn Distro evit diverkañ ur "
-"berradenn pe Echap. evit nullañ). Mont a raio en dro ma implijit metacity "
+"Klikit war ur afell eus ar bann kleiz ha lakait ar verradenn a-zere evit un "
+"aozadur eus ar skrammoù (implijit ar stokell Distro evit diverkañ ur "
+"verradenn pe Achap. evit nullañ). Mont a raio en dro ma implijit metacity "
 "nemetken pe ur meziant all oc'h implij ar memes kefluniadur."
 
 #: screenlayout/widget.py:61
@@ -170,7 +170,7 @@ msgstr "Gweredekaet"
 
 #: screenlayout/widget.py:335
 msgid "Primary"
-msgstr ""
+msgstr "Troidigezh"
 
 #: screenlayout/widget.py:349
 #, python-format
@@ -184,11 +184,11 @@ msgstr "N'eo ket posupl lakaat ar reteadur-mañ : %s"
 
 #: screenlayout/widget.py:368
 msgid "Resolution"
-msgstr "Resolvidigezh"
+msgstr "Diarunusted"
 
 #: screenlayout/widget.py:370
 msgid "Orientation"
-msgstr "Reteadur"
+msgstr "Reteradur"
 
 #: screenlayout/xrandr.py:275
 msgid "A part of an output is outside the virtual screen."
