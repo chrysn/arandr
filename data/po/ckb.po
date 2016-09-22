@@ -8,13 +8,16 @@ msgstr ""
 "Project-Id-Version: arandr 0.1.7.1\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2016-09-22 23:04+0000\n"
+"Last-Translator: Rasti K5 <rasti.khdhr@gmail.com>\n"
+"Language-Team: Kurdish Sorani "
+"<https://hosted.weblate.org/projects/arandr/translations/ckb/>\n"
 "Language: ckb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.9-dev\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
@@ -22,7 +25,7 @@ msgstr ""
 
 #: screenlayout/gui.py:128
 msgid "_View"
-msgstr ""
+msgstr "_بینین"
 
 #: screenlayout/gui.py:130
 msgid "_Outputs"
@@ -34,7 +37,7 @@ msgstr ""
 
 #: screenlayout/gui.py:133
 msgid "_System"
-msgstr ""
+msgstr "_سیستەم"
 
 #: screenlayout/gui.py:134
 msgid "_Keybindings (Metacity)"
@@ -42,19 +45,19 @@ msgstr ""
 
 #: screenlayout/gui.py:136
 msgid "_Help"
-msgstr ""
+msgstr "_یارمەتی"
 
 #: screenlayout/gui.py:140
 msgid "1:4"
-msgstr ""
+msgstr "1:4"
 
 #: screenlayout/gui.py:141
 msgid "1:8"
-msgstr ""
+msgstr "1:8"
 
 #: screenlayout/gui.py:142
 msgid "1:16"
-msgstr ""
+msgstr "1:16"
 
 #: screenlayout/gui.py:189
 msgid "Script Properties"
@@ -116,7 +119,7 @@ msgstr ""
 
 #: screenlayout/metacity.py:235
 msgid "other application"
-msgstr ""
+msgstr "نەرمەواڵەی تر"
 
 #: screenlayout/metacity.py:255
 #, python-format
@@ -156,11 +159,11 @@ msgstr ""
 
 #: screenlayout/widget.py:327
 msgid "Active"
-msgstr ""
+msgstr "کارا"
 
 #: screenlayout/widget.py:335
 msgid "Primary"
-msgstr ""
+msgstr "سەرەکی"
 
 #: screenlayout/widget.py:349
 #, python-format
