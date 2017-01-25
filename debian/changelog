@@ -1,3 +1,13 @@
+arandr (0.1.9-2) unstable; urgency=medium
+
+  * Change debhelper compat to 10
+  * Update standards-version to 3.9.8
+  * Explicitly enable dh_python2 (Closes: #849689)
+  * Drop needless debian/dirs
+  * Copyright: Use https URIs
+
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Wed, 25 Jan 2017 11:38:24 +0100
+
 arandr (0.1.9-1) unstable; urgency=medium
 
   * New upstream release
