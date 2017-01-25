@@ -3,7 +3,7 @@ Section: x11
 Priority: optional
 Maintainer: Christian M. Amsüss <chrysn@fsfe.org>
 Homepage: http://christian.amsuess.com/tools/arandr/
-Build-Depends: debhelper (>= 10), python (>= 2.6.6-3~)
+Build-Depends: debhelper (>= 10), python (>= 2.6.6-3~), dh-python
 Build-Depends-Indep: gettext, python-docutils (>=0.6)
 Standards-Version: 3.9.7
 Vcs-Browser: https://anonscm.debian.org/cgit/arandr/arandr.git/?h=debian
