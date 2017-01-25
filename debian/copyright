@@ -1,7 +1,7 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: ARandR
 Upstream-Contact: Christian M. Amsüss <chrysn@fsfe.org>
-Source: http://christian.amsuess.com/tools/arandr/
+Source: https://christian.amsuess.com/tools/arandr/
 Comment: The bulk of data/po files can easily be managed by the upstream
          setup.py update_translator_credits command.
 
