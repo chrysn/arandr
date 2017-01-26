@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: arandr\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: 2017-01-23 03:46+0000\n"
+"PO-Revision-Date: 2017-01-26 01:08+0000\n"
 "Last-Translator: Nobuhiro Iwamatsu <iwamatsu@gmail.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/arandr/translations/ja/>\n"
@@ -137,13 +137,14 @@ msgstr "gconf が存在しません。"
 msgid ""
 "In order to configure metacity, you need to have the python gconf module "
 "installed."
-msgstr ""
+msgstr "metacity を設定するには、python gconf モジュールをインストールする必要があります。"
 
 #: screenlayout/metacity.py:292
 msgid "Keybindings (via Metacity)"
 msgstr "キーバインド (Metacity経由)"
 
 #: screenlayout/metacity.py:305
+#, fuzzy
 msgid ""
 "Click on a button in the left column and press a key combination you want to "
 "bind to a certain screen layout. (Use backspace to clear accelerators, "
@@ -153,6 +154,10 @@ msgid ""
 "This will only work if you use metacity or another program reading its "
 "configuration."
 msgstr ""
+"左側の列のボタンをクリックし、特定の画面レイアウトにバインドするキーの組み合わせを押します(アクセラレータをクリアするためにバックスペースを使い、エスケー"
+"プして編集を中止します)。次に、右の列で1つまたは複数のレイアウトを選択します。\n"
+"\n"
+"これは、metacity または別のプログラムで設定を読み取っている場合のみ機能します。"
 
 #: screenlayout/widget.py:61
 msgid ""
@@ -168,7 +173,7 @@ msgstr "アクティブ"
 
 #: screenlayout/widget.py:335
 msgid "Primary"
-msgstr ""
+msgstr "プライマリ"
 
 #: screenlayout/widget.py:349
 #, python-format
