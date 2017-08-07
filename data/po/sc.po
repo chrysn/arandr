@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: arandr 0.1.4\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: 2017-07-30 15:56+0000\n"
+"PO-Revision-Date: 2017-08-07 15:45+0000\n"
 "Last-Translator: Ajeje Brazorf <lmelonimamo@yahoo.it>\n"
 "Language-Team: Sardinian "
 "<https://hosted.weblate.org/projects/arandr/translations/sc/>\n"
@@ -82,7 +82,7 @@ msgstr "Aperi unu disponimentu"
 
 #: screenlayout/gui.py:239
 msgid "Save Layout"
-msgstr "Sarba su disponimentu"
+msgstr "Sarva su disponimentu"
 
 #: screenlayout/meta.py:23
 msgid "ARandR Screen Layout Editor"
@@ -127,7 +127,7 @@ msgstr "àteru aplicu"
 #, python-format
 msgid "No files in %(folder)r. Save a layout first."
 msgstr ""
-"Non b'est documentu perunu in %(folder)r. In antis sarba unu disponimentu."
+"Non b'est documentu perunu in %(folder)r. In antis sarva unu disponimentu."
 
 #: screenlayout/metacity.py:284
 msgid "gconf not available."
