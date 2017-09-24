@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: arandr\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: 2016-10-18 18:27+0000\n"
-"Last-Translator: Erik Sundin <esundin@miman.biz>\n"
+"PO-Revision-Date: 2017-09-25 22:47+0000\n"
+"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish "
 "<https://hosted.weblate.org/projects/arandr/translations/sv/>\n"
 "Language: sv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.9-dev\n"
+"X-Generator: Weblate 2.17-dev\n"
 "X-Launchpad-Export-Date: 2012-03-23 05:10+0000\n"
 
 #: screenlayout/gui.py:117
@@ -87,7 +87,7 @@ msgstr "Spara Layout"
 
 #: screenlayout/meta.py:23
 msgid "ARandR Screen Layout Editor"
-msgstr "ARandR Skärm Layout Redigerare"
+msgstr "ARandR Skärmlayoutredigerare"
 
 #. # translators, please translate in the style of "Another XRandR GUI
 #. # (ein weiteres GUI für XRandR)" so users get both the explanation of
@@ -138,7 +138,7 @@ msgid ""
 "In order to configure metacity, you need to have the python gconf module "
 "installed."
 msgstr ""
-"För att kunna konfigurera metacity, måste du ha python gconf modulen "
+"För att kunna konfigurera metacity, måste du ha python gconf-modulen "
 "installerad."
 
 #: screenlayout/metacity.py:292
@@ -155,9 +155,9 @@ msgid ""
 "This will only work if you use metacity or another program reading its "
 "configuration."
 msgstr ""
-"Klicka på en knapp i den vänstra kolumnen och trycker på den "
+"Klicka på en knapp i den vänstra kolumnen och tryck på den "
 "tangentkombination du vill binda till en viss skärmlayout. (Använd backspace "
-"för att ta bort snabbtangent, escape för att avbryta redigeringen.) Välj "
+"för att ta bort snabbtangenter, escape för att avbryta redigeringen.) Välj "
 "sedan en eller flera layouter i den högra kolumnen.\n"
 "\n"
 "Detta fungerar bara om du använder metacity eller något annat program för "
@@ -187,7 +187,7 @@ msgstr "Denna upplösning är inte möjlig här: %s"
 #: screenlayout/widget.py:362
 #, python-format
 msgid "This orientation is not possible here: %s"
-msgstr "Denna orienteringen är inte möjlig här: %s"
+msgstr "Denna orientering är inte möjlig här: %s"
 
 #: screenlayout/widget.py:368
 msgid "Resolution"
