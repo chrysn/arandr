@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: arandr 0.1.7.1\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: 2017-11-30 18:41+0000\n"
+"PO-Revision-Date: 2017-12-01 18:45+0000\n"
 "Last-Translator: ekeimaja <ekeimaja@gmail.com>\n"
 "Language-Team: Finnish "
 "<https://hosted.weblate.org/projects/arandr/translations/fi/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
-msgstr "_Ulkoasu"
+msgstr "_Asettelu"
 
 #: screenlayout/gui.py:128
 msgid "_View"
@@ -97,7 +97,7 @@ msgstr "Toinen XRandR käyttöliittymä"
 
 #: screenlayout/metacity.py:53
 msgid "Accelerator"
-msgstr "Kiihdytys"
+msgstr "Kiihdytin"
 
 #: screenlayout/metacity.py:54
 msgid "Action"
@@ -126,7 +126,7 @@ msgstr "muu sovellus"
 #: screenlayout/metacity.py:255
 #, python-format
 msgid "No files in %(folder)r. Save a layout first."
-msgstr "Ei tiedostoja %(kansio). Tallenna asettelu ensin."
+msgstr "Ei tiedostoja %(folder)r. Tallenna asettelu ensiksi."
 
 #: screenlayout/metacity.py:284
 msgid "gconf not available."
