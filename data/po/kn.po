@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: arandr 0.1.2\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: 2018-05-20 13:17+0000\n"
+"PO-Revision-Date: 2018-05-21 13:38+0000\n"
 "Last-Translator: DARREN MELROY MENEZES <dmm6799@gmail.com>\n"
 "Language-Team: Kannada <https://hosted.weblate.org/projects/arandr/"
 "translations/kn/>\n"
@@ -181,7 +181,7 @@ msgstr "ಪ್ರಮುಖ"
 #: screenlayout/widget.py:349
 #, python-format
 msgid "Setting this resolution is not possible here: %s"
-msgstr "ಈ ರೆಸಲ್ಯೂಶನ್ ಅನ್ನು ಸೆಟ್ ಮಾಡುವುದು ಇಲ್ಲಿ ಸಾಧ್ಯವಿಲ್ಲ: %s"
+msgstr "ಇಲ್ಲಿ ಈ ರೆಸಲ್ಯೂಶನ್ ಅನ್ನು ಸೆಟ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ : %s"
 
 #: screenlayout/widget.py:362
 #, python-format
@@ -189,17 +189,23 @@ msgid "This orientation is not possible here: %s"
 msgstr "ಈ ನಿಲುವು(ಓರಿಯೆಂಟೇಶನ್) ಇಲ್ಲಿ ಸಾಧ್ಯವಿಲ್ಲ: %s"
 
 #: screenlayout/widget.py:368
+#, fuzzy
 msgid "Resolution"
 msgstr "ರೆಸಲ್ಯೂಶನ್"
 
 #: screenlayout/widget.py:370
+#, fuzzy
 msgid "Orientation"
 msgstr "ನಿಲುವು (ಓರಿಯೆಂಟೇಶನ್)"
 
 #: screenlayout/xrandr.py:275
 msgid "A part of an output is outside the virtual screen."
-msgstr "ಔಟ್‌ಪುಟ್‌ನ ಒಂದು ಭಾಗ ವರ್ಚುವಲ್ ಸ್ಕ್ರೀನ್‌ನ ಹೊರಗಿದೆ."
+msgstr ""
+"ಫಲಿತಾಂಶದ (ಔಟ್‌ಪುಟ್‌ನ) ಒಂದು ಭಾಗವು ವಾಸ್ತವಿಕ (ವರ್ಚುವಲ್) ತೆರೆಯ (ಪರದೆಯ , "
+"ಸ್ಕ್ರೀನ್‌ನ) ಹೊರಗಿದೆ."
 
 #: screenlayout/xrandr.py:278
 msgid "An output is outside the virtual screen."
-msgstr "ಔಟ್‌ಪುಟ್‌ ವರ್ಚುವಲ್ ಸ್ಕ್ರೀನ್‌ನ ಹೊರಗಿದೆ."
+msgstr ""
+"ಒಂದು ಫಲಿತಾಂಶವು (ಔಟ್‌ಪುಟ್‌) ವಾಸ್ತವಿಕ (ವರ್ಚುವಲ್ ) ತೆರೆಯ (ಪರದೆಯ , ಸ್ಕ್ರೀನ್‌ನ ) "
+"ಹೊರಗಿದೆ."
