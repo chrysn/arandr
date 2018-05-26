@@ -34,6 +34,9 @@ class Snap(object):
             self.horizontal.add(i[0].top-size.height)
             self.horizontal.add(i[0].top+i[1].height-size.height)
 
+            self.vertical.add((i[0].left + i[1].width/2)-size.width/2)
+            self.horizontal.add((i[0].top + i[1].height/2)-size.height/2)
+
     def suggest(self, position):
         vertical = [x for x in self.vertical if abs(x-position[0])<self.tolerance]
         horizontal = [y for y in self.horizontal if abs(y-position[1])<self.tolerance]
