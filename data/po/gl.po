@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: arandr\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: 2018-05-27 10:23+0000\n"
+"PO-Revision-Date: 2018-05-28 10:38+0000\n"
 "Last-Translator: Miguel A. Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/arandr/"
 "translations/gl/>\n"
@@ -62,7 +62,7 @@ msgstr "1:16"
 
 #: screenlayout/gui.py:189
 msgid "Script Properties"
-msgstr "Propriedades do script"
+msgstr "Propiedades do script"
 
 #: screenlayout/gui.py:201
 msgid "Script"
@@ -79,11 +79,11 @@ msgstr ""
 
 #: screenlayout/gui.py:227
 msgid "Open Layout"
-msgstr "Abrir disposición"
+msgstr "Abrir a disposición"
 
 #: screenlayout/gui.py:239
 msgid "Save Layout"
-msgstr "Gardar disposición"
+msgstr "Gardar a disposición"
 
 #: screenlayout/meta.py:23
 msgid "ARandR Screen Layout Editor"
@@ -94,7 +94,7 @@ msgstr "Editor de disposicións de ARandR"
 #. # the acronym and a localized version.
 #: screenlayout/meta.py:27
 msgid "Another XRandR GUI"
-msgstr "Another XRandR GUI (outra IGU de XRandR)"
+msgstr "Another XRandR GUI (Outra IGU de XRandR)"
 
 #: screenlayout/metacity.py:53
 msgid "Accelerator"
@@ -131,7 +131,7 @@ msgstr "Non hai ficheiros en %(folder)r. Garde unha disposición primeiro."
 
 #: screenlayout/metacity.py:284
 msgid "gconf not available."
-msgstr "gconf no está dispoñíbel."
+msgstr "gconf non está dispoñíbel."
 
 #: screenlayout/metacity.py:285
 msgid ""
@@ -157,7 +157,7 @@ msgid ""
 msgstr ""
 "Prema nun botón na columna esquerda e prema unha combinación de teclas que "
 "desexe vincular a unha disposición de pantalla concreta. (Use a tecla "
-"Retroceso para limpar aceleradores e a tecla Escape para interromper a "
+"Retroceso para limpar teclas rápidas e a tecla Escape para interromper a "
 "edición.) De seguido seleccione unha ou máis disposicións na columna da "
 "dereita.\n"
 "\n"
@@ -169,7 +169,7 @@ msgid ""
 "Your configuration does not include an active monitor. Do you want to apply "
 "the configuration?"
 msgstr ""
-"A súa configuración non inclúe un monitor activo. Desexa aplicar a "
+"A súa configuración non inclúe un monitor activo. Quere aplicar a "
 "configuración?"
 
 #: screenlayout/widget.py:327
