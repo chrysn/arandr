@@ -62,7 +62,7 @@ Installation
         tar xzf arandr-0.1.9.tar.gz
         cd arandr-0.1.9
 
-    * or get it directly from GIT (`hosted on alioth`_)::
+    * or get it directly from GIT (`hosted on GitLab`_)::
 
         git clone git://anonscm.debian.org/arandr/arandr.git
         cd arandr
@@ -91,7 +91,7 @@ Bugs / Communication
 --------------------
 
 * Versions before 0.1.7 depended on all modes to have a <width>x<height> name (see `debian bug #507521`_); if ARandR does not start up, please install the latest version. (On different bugtrackers, this is called the ValueError / "1080p" / "1024x768i" problem).
-* There exists a `list of bugs`_ (and feature requests and general wishlist). To report a problem or request a feature, you can `register on alioth`_ (the hosting service) and `report it`_.
+* There exists a `list of bugs`_ (and feature requests and general wishlist). To report a problem or request a feature, you can `report it`_.
 * For general discussion, you can `subscribe to the general discussion list`_ <arandr-users@lists.alioth.debian.org>.
 * To stay informed about new releases, `subscribe to the announce list`_ <arandr-announce@lists.alioth.debian.org>.
 
@@ -195,13 +195,13 @@ Translations by
  .. _GPLv3: http://www.gnu.org/licenses/gpl-3.0.txt
  .. _`dual head sketch`: http://www.thinkwiki.org/wiki/Image:Intel-DualHead.png
  .. _ThinkWiki: http://thinkwiki.org/
- .. _`hosted on alioth`: https://alioth.debian.org/scm/browser.php?group_id=100834
+ .. _`hosted on GitLab`: https://gitlab.com/arandr/arandr
  .. _Debian: http://packages.debian.org/arandr
  .. _Ubuntu: http://packages.ubuntu.com/arandr
  .. _gettext: http://www.gnu.org/software/gettext/
  .. _`ARandR's page on hosted Weblate`: http://hosted.weblate.org/projects/arandr/translations/
  .. _me: mailto:chrysn@fsfe.org
- .. _bugtracker: https://alioth.debian.org/tracker/?atid=413123&group_id=100834
+ .. _bugtracker: https://gitlab.com/arandr/arandr/issues
  .. _`arandr-users mailing list`: https://lists.alioth.debian.org/mailman/listinfo/arandr-users
  .. _python: http://www.python.org/
  .. _PyGTK: http://www.pygtk.org/
@@ -211,9 +211,8 @@ Translations by
  .. _docutils: http://docutils.sourceforge.net/
  .. _`debian bug #507521`: http://bugs.debian.org/507521
  .. _`X11:Utilities repository`: http://download.opensuse.org/repositories/X11:/Utilities/
- .. _`list of bugs`: https://alioth.debian.org/tracker/?atid=413123&group_id=100834
- .. _`register on alioth`: https://alioth.debian.org/account/register.php
- .. _`report it`: https://alioth.debian.org/tracker/?func=add&group_id=100834&atid=413123
+ .. _`list of bugs`: https://gitlab.com/arandr/arandr/issues
+ .. _`report it`: https://gitlab.com/arandr/arandr/issues/new
  .. _`subscribe to the general discussion list`: https://lists.alioth.debian.org/mailman/listinfo/arandr-users
  .. _`subscribe to the announce list`: https://lists.alioth.debian.org/mailman/listinfo/arandr-announce
  .. _`flattr this`: https://flattr.com/submit/auto?user_id=chrysn&url=http%3A%2F%2Fchristian.amsuess.com%2Ftools%2Farandr%2F
