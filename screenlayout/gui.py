@@ -130,7 +130,8 @@ class Application(object):
             ("SaveAs", Gtk.STOCK_SAVE_AS, None, None, None, self.do_save_as),
 
             ("Apply", Gtk.STOCK_APPLY, None, '<Control>Return', None, self.do_apply),
-            ("LayoutSettings", Gtk.STOCK_PROPERTIES, None, '<Alt>Return', None, self.do_open_properties),
+            ("LayoutSettings", Gtk.STOCK_PROPERTIES, None,
+             '<Alt>Return', None, self.do_open_properties),
 
             ("Quit", Gtk.STOCK_QUIT, None, None, None, Gtk.main_quit),
 
@@ -141,16 +142,17 @@ class Application(object):
             ("OutputsDummy", None, _("Dummy")),
 
             ("System", None, _("_System")),
-            ("Metacity", None, _("_Keybindings (Metacity)"), None, None, self.do_open_metacity),
+            ("Metacity", None, _("_Keybindings (Metacity)"),
+             None, None, self.do_open_metacity),
 
             ("Help", None, _("_Help")),
             ("About", Gtk.STOCK_ABOUT, None, None, None, self.about),
-            ])
+        ])
         actiongroup.add_radio_actions([
             ("Zoom4", None, _("1:4"), None, None, 4),
             ("Zoom8", None, _("1:8"), None, None, 8),
             ("Zoom16", None, _("1:16"), None, None, 16),
-            ], 8, self.set_zoom)
+        ], 8, self.set_zoom)
 
         window.connect('destroy', Gtk.main_quit)
 
@@ -193,14 +195,16 @@ class Application(object):
     #################### actions ####################
 
     @actioncallback
-    def set_zoom(self, value): # don't use directly: state is not pushed back to action group.
+    # don't use directly: state is not pushed back to action group.
+    def set_zoom(self, value):
         self.widget.factor = value
-        self.window.resize(1,1)
+        self.window.resize(1, 1)
 
     @actioncallback
     def do_open_properties(self):
-        d = Gtk.Dialog(_("Script Properties"), None, Gtk.DialogFlags.MODAL, (Gtk.STOCK_CLOSE, Gtk.RESPONSE_ACCEPT))
-        d.set_default_size(300,400)
+        d = Gtk.Dialog(_("Script Properties"), None,
+                       Gtk.DialogFlags.MODAL, (Gtk.STOCK_CLOSE, Gtk.RESPONSE_ACCEPT))
+        d.set_default_size(300, 400)
 
         script_editor = Gtk.TextView()
         script_buffer = script_editor.get_buffer()
@@ -227,7 +231,8 @@ class Application(object):
         try:
             self.widget.save_to_x()
         except Exception as e:
-            d = Gtk.MessageDialog(None, Gtk.DialogFlags.MODAL, Gtk.MessageType.ERROR, Gtk.BUTTONS_OK, _("XRandR failed:\n%s")%e)
+            d = Gtk.MessageDialog(None, Gtk.DialogFlags.MODAL, Gtk.MessageType.ERROR, Gtk.BUTTONS_OK, _(
+                "XRandR failed:\n%s") % e)
             d.run()
             d.destroy()
 
@@ -237,7 +242,8 @@ class Application(object):
 
     @actioncallback
     def do_open(self):
-        d = self._new_file_dialog(_("Open Layout"), Gtk.FILE_CHOOSER_ACTION_OPEN, Gtk.STOCK_OPEN)
+        d = self._new_file_dialog(
+            _("Open Layout"), Gtk.FILE_CHOOSER_ACTION_OPEN, Gtk.STOCK_OPEN)
 
         result = d.run()
         filenames = d.get_filenames()
@@ -249,7 +255,8 @@ class Application(object):
 
     @actioncallback
     def do_save_as(self):
-        d = self._new_file_dialog(_("Save Layout"), Gtk.FILE_CHOOSER_ACTION_SAVE, Gtk.STOCK_SAVE)
+        d = self._new_file_dialog(
+            _("Save Layout"), Gtk.FILE_CHOOSER_ACTION_SAVE, Gtk.STOCK_SAVE)
         d.props.do_overwrite_confirmation = True
 
         result = d.run()
@@ -258,7 +265,8 @@ class Application(object):
         if result == Gtk.RESPONSE_ACCEPT:
             assert len(filenames) == 1
             f = filenames[0]
-            if not f.endswith('.sh'): f = f + '.sh'
+            if not f.endswith('.sh'):
+                f = f + '.sh'
             self.widget.save_to_file(f, self.filetemplate)
 
     def _new_file_dialog(self, title, type, buttontype):
@@ -304,8 +312,10 @@ class Application(object):
         d.props.translator_credits = "\n".join(TRANSLATORS)
         d.props.copyright = COPYRIGHT
         d.props.comments = PROGRAMDESCRIPTION
-        licensetext = open(os.path.join(os.path.dirname(__file__), 'data', 'gpl-3.txt')).read()
-        d.props.license = licensetext.replace('<', u'\u2329 ').replace('>', u' \u232a')
+        licensetext = open(os.path.join(os.path.dirname(
+            __file__), 'data', 'gpl-3.txt')).read()
+        d.props.license = licensetext.replace(
+            '<', u'\u2329 ').replace('>', u' \u232a')
         d.props.logo_icon_name = 'video-display'
         d.run()
         d.destroy()
@@ -313,10 +323,13 @@ class Application(object):
     def run(self):
         Gtk.main()
 
+
 def main():
-    p = optparse.OptionParser(usage="%prog [savedfile]", description="Another XRandrR GUI", version="%%prog %s"%__version__)
+    p = optparse.OptionParser(
+        usage="%prog [savedfile]", description="Another XRandrR GUI", version="%%prog %s" % __version__)
     p.add_option('--randr-display', help='Use D as display for xrandr (but still show the GUI on the display from the environment; e.g. `localhost:10.0`)', metavar='D')
-    p.add_option('--force-version', help='Even run with untested XRandR versions', action='store_true')
+    p.add_option('--force-version',
+                 help='Even run with untested XRandR versions', action='store_true')
 
     (options, args) = p.parse_args()
     if len(args) == 0:
@@ -327,8 +340,8 @@ def main():
         p.usage()
 
     a = Application(
-            file=file_to_open,
-            randr_display=options.randr_display,
-            force_version=options.force_version
-            )
+        file=file_to_open,
+        randr_display=options.randr_display,
+        force_version=options.force_version
+    )
     a.run()
