@@ -203,7 +203,7 @@ class Application(object):
     @actioncallback
     def do_open_properties(self):
         d = Gtk.Dialog(_("Script Properties"), None,
-                       Gtk.DialogFlags.MODAL, (Gtk.STOCK_CLOSE, Gtk.RESPONSE_ACCEPT))
+                       Gtk.DialogFlags.MODAL, (Gtk.STOCK_CLOSE, Gtk.ResponseType.ACCEPT))
         d.set_default_size(300, 400)
 
         script_editor = Gtk.TextView()
@@ -243,12 +243,12 @@ class Application(object):
     @actioncallback
     def do_open(self):
         d = self._new_file_dialog(
-            _("Open Layout"), Gtk.FILE_CHOOSER_ACTION_OPEN, Gtk.STOCK_OPEN)
+            _("Open Layout"), Gtk.FileChooserAction.OPEN, Gtk.STOCK_OPEN)
 
         result = d.run()
         filenames = d.get_filenames()
         d.destroy()
-        if result == Gtk.RESPONSE_ACCEPT:
+        if result == Gtk.ResponseType.ACCEPT:
             assert len(filenames) == 1
             f = filenames[0]
             self.filetemplate = self.widget.load_from_file(f)
@@ -256,13 +256,13 @@ class Application(object):
     @actioncallback
     def do_save_as(self):
         d = self._new_file_dialog(
-            _("Save Layout"), Gtk.FILE_CHOOSER_ACTION_SAVE, Gtk.STOCK_SAVE)
+            _("Save Layout"), Gtk.FileChooserAction.SAVE, Gtk.STOCK_SAVE)
         d.props.do_overwrite_confirmation = True
 
         result = d.run()
         filenames = d.get_filenames()
         d.destroy()
-        if result == Gtk.RESPONSE_ACCEPT:
+        if result == Gtk.ResponseType.ACCEPT:
             assert len(filenames) == 1
             f = filenames[0]
             if not f.endswith('.sh'):
@@ -271,8 +271,8 @@ class Application(object):
 
     def _new_file_dialog(self, title, type, buttontype):
         d = Gtk.FileChooserDialog(title, None, type)
-        d.add_button(Gtk.STOCK_CANCEL, Gtk.RESPONSE_CANCEL)
-        d.add_button(buttontype, Gtk.RESPONSE_ACCEPT)
+        d.add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL)
+        d.add_button(buttontype, Gtk.ResponseType.ACCEPT)
 
         layoutdir = os.path.expanduser('~/.screenlayout/')
         try:
