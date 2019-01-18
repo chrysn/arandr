@@ -1,73 +1,80 @@
 # ARandR -- Another XRandR GUI
 # Copyright (C) 2008 -- 2011 chrysn <chrysn@fsfe.org>
-# 
+#
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-# 
+#
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+import gettext
+from gi.repository import GObject, Gtk
 import os
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import GObject, Gtk
 
 try:
     import gconf
 except ImportError:
     gconf = None
 
-import gettext
 gettext.install('arandr')
 
-SCRIPTSDIR = os.path.expanduser('~/.screenlayout/') # must end in /
+SCRIPTSDIR = os.path.expanduser('~/.screenlayout/')  # must end in /
 
 # cycling template:
 # sh -c 'COUNT=`cat /tmp/counter 2>/dev/null`; LENGTH=3; COUNT=$(expr $(expr $COUNT + 1) % $LENGTH); echo $COUNT > /tmp/counter; case "$COUNT" in 0) echo zero;; 1) echo uno;; 2) echo dos;; esac'
 # countfile must be a harmless string
 CYCLINGPATTERN = """sh -c 'COUNTFILE=%(countfile)s; COUNT=`cat $COUNTFILE 2>/dev/null`; LENGTH=%(length)d; COUNT=$(expr $(expr $COUNT + 1) %% $LENGTH); echo $COUNT > $COUNTFILE; case "$COUNT" in %(cases)s;; esac'"""
 CYCLINGPATTERN_RECOGNITION = [
-        """sh -c 'COUNTFILE=""",
-        """; COUNT=`cat $COUNTFILE 2>/dev/null`; LENGTH=""",
-        """; COUNT=$(expr $(expr $COUNT + 1) % $LENGTH); echo $COUNT > $COUNTFILE; case "$COUNT" in """,
-        """;; esac'""",
-        ]
+    """sh -c 'COUNTFILE=""",
+    """; COUNT=`cat $COUNTFILE 2>/dev/null`; LENGTH=""",
+    """; COUNT=$(expr $(expr $COUNT + 1) % $LENGTH); echo $COUNT > $COUNTFILE; case "$COUNT" in """,
+    """;; esac'""",
+]
+
 
 class MetacityWidget(Gtk.Table):
     """Widget that manages bindings of screenlayout scripts to metacity keybindings.
 
     Not related to ARandR except that ARandR scripts are bound."""
+
     def __init__(self):
         Gtk.Table.__init__(self, rows=13, columns=2)
 
         c = gconf.client_get_default()
-        c.add_dir('/apps/metacity/global_keybindings', gconf.CLIENT_PRELOAD_NONE)
-        c.add_dir('/apps/metacity/keybinding_commands', gconf.CLIENT_PRELOAD_NONE)
+        c.add_dir('/apps/metacity/global_keybindings',
+                  gconf.CLIENT_PRELOAD_NONE)
+        c.add_dir('/apps/metacity/keybinding_commands',
+                  gconf.CLIENT_PRELOAD_NONE)
 
-        self.attach(Gtk.Label(_("Accelerator")), 0,1,0,1)
-        self.attach(Gtk.Label(_("Action")), 1,2,0,1)
+        self.attach(Gtk.Label(_("Accelerator")), 0, 1, 0, 1)
+        self.attach(Gtk.Label(_("Action")), 1, 2, 0, 1)
 
         self.lines = []
-        for i in range(1,13):
-            k = KeyBindingButton(c, '/apps/metacity/global_keybindings/run_command_%d'%i)
-            a = ActionWidget(c, '/apps/metacity/keybinding_commands/command_%d'%i)
+        for i in range(1, 13):
+            k = KeyBindingButton(
+                c, '/apps/metacity/global_keybindings/run_command_%d' % i)
+            a = ActionWidget(
+                c, '/apps/metacity/keybinding_commands/command_%d' % i)
             self.attach(k, 0, 1, i, i+1)
             self.attach(a, 1, 2, i, i+1)
-            self.lines.append((k,a))
+            self.lines.append((k, a))
             k.connect('notify::bound', lambda *args: self._update())
             a.connect('notify::editable', lambda *args: self._update())
         self._update()
 
     def _update(self):
-        for i,(k,a) in enumerate(self.lines):
-            enable = (i==0 or k.props.bound or self.lines[i-1][0].props.bound) and a.props.editable
+        for i, (k, a) in enumerate(self.lines):
+            enable = (
+                i == 0 or k.props.bound or self.lines[i-1][0].props.bound) and a.props.editable
             k.props.sensitive = enable
             a.props.sensitive = enable and k.props.bound
 
@@ -76,6 +83,7 @@ class GConfButton(Gtk.Button):
     """Button connected to a gconfkey via a gconf client c.
 
     Will call self._update when the key is changed; use self.set(value) to change the key's value."""
+
     def __init__(self, c, gconfkey):
         self._properties = {}
         super(GConfButton, self).__init__()
@@ -87,10 +95,11 @@ class GConfButton(Gtk.Button):
 
     def __del__(self):
         self.gconf.notify_remove(self._id)
-        #print "del" # FIXME: not called!
+        # print "del" # FIXME: not called!
 
     def do_get_property(self, key):
         return self._properties[key]
+
     def do_set_property(self, key, value):
         self._properties[key] = value
 
@@ -105,8 +114,8 @@ class GConfButton(Gtk.Button):
 class KeyBindingButton(GConfButton):
     """GConfButton that will interpret the value as a keybinding and ask for a new keybinding when pressed."""
     __gproperties__ = {
-            'bound': (GObject.TYPE_BOOLEAN, 'bound', 'slot is bound to a key', False, GObject.PARAM_READWRITE),
-            }
+        'bound': (GObject.TYPE_BOOLEAN, 'bound', 'slot is bound to a key', False, GObject.PARAM_READWRITE),
+    }
 
     def __init__(self, *args, **kwords):
         super(KeyBindingButton, self).__init__(*args, **kwords)
@@ -137,14 +146,17 @@ class KeyBindingButton(GConfButton):
         else:
             self.abort_editing()
 
-    def on_keypress(self, widget, event): # modified from gnome deskbar-applet's DeskbarPreferencesUI.py
+    # modified from gnome deskbar-applet's DeskbarPreferencesUI.py
+    def on_keypress(self, widget, event):
         if not self.editing:
             return
 
         keymap = Gtk.gdk.keymap_get_default()
-        translation = keymap.translate_keyboard_state(event.hardware_keycode, event.state, event.group)
-        if translation == None: # FIXME: metacity can also handle raw keycodes with modifiers (but can compiz?)
-            accel_name = "%#x"%event.hardware_keycode
+        translation = keymap.translate_keyboard_state(
+            event.hardware_keycode, event.state, event.group)
+        # FIXME: metacity can also handle raw keycodes with modifiers (but can compiz?)
+        if translation == None:
+            accel_name = "%#x" % event.hardware_keycode
         else:
             (keyval, egroup, level, consumed_modifiers) = translation
             upper = event.keyval
@@ -156,7 +168,8 @@ class KeyBindingButton(GConfButton):
 
             # filter consumed/ignored modifiers
             ignored_modifiers = Gtk.gdk.MOD2_MASK | Gtk.gdk.MOD5_MASK
-            accel_mods = event.state & Gtk.gdk.MODIFIER_MASK & ~(consumed_modifiers | ignored_modifiers)
+            accel_mods = event.state & Gtk.gdk.MODIFIER_MASK & ~(
+                consumed_modifiers | ignored_modifiers)
 
             if accel_mods == 0 and accel_keyval == Gtk.keysyms.Escape:
                 self.abort_editing()
@@ -166,7 +179,7 @@ class KeyBindingButton(GConfButton):
                 return
 
             if not Gtk.accelerator_valid(accel_keyval, accel_mods):
-                return # just modifiers
+                return  # just modifiers
 
             accel_name = Gtk.accelerator_name(accel_keyval, accel_mods)
             #self.set_accelerator(accel_keyval, event.hardware_keycode, accel_mods)
@@ -175,11 +188,12 @@ class KeyBindingButton(GConfButton):
 
         self.set(accel_name)
 
+
 class ActionWidget(GConfButton):
     """GConfButton that will interpret the value as a command and allow changing it if it is a screenlayout script or a collection thereof."""
     __gproperties__ = {
-            'editable': (GObject.TYPE_BOOLEAN, 'editable', 'true if property can be managed by MetacityWidget', False, GObject.PARAM_READWRITE),
-            }
+        'editable': (GObject.TYPE_BOOLEAN, 'editable', 'true if property can be managed by MetacityWidget', False, GObject.PARAM_READWRITE),
+    }
 
     def __init__(self, *args, **kwords):
         super(ActionWidget, self).__init__(*args, **kwords)
@@ -211,11 +225,12 @@ class ActionWidget(GConfButton):
                 index = left.index(CYCLINGPATTERN_RECOGNITION[3])
                 cases = left[:index]
                 left = left[index+len(CYCLINGPATTERN_RECOGNITION[3]):]
-                if left!="":
+                if left != "":
                     raise ValueError("Not my syntax.")
 
                 # countfile, length, cases
-                counter, scripts = zip(*[part.split(") ") for part in cases.split(" ;; ")])
+                counter, scripts = zip(*[part.split(") ")
+                                         for part in cases.split(" ;; ")])
                 if counter != tuple(str(i) for i in range(length)):
                     raise ValueError("Not my syntax.")
 
@@ -224,7 +239,7 @@ class ActionWidget(GConfButton):
                     if s.startswith('"'+SCRIPTSDIR) and s.endswith('.sh"'):
                         self.items.append(s[len(SCRIPTSDIR)+1:-4])
                     else:
-                        raise ValueError("Not my syntax.");
+                        raise ValueError("Not my syntax.")
             except (ValueError, ):
                 self.props.label = _("incompatible configuration")
                 self.props.editable = False
@@ -247,13 +262,15 @@ class ActionWidget(GConfButton):
                 i = Gtk.CheckMenuItem(text)
                 if text in self.items:
                     i.props.active = True
-                i.connect('activate', lambda menuitem, script: self.toggle(script), text)
+                i.connect('activate', lambda menuitem,
+                          script: self.toggle(script), text)
                 m.add(i)
-        except OSError: # no such directory
+        except OSError:  # no such directory
             pass
 
         if not m.get_children():
-            i = Gtk.MenuItem(_("No files in %(folder)r. Save a layout first.")%{'folder':SCRIPTSDIR})
+            i = Gtk.MenuItem(_("No files in %(folder)r. Save a layout first.") % {
+                             'folder': SCRIPTSDIR})
             i.props.sensitive = False
             m.add(i)
         else:
@@ -274,16 +291,19 @@ class ActionWidget(GConfButton):
         if len(self.items) == 0:
             self.set("")
         elif len(self.items) == 1:
-            self.set('"%s%s.sh"'%(SCRIPTSDIR, self.items[0]))
+            self.set('"%s%s.sh"' % (SCRIPTSDIR, self.items[0]))
         else:
-            self.set(CYCLINGPATTERN%{'length':len(self.items), 'countfile':'/tmp/screenlayout_count.%s'%os.environ['USER'], 'cases':" ;; ".join('%d) "%s.sh"'%(i,SCRIPTSDIR+script) for (i,script) in enumerate(self.items))})
+            self.set(CYCLINGPATTERN % {'length': len(self.items), 'countfile': '/tmp/screenlayout_count.%s' % os.environ['USER'], 'cases': " ;; ".join(
+                '%d) "%s.sh"' % (i, SCRIPTSDIR+script) for (i, script) in enumerate(self.items))})
 
 
 def show_keybinder():
     if not gconf:
-        d = Gtk.MessageDialog(None, Gtk.DialogFlags.DESTROY_WITH_PARENT, Gtk.MessageType.ERROR, Gtk.ButtonsType.CLOSE)
+        d = Gtk.MessageDialog(None, Gtk.DialogFlags.DESTROY_WITH_PARENT,
+                              Gtk.MessageType.ERROR, Gtk.ButtonsType.CLOSE)
         d.props.text = _("gconf not available.")
-        d.props.secondary_text = _("In order to configure metacity, you need to have the python gconf module installed.")
+        d.props.secondary_text = _(
+            "In order to configure metacity, you need to have the python gconf module installed.")
         d.run()
         d.destroy()
         return
@@ -295,7 +315,7 @@ def show_keybinder():
     close = Gtk.Button(Gtk.STOCK_CLOSE)
     close.props.use_stock = True
     close.connect('clicked', lambda *args: d.destroy())
-    buttons = Gtk.HBox() # FIXME: use HButtonBox
+    buttons = Gtk.HBox()  # FIXME: use HButtonBox
     buttons.props.border_width = 5
     buttons.pack_end(close, expand=False)
 
