@@ -15,8 +15,9 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import os
-import gobject
-import gtk
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import GObject, Gtk
 
 try:
     import gconf
@@ -39,19 +40,19 @@ CYCLINGPATTERN_RECOGNITION = [
         """;; esac'""",
         ]
 
-class MetacityWidget(gtk.Table):
+class MetacityWidget(Gtk.Table):
     """Widget that manages bindings of screenlayout scripts to metacity keybindings.
 
     Not related to ARandR except that ARandR scripts are bound."""
     def __init__(self):
-        gtk.Table.__init__(self, rows=13, columns=2)
+        Gtk.Table.__init__(self, rows=13, columns=2)
 
         c = gconf.client_get_default()
         c.add_dir('/apps/metacity/global_keybindings', gconf.CLIENT_PRELOAD_NONE)
         c.add_dir('/apps/metacity/keybinding_commands', gconf.CLIENT_PRELOAD_NONE)
 
-        self.attach(gtk.Label(_("Accelerator")), 0,1,0,1)
-        self.attach(gtk.Label(_("Action")), 1,2,0,1)
+        self.attach(Gtk.Label(_("Accelerator")), 0,1,0,1)
+        self.attach(Gtk.Label(_("Action")), 1,2,0,1)
 
         self.lines = []
         for i in range(1,13):
@@ -71,7 +72,7 @@ class MetacityWidget(gtk.Table):
             a.props.sensitive = enable and k.props.bound
 
 
-class GConfButton(gtk.Button):
+class GConfButton(Gtk.Button):
     """Button connected to a gconfkey via a gconf client c.
 
     Will call self._update when the key is changed; use self.set(value) to change the key's value."""
@@ -104,7 +105,7 @@ class GConfButton(gtk.Button):
 class KeyBindingButton(GConfButton):
     """GConfButton that will interpret the value as a keybinding and ask for a new keybinding when pressed."""
     __gproperties__ = {
-            'bound': (gobject.TYPE_BOOLEAN, 'bound', 'slot is bound to a key', False, gobject.PARAM_READWRITE),
+            'bound': (GObject.TYPE_BOOLEAN, 'bound', 'slot is bound to a key', False, GObject.PARAM_READWRITE),
             }
 
     def __init__(self, *args, **kwords):
@@ -140,34 +141,34 @@ class KeyBindingButton(GConfButton):
         if not self.editing:
             return
 
-        keymap = gtk.gdk.keymap_get_default()
+        keymap = Gtk.gdk.keymap_get_default()
         translation = keymap.translate_keyboard_state(event.hardware_keycode, event.state, event.group)
         if translation == None: # FIXME: metacity can also handle raw keycodes with modifiers (but can compiz?)
             accel_name = "%#x"%event.hardware_keycode
         else:
             (keyval, egroup, level, consumed_modifiers) = translation
             upper = event.keyval
-            accel_keyval = gtk.gdk.keyval_to_lower(upper)
+            accel_keyval = Gtk.gdk.keyval_to_lower(upper)
 
             # Put shift back if it changed the case of the key, not otherwise.
-            if upper != accel_keyval and (consumed_modifiers & gtk.gdk.SHIFT_MASK):
-                consumed_modifiers &= ~(gtk.gdk.SHIFT_MASK)
+            if upper != accel_keyval and (consumed_modifiers & Gtk.gdk.SHIFT_MASK):
+                consumed_modifiers &= ~(Gtk.gdk.SHIFT_MASK)
 
             # filter consumed/ignored modifiers
-            ignored_modifiers = gtk.gdk.MOD2_MASK | gtk.gdk.MOD5_MASK
-            accel_mods = event.state & gtk.gdk.MODIFIER_MASK & ~(consumed_modifiers | ignored_modifiers)
+            ignored_modifiers = Gtk.gdk.MOD2_MASK | Gtk.gdk.MOD5_MASK
+            accel_mods = event.state & Gtk.gdk.MODIFIER_MASK & ~(consumed_modifiers | ignored_modifiers)
 
-            if accel_mods == 0 and accel_keyval == gtk.keysyms.Escape:
+            if accel_mods == 0 and accel_keyval == Gtk.keysyms.Escape:
                 self.abort_editing()
                 return
-            if accel_mods == 0 and accel_keyval == gtk.keysyms.BackSpace:
+            if accel_mods == 0 and accel_keyval == Gtk.keysyms.BackSpace:
                 self.set('disabled')
                 return
 
-            if not gtk.accelerator_valid(accel_keyval, accel_mods):
+            if not Gtk.accelerator_valid(accel_keyval, accel_mods):
                 return # just modifiers
 
-            accel_name = gtk.accelerator_name(accel_keyval, accel_mods)
+            accel_name = Gtk.accelerator_name(accel_keyval, accel_mods)
             #self.set_accelerator(accel_keyval, event.hardware_keycode, accel_mods)
             #self.__old_value = None
             #self.emit('accel-edited', accel_name, accel_keyval, accel_mods, event.hardware_keycode)
@@ -177,7 +178,7 @@ class KeyBindingButton(GConfButton):
 class ActionWidget(GConfButton):
     """GConfButton that will interpret the value as a command and allow changing it if it is a screenlayout script or a collection thereof."""
     __gproperties__ = {
-            'editable': (gobject.TYPE_BOOLEAN, 'editable', 'true if property can be managed by MetacityWidget', False, gobject.PARAM_READWRITE),
+            'editable': (GObject.TYPE_BOOLEAN, 'editable', 'true if property can be managed by MetacityWidget', False, GObject.PARAM_READWRITE),
             }
 
     def __init__(self, *args, **kwords):
@@ -237,13 +238,13 @@ class ActionWidget(GConfButton):
             self.items = None
 
     def on_clicked(self, widget):
-        m = gtk.Menu()
+        m = Gtk.Menu()
         try:
             for f in os.listdir(SCRIPTSDIR):
                 if not f.endswith('.sh'):
                     continue
                 text = f[:-3]
-                i = gtk.CheckMenuItem(text)
+                i = Gtk.CheckMenuItem(text)
                 if text in self.items:
                     i.props.active = True
                 i.connect('activate', lambda menuitem, script: self.toggle(script), text)
@@ -252,13 +253,13 @@ class ActionWidget(GConfButton):
             pass
 
         if not m.get_children():
-            i = gtk.MenuItem(_("No files in %(folder)r. Save a layout first.")%{'folder':SCRIPTSDIR})
+            i = Gtk.MenuItem(_("No files in %(folder)r. Save a layout first.")%{'folder':SCRIPTSDIR})
             i.props.sensitive = False
             m.add(i)
         else:
-            m.add(gtk.MenuItem())
+            m.add(Gtk.MenuItem())
 
-            i = gtk.ImageMenuItem(gtk.STOCK_CLEAR)
+            i = Gtk.ImageMenuItem(Gtk.STOCK_CLEAR)
             i.connect('activate', lambda menuitem: self.set(""))
             m.add(i)
 
@@ -280,29 +281,29 @@ class ActionWidget(GConfButton):
 
 def show_keybinder():
     if not gconf:
-        d = gtk.MessageDialog(None, gtk.DIALOG_DESTROY_WITH_PARENT, gtk.MESSAGE_ERROR, gtk.BUTTONS_CLOSE)
+        d = Gtk.MessageDialog(None, Gtk.DialogFlags.DESTROY_WITH_PARENT, Gtk.MessageType.ERROR, Gtk.ButtonsType.CLOSE)
         d.props.text = _("gconf not available.")
         d.props.secondary_text = _("In order to configure metacity, you need to have the python gconf module installed.")
         d.run()
         d.destroy()
         return
 
-    d = gtk.Window()
+    d = Gtk.Window()
     d.props.modal = True
     d.props.title = _("Keybindings (via Metacity)")
 
-    close = gtk.Button(gtk.STOCK_CLOSE)
+    close = Gtk.Button(Gtk.STOCK_CLOSE)
     close.props.use_stock = True
     close.connect('clicked', lambda *args: d.destroy())
-    buttons = gtk.HBox() # FIXME: use HButtonBox
+    buttons = Gtk.HBox() # FIXME: use HButtonBox
     buttons.props.border_width = 5
     buttons.pack_end(close, expand=False)
 
     t = MetacityWidget()
 
-    contents = gtk.VBox()
+    contents = Gtk.VBox()
     contents.pack_start(t)
-    l = gtk.Label(_('Click on a button in the left column and press a key combination you want to bind to a certain screen layout. (Use backspace to clear accelerators, escape to abort editing.) Then, select one or more layouts in the right column.\n\nThis will only work if you use metacity or another program reading its configuration.'))
+    l = Gtk.Label(_('Click on a button in the left column and press a key combination you want to bind to a certain screen layout. (Use backspace to clear accelerators, escape to abort editing.) Then, select one or more layouts in the right column.\n\nThis will only work if you use metacity or another program reading its configuration.'))
     l.props.wrap = True
     contents.pack_start(l)
     contents.pack_end(buttons, expand=False)
