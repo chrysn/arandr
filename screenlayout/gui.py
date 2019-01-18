@@ -34,11 +34,11 @@ from .meta import (
 )
 
 import gi
+gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio
 
 
 gettext.install('arandr')
-gi.require_version('Gtk', '3.0')
 
 
 def actioncallback(function):
