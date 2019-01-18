@@ -1,7 +1,3 @@
-from .auxiliary import Position, NORMAL, ROTATIONS, InadequateConfiguration
-from .xrandr import XRandR, Feature
-from .snap import Snap
-from gi.repository import GObject, Gtk, Pango, PangoCairo, Gdk
 """
 ARandR -- Another XRandR GUI
 Copyright (C) 2008 -- 2011 chrysn <chrysn@fsfe.org>
@@ -30,6 +26,11 @@ import gettext
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('PangoCairo', '1.0')
+from gi.repository import GObject, Gtk, Pango, PangoCairo, Gdk
+
+from .snap import Snap
+from .xrandr import XRandR, Feature
+from .auxiliary import Position, NORMAL, ROTATIONS, InadequateConfiguration
 
 
 gettext.install('arandr')
