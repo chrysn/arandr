@@ -18,28 +18,33 @@
 
 Run by calling the main() function."""
 
-import gtk
+# pylint: disable=wrong-import-position
+
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
+
 from . import widget
 
 
 def main():
-    w = gtk.Window()
-    w.connect('destroy', gtk.main_quit)
+    window = Gtk.Window()
+    window.connect('destroy', Gtk.main_quit)
 
-    r = widget.ARandRWidget()
-    r.load_from_x()
+    arandr = widget.ARandRWidget(window=window)
+    arandr.load_from_x()
 
-    b = gtk.Button("Reload")
-    b.connect('clicked', lambda *args: r.load_from_x())
+    reload_button = Gtk.Button("Reload")
+    reload_button.connect('clicked', lambda *args: arandr.load_from_x())
 
-    b2 = gtk.Button("Apply")
-    b2.connect('clicked', lambda *args: r.save_to_x())
+    apply_button = Gtk.Button("Apply")
+    apply_button.connect('clicked', lambda *args: arandr.save_to_x())
 
-    v = gtk.VBox()
-    w.add(v)
-    v.add(r)
-    v.add(b)
-    v.add(b2)
-    w.set_title('Simple ARandR Widget Demo')
-    w.show_all()
-    gtk.main()
+    vbox = Gtk.VBox()
+    window.add(vbox)
+    vbox.add(arandr)
+    vbox.add(reload_button)
+    vbox.add(apply_button)
+    window.set_title('Simple ARandR Widget Demo')
+    window.show_all()
+    Gtk.main()
