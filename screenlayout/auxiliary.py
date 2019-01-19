@@ -40,7 +40,7 @@ class BetterList(list):
         i = -1
         while True:
             try:
-                i = self.index(item, i+1)
+                i = self.index(item, i + 1)
             except ValueError:
                 break
             yield i
@@ -48,9 +48,9 @@ class BetterList(list):
     def split(self, item):
         indices = list(self.indices(item))
         yield self[:indices[0]]
-        for x in (self[a+1:b] for (a, b) in zip(indices[:-1], indices[1:])):
+        for x in (self[a + 1:b] for (a, b) in zip(indices[:-1], indices[1:])):
             yield x
-        yield self[indices[-1]+1:]
+        yield self[indices[-1] + 1:]
 
 
 class Size(tuple):
@@ -139,7 +139,7 @@ class Rotation(str):
         if self not in ('left', 'right', 'normal', 'inverted'):
             raise Exception("No know rotation.")
     is_odd = property(lambda self: self in ('left', 'right'))
-    _angles = {'left': pi/2, 'inverted': pi, 'right': 3*pi/2, 'normal': 0}
+    _angles = {'left': pi / 2, 'inverted': pi, 'right': 3 * pi / 2, 'normal': 0}
     angle = property(lambda self: Rotation._angles[self])
 
     def __repr__(self):

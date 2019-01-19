@@ -27,23 +27,23 @@ class Snap:
         self.vertical = set()
         for i in positions:
             self.vertical.add(i[0].left)
-            self.vertical.add(i[0].left+i[1].width)
+            self.vertical.add(i[0].left + i[1].width)
             self.horizontal.add(i[0].top)
-            self.horizontal.add(i[0].top+i[1].height)
+            self.horizontal.add(i[0].top + i[1].height)
 
-            self.vertical.add(i[0].left-size.width)
-            self.vertical.add(i[0].left+i[1].width-size.width)
-            self.horizontal.add(i[0].top-size.height)
-            self.horizontal.add(i[0].top+i[1].height-size.height)
+            self.vertical.add(i[0].left - size.width)
+            self.vertical.add(i[0].left + i[1].width - size.width)
+            self.horizontal.add(i[0].top - size.height)
+            self.horizontal.add(i[0].top + i[1].height - size.height)
 
-            self.vertical.add((i[0].left + i[1].width/2)-size.width/2)
-            self.horizontal.add((i[0].top + i[1].height/2)-size.height/2)
+            self.vertical.add((i[0].left + i[1].width / 2) - size.width / 2)
+            self.horizontal.add((i[0].top + i[1].height / 2) - size.height / 2)
 
     def suggest(self, position):
         vertical = [x for x in self.vertical if abs(
-            x-position[0]) < self.tolerance]
+            x - position[0]) < self.tolerance]
         horizontal = [y for y in self.horizontal if abs(
-            y-position[1]) < self.tolerance]
+            y - position[1]) < self.tolerance]
 
         if vertical:
             position = Position((vertical[0], position[1]))

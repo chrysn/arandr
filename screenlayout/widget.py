@@ -52,8 +52,9 @@ class ARandRWidget(Gtk.DrawingArea):
         self.window = window
         self._factor = factor
 
-        self.set_size_request(1024//self.factor, 1024 //
-                              self.factor)  # best guess for now
+        self.set_size_request(
+            1024 // self.factor, 1024 // self.factor
+        )  # best guess for now
 
         self.connect('button-press-event', self.click)
         self.set_events(Gdk.EventType.BUTTON_PRESS)
@@ -110,7 +111,7 @@ class ARandRWidget(Gtk.DrawingArea):
         # don't request too large a window, but make sure very possible compination fits
         xdim = min(self._xrandr.state.virtual.max[0], usable_size)
         ydim = min(self._xrandr.state.virtual.max[1], usable_size)
-        self.set_size_request(xdim//self.factor, ydim//self.factor)
+        self.set_size_request(xdim // self.factor, ydim // self.factor)
 
     #################### loading ####################
 
@@ -216,8 +217,8 @@ class ARandRWidget(Gtk.DrawingArea):
     def do_expose_event(self, _event, context):
         context.rectangle(
             0, 0,
-            self._xrandr.state.virtual.max[0]//self.factor,
-            self._xrandr.state.virtual.max[1]//self.factor
+            self._xrandr.state.virtual.max[0] // self.factor,
+            self._xrandr.state.virtual.max[1] // self.factor
         )
         context.clip()
 
@@ -227,8 +228,8 @@ class ARandRWidget(Gtk.DrawingArea):
         context.fill()
         context.save()
 
-        context.scale(1/self.factor, 1/self.factor)
-        context.set_line_width(self.factor*1.5)
+        context.scale(1 / self.factor, 1 / self.factor)
+        context.set_line_width(self.factor * 1.5)
 
         self._draw(self._xrandr, context)
 
@@ -251,7 +252,7 @@ class ARandRWidget(Gtk.DrawingArea):
 
             rect = (output.tentative_position if hasattr(
                 output, 'tentative_position') else output.position) + tuple(output.size)
-            center = rect[0]+rect[2]/2, rect[1]+rect[3]/2
+            center = rect[0] + rect[2] / 2, rect[1] + rect[3] / 2
 
             # paint rectangle
             context.set_source_rgba(1, 1, 1, 0.7)
@@ -264,7 +265,7 @@ class ARandRWidget(Gtk.DrawingArea):
             # set up for text
             context.save()
             textwidth = rect[3 if output.rotation.is_odd else 2]
-            widthperchar = textwidth/len(output_name)
+            widthperchar = textwidth / len(output_name)
             # i think this looks nice and won't overflow even for wide fonts
             textheight = int(widthperchar * 0.8)
 
@@ -290,7 +291,7 @@ class ARandRWidget(Gtk.DrawingArea):
 
             # position text
             layoutsize = layout.get_pixel_size()
-            layoutoffset = -layoutsize[0]/2, -layoutsize[1]/2
+            layoutoffset = -layoutsize[0] / 2, -layoutsize[1] / 2
             context.move_to(*center)
             context.rotate(output.rotation.angle)
             context.rel_move_to(*layoutoffset)
@@ -303,8 +304,8 @@ class ARandRWidget(Gtk.DrawingArea):
         # using self.allocation as rect is offset by the menu bar.
         self.queue_draw_area(
             0, 0,
-            self._xrandr.state.virtual.max[0]//self.factor,
-            self._xrandr.state.virtual.max[1]//self.factor
+            self._xrandr.state.virtual.max[0] // self.factor,
+            self._xrandr.state.virtual.max[1] // self.factor
         )
         # this has the side effect of not painting out of the available
         # region output_name drag and drop
@@ -342,15 +343,15 @@ class ARandRWidget(Gtk.DrawingArea):
         self._lastclick = (event.x, event.y)
 
     def _get_point_outputs(self, x, y):
-        x, y = x*self.factor, y*self.factor
+        x, y = x * self.factor, y * self.factor
         outputs = set()
         for output_name, output in self._xrandr.configuration.outputs.items():
             if not output.active:
                 continue
             if (
-                    output.position[0]-self.factor <= x <= output.position[0]+output.size[0]+self.factor
+                    output.position[0] - self.factor <= x <= output.position[0] + output.size[0] + self.factor
             ) and (
-                output.position[1]-self.factor <= y <= output.position[1]+output.size[1]+self.factor
+                output.position[1] - self.factor <= y <= output.position[1] + output.size[1] + self.factor
             ):
                 outputs.add(output_name)
         return outputs
@@ -459,8 +460,8 @@ class ARandRWidget(Gtk.DrawingArea):
                              Gtk.TargetFlags.SAME_WIDGET, 0)],
             0
         )
-        #self.drag_source_set(Gdk.BUTTON1_MASK, [], 0)
-        #self.drag_dest_set(0, [], 0)
+        # self.drag_source_set(Gdk.BUTTON1_MASK, [], 0)
+        # self.drag_dest_set(0, [], 0)
 
         self._draggingfrom = None
         self._draggingoutput = None
@@ -485,8 +486,8 @@ class ARandRWidget(Gtk.DrawingArea):
 
         self._draggingsnap = Snap(
             self._xrandr.configuration.outputs[self._draggingoutput].size,
-            self.factor*5,
-            [(Position((0, 0)), self._xrandr.state.virtual.max)]+[
+            self.factor * 5,
+            [(Position((0, 0)), self._xrandr.state.virtual.max)] + [
                 (virtual_state.position, virtual_state.size)
                 for (k, virtual_state) in self._xrandr.configuration.outputs.items()
                 if k != self._draggingoutput and virtual_state.active
@@ -501,11 +502,11 @@ class ARandRWidget(Gtk.DrawingArea):
 
         Gdk.drag_status(context, Gdk.DragAction.MOVE, time)
 
-        rel = x-self._draggingfrom[0], y-self._draggingfrom[1]
+        rel = x - self._draggingfrom[0], y - self._draggingfrom[1]
 
         oldpos = self._xrandr.configuration.outputs[self._draggingoutput].position
         newpos = Position(
-            (oldpos[0]+self.factor*rel[0], oldpos[1]+self.factor*rel[1]))
+            (oldpos[0] + self.factor * rel[0], oldpos[1] + self.factor * rel[1]))
         self._xrandr.configuration.outputs[
             self._draggingoutput
         ].tentative_position = self._draggingsnap.suggest(newpos)

@@ -66,7 +66,7 @@ class XRandR:
 
     def _output(self, *args):
         proc = subprocess.Popen(
-            ("xrandr",)+args,
+            ("xrandr",) + args,
             stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=self.environ
         )
         ret, err = proc.communicate()
@@ -127,8 +127,8 @@ class XRandR:
                 if len(output_argument) % 2 != 0:
                     raise FileSyntaxError()
                 parts = [
-                    (output_argument[2*i], output_argument[2*i+1])
-                    for i in range(len(output_argument)//2)
+                    (output_argument[2 * i], output_argument[2 * i + 1])
+                    for i in range(len(output_argument) // 2)
                 ]
                 for part in parts:
                     if part[0] == '--mode':
@@ -242,10 +242,10 @@ class XRandR:
                 screenline = line
             elif line.startswith('\t'):
                 continue
-            elif line.startswith(2*' '):  # [mode, width, height]
+            elif line.startswith(2 * ' '):  # [mode, width, height]
                 line = line.strip()
-                if reduce(bool.__or__, [line.startswith(x+':') for x in "hv"]):
-                    line = line[-len(line):line.index(" start")-len(line)]
+                if reduce(bool.__or__, [line.startswith(x + ':') for x in "hv"]):
+                    line = line[-len(line):line.index(" start") - len(line)]
                     items[-1][1][-1].append(line[line.rindex(' '):])
                 else:  # mode
                     items[-1][1].append([line.split()])
@@ -282,10 +282,10 @@ class XRandR:
         """
         if not template:
             template = self.DEFAULTTEMPLATE
-        template = '\n'.join(template)+'\n'
+        template = '\n'.join(template) + '\n'
 
         data = {
-            'xrandr': "xrandr " +" ".join(self.configuration.commandlineargs())
+            'xrandr': "xrandr " + " ".join(self.configuration.commandlineargs())
         }
         if additional:
             data.update(additional)
@@ -301,7 +301,7 @@ class XRandR:
 
         for output_name in self.outputs:
             output_config = self.configuration.outputs[output_name]
-            #output_state = self.state.outputs[output_name]
+            # output_state = self.state.outputs[output_name]
 
             if not output_config.active:
                 continue
