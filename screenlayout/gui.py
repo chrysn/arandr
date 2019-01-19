@@ -14,8 +14,8 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 """Main GUI for ARandR"""
+# pylint: disable=deprecated-method,deprecated-module,wrong-import-order,missing-docstring,wrong-import-position
 
 import os
 import optparse
@@ -24,20 +24,15 @@ import inspect
 # import os
 # os.environ['DISPLAY']=':0.0'
 
-import gettext
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
 
 from . import widget
-
+from .i18n import _
 from .meta import (
     __version__, TRANSLATORS, COPYRIGHT, PROGRAMNAME, PROGRAMDESCRIPTION,
 )
-
-import gi
-gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gio
-
-
-gettext.install('arandr')
 
 
 def actioncallback(function):
@@ -45,7 +40,8 @@ def actioncallback(function):
     from a Gtk.Action and as a normal function.
 
     Functions taking no arguments will never be given any, functions taking one
-    argument (callbacks for radio actions) will be given the value of the action or just the argument.
+    argument (callbacks for radio actions) will be given the value of the action
+    or just the argument.
 
     A first argument called 'self' is passed through.
     """
@@ -65,7 +61,7 @@ def actioncallback(function):
         if len(argnames) == len(args_in):  # called directly
             args_out.extend(args_in)
         elif len(argnames)+1 == len(args_in):
-            if len(argnames):
+            if argnames:
                 args_out.append(args_in[1].props.value)
         else:
             raise TypeError("Arguments don't match")
@@ -77,7 +73,7 @@ def actioncallback(function):
     return wrapper
 
 
-class Application(object):
+class Application:
     uixml = """
     <ui>
         <menubar name="MenuBar">
@@ -194,9 +190,11 @@ class Application(object):
 
     @actioncallback
     def do_open_properties(self):
-        d = Gtk.Dialog(_("Script Properties"), None,
-                       Gtk.DialogFlags.MODAL, (Gtk.STOCK_CLOSE, Gtk.ResponseType.ACCEPT))
-        d.set_default_size(300, 400)
+        dialog = Gtk.Dialog(
+            _("Script Properties"), None,
+            Gtk.DialogFlags.MODAL, (Gtk.STOCK_CLOSE, Gtk.ResponseType.ACCEPT)
+        )
+        dialog.set_default_size(300, 400)
 
         script_editor = Gtk.TextView()
         script_buffer = script_editor.get_buffer()
@@ -205,15 +203,15 @@ class Application(object):
 
         #wacom_options = Gtk.Label("FIXME")
 
-        nb = Gtk.Notebook()
-        #nb.append_page(wacom_options, Gtk.Label(_("Wacom options")))
-        nb.append_page(script_editor, Gtk.Label(_("Script")))
+        notebook = Gtk.Notebook()
+        #notebook.append_page(wacom_options, Gtk.Label(_("Wacom options")))
+        notebook.append_page(script_editor, Gtk.Label(_("Script")))
 
-        d.vbox.pack_start(nb, expand=False, fill=False, padding=0)
-        d.show_all()
+        dialog.vbox.pack_start(notebook, expand=False, fill=False, padding=0)  # pylint: disable=no-member
+        dialog.show_all()
 
-        d.run()
-        d.destroy()
+        dialog.run()
+        dialog.destroy()
 
     @actioncallback
     def do_apply(self):
@@ -222,11 +220,13 @@ class Application(object):
 
         try:
             self.widget.save_to_x()
-        except Exception as e:
-            d = Gtk.MessageDialog(None, Gtk.DialogFlags.MODAL, Gtk.MessageType.ERROR, Gtk.BUTTONS_OK, _(
-                "XRandR failed:\n%s") % e)
-            d.run()
-            d.destroy()
+        except Exception as exc:  # pylint: disable=broad-except
+            dialog = Gtk.MessageDialog(
+                None, Gtk.DialogFlags.MODAL, Gtk.MessageType.ERROR,
+                Gtk.ButtonsType.OK, _("XRandR failed:\n%s") % exc
+            )
+            dialog.run()
+            dialog.destroy()
 
     @actioncallback
     def do_new(self):
@@ -234,100 +234,116 @@ class Application(object):
 
     @actioncallback
     def do_open(self):
-        d = self._new_file_dialog(
-            _("Open Layout"), Gtk.FileChooserAction.OPEN, Gtk.STOCK_OPEN)
+        dialog = self._new_file_dialog(
+            _("Open Layout"), Gtk.FileChooserAction.OPEN, Gtk.STOCK_OPEN
+        )
 
-        result = d.run()
-        filenames = d.get_filenames()
-        d.destroy()
+        result = dialog.run()
+        filenames = dialog.get_filenames()
+        dialog.destroy()
         if result == Gtk.ResponseType.ACCEPT:
             assert len(filenames) == 1
-            f = filenames[0]
-            self.filetemplate = self.widget.load_from_file(f)
+            filename = filenames[0]
+            self.filetemplate = self.widget.load_from_file(filename)
 
     @actioncallback
     def do_save_as(self):
-        d = self._new_file_dialog(
-            _("Save Layout"), Gtk.FileChooserAction.SAVE, Gtk.STOCK_SAVE)
-        d.props.do_overwrite_confirmation = True
+        dialog = self._new_file_dialog(
+            _("Save Layout"), Gtk.FileChooserAction.SAVE, Gtk.STOCK_SAVE
+        )
+        dialog.props.do_overwrite_confirmation = True
 
-        result = d.run()
-        filenames = d.get_filenames()
-        d.destroy()
+        result = dialog.run()
+        filenames = dialog.get_filenames()
+        dialog.destroy()
         if result == Gtk.ResponseType.ACCEPT:
             assert len(filenames) == 1
-            f = filenames[0]
-            if not f.endswith('.sh'):
-                f = f + '.sh'
-            self.widget.save_to_file(f, self.filetemplate)
+            filename = filenames[0]
+            if not filename.endswith('.sh'):
+                filename = filename + '.sh'
+            self.widget.save_to_file(filename, self.filetemplate)
 
-    def _new_file_dialog(self, title, type, buttontype):
-        d = Gtk.FileChooserDialog(title, None, type)
-        d.add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL)
-        d.add_button(buttontype, Gtk.ResponseType.ACCEPT)
+    def _new_file_dialog(self, title, dialog_type, buttontype):  # pylint: disable=no-self-use
+        dialog = Gtk.FileChooserDialog(title, None, dialog_type)
+        dialog.add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL)
+        dialog.add_button(buttontype, Gtk.ResponseType.ACCEPT)
 
         layoutdir = os.path.expanduser('~/.screenlayout/')
         try:
             os.makedirs(layoutdir)
         except OSError:
             pass
-        d.set_current_folder(layoutdir)
+        dialog.set_current_folder(layoutdir)
 
-        f = Gtk.FileFilter()
-        f.set_name('Shell script (Layout file)')
-        f.add_pattern('*.sh')
-        d.add_filter(f)
+        file_filter = Gtk.FileFilter()
+        file_filter.set_name('Shell script (Layout file)')
+        file_filter.add_pattern('*.sh')
+        dialog.add_filter(file_filter)
 
-        return d
+        return dialog
 
     #################### widget maintenance ####################
 
-    def _widget_changed(self, widget):
+    def _widget_changed(self, _widget):
         self._populate_outputs()
 
     def _populate_outputs(self):
-        w = self.uimanager.get_widget('/MenuBar/Outputs')
-        w.props.submenu = self.widget.contextmenu()
+        outputs_widget = self.uimanager.get_widget('/MenuBar/Outputs')
+        outputs_widget.props.submenu = self.widget.contextmenu()
 
     #################### application related ####################
 
-    def about(self, *args):
-        d = Gtk.AboutDialog()
-        d.props.program_name = PROGRAMNAME
-        d.props.version = __version__
-        d.props.translator_credits = "\n".join(TRANSLATORS)
-        d.props.copyright = COPYRIGHT
-        d.props.comments = PROGRAMDESCRIPTION
+    def about(self, *_args):  # pylint: disable=no-self-use
+        dialog = Gtk.AboutDialog()
+        dialog.props.program_name = PROGRAMNAME
+        dialog.props.version = __version__
+        dialog.props.translator_credits = "\n".join(TRANSLATORS)
+        dialog.props.copyright = COPYRIGHT
+        dialog.props.comments = PROGRAMDESCRIPTION
         licensetext = open(os.path.join(os.path.dirname(
             __file__), 'data', 'gpl-3.txt')).read()
-        d.props.license = licensetext.replace(
+        dialog.props.license = licensetext.replace(
             '<', u'\u2329 ').replace('>', u' \u232a')
-        d.props.logo_icon_name = 'video-display'
-        d.run()
-        d.destroy()
+        dialog.props.logo_icon_name = 'video-display'
+        dialog.run()
+        dialog.destroy()
 
-    def run(self):
+    def run(self):  # pylint: disable=no-self-use
         Gtk.main()
 
 
 def main():
-    p = optparse.OptionParser(
-        usage="%prog [savedfile]", description="Another XRandrR GUI", version="%%prog %s" % __version__)
-    p.add_option('--randr-display', help='Use D as display for xrandr (but still show the GUI on the display from the environment; e.g. `localhost:10.0`)', metavar='D')
-    p.add_option('--force-version',
-                 help='Even run with untested XRandR versions', action='store_true')
+    parser = optparse.OptionParser(
+        usage="%prog [savedfile]",
+        description="Another XRandrR GUI",
+        version="%%prog %s" % __version__
+    )
+    parser.add_option(
+        '--randr-display',
+        help=(
+            'Use D as display for xrandr '
+            '(but still show the GUI on the display from the environment; '
+            'e.g. `localhost:10.0`)'
+        ),
+        metavar='D'
+    )
+    parser.add_option(
+        '--force-version',
+        help='Even run with untested XRandR versions',
+        action='store_true'
+    )
 
-    (options, args) = p.parse_args()
-    if len(args) == 0:
+    (options, args) = parser.parse_args()
+    if not args:
         file_to_open = None
     elif len(args) == 1:
         file_to_open = args[0]
     else:
-        p.usage()
+        parser.usage()
 
-    a = Application(
+    app = Application(
         file=file_to_open,
         randr_display=options.randr_display,
         force_version=options.force_version
     )
-    a.run()
+    app.run()
