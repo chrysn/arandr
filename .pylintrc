@@ -244,7 +244,7 @@ notes=FIXME,XXX
 argument-name-hint=(([a-z][a-z0-9_]{2,36})|(_[a-z0-9_]*))$
 
 # Regular expression matching correct argument names
-argument-rgx=(([a-z][a-z0-9_]{2,36})|(_[a-z0-9_]*)|x|y)$
+argument-rgx=(([a-z][a-z0-9_]{2,36})|(_[a-z0-9_]*)|x|y|w|h)$
 
 # Naming hint for attribute names
 attr-name-hint=(([a-z][a-z0-9_]{2,36})|(_[a-z0-9_]*))$
@@ -323,7 +323,7 @@ property-classes=abc.abstractproperty
 variable-name-hint=(([a-z][a-z0-9_]{2,36})|(_[a-z0-9_]*))$
 
 # Regular expression matching correct variable names
-variable-rgx=(([a-z][a-z0-9_]{2,36})|(_[a-z0-9_]*)|x|y)$
+variable-rgx=(([a-z][a-z0-9_]{2,36})|(_[a-z0-9_]*)|x|y|w|h)$
 
 
 [CLASSES]
