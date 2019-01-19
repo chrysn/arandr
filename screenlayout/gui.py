@@ -217,7 +217,7 @@ class Application(object):
         #nb.append_page(wacom_options, Gtk.Label(_("Wacom options")))
         nb.append_page(script_editor, Gtk.Label(_("Script")))
 
-        d.vbox.pack_start(nb)
+        d.vbox.pack_start(nb, expand=False, fill=False, padding=0)
         d.show_all()
 
         d.run()
