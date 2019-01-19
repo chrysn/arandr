@@ -17,15 +17,15 @@
 from .auxiliary import Position
 
 
-class Snap(object):
+class Snap:
     """Snap-to-edges manager"""
 
-    def __init__(self, size, tolerance, list):
+    def __init__(self, size, tolerance, positions):
         self.tolerance = tolerance
 
         self.horizontal = set()
         self.vertical = set()
-        for i in list:
+        for i in positions:
             self.vertical.add(i[0].left)
             self.vertical.add(i[0].left+i[1].width)
             self.horizontal.add(i[0].top)

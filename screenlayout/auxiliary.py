@@ -16,6 +16,8 @@
 
 """Exceptions and generic classes"""
 
+# pylint: disable=fixme
+
 from math import pi
 
 
@@ -67,7 +69,7 @@ class Size(tuple):
         return "%dx%d" % self
 
 
-class NamedSize(object):
+class NamedSize:
     """Object that behaves like a size, but has an additional name attribute"""
 
     def __init__(self, size, name):
@@ -80,8 +82,7 @@ class NamedSize(object):
     def __str__(self):
         if "%dx%d" % (self.width, self.height) in self.name:
             return self.name
-        else:
-            return "%s (%dx%d)" % (self.name, self.width, self.height)
+        return "%s (%dx%d)" % (self.name, self.width, self.height)
 
     def __iter__(self):
         return self._size.__iter__()
@@ -133,7 +134,8 @@ class Geometry(tuple):
 class Rotation(str):
     """String that represents a rotation by a multiple of 90 degree"""
 
-    def __init__(self, original_me):
+    def __init__(self, _original_me):
+        super().__init__()
         if self not in ('left', 'right', 'normal', 'inverted'):
             raise Exception("No know rotation.")
     is_odd = property(lambda self: self in ('left', 'right'))
