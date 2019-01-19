@@ -408,5 +408,7 @@ class XRandR:
                             Size(reversed(geometry.size)), name=modename)
                     else:
                         self.mode = NamedSize(geometry.size, name=modename)
-            size = property(lambda self: NamedSize(Size(reversed(
-                self.mode)), name=self.mode.name) if self.rotation.is_odd else self.mode)
+
+            size = property(lambda self: NamedSize(
+                Size(reversed(self.mode)), name=self.mode.name
+            ) if self.rotation.is_odd else self.mode)
