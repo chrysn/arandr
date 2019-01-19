@@ -60,7 +60,7 @@ def actioncallback(function):
             args_out.append(args_in.pop(0))
         if len(argnames) == len(args_in):  # called directly
             args_out.extend(args_in)
-        elif len(argnames)+1 == len(args_in):
+        elif len(argnames) + 1 == len(args_in):
             if argnames:
                 args_out.append(args_in[1].props.value)
         else:
@@ -201,10 +201,10 @@ class Application:
         script_buffer.set_text("\n".join(self.filetemplate))
         script_editor.props.editable = False
 
-        #wacom_options = Gtk.Label("FIXME")
+        # wacom_options = Gtk.Label("FIXME")
 
         notebook = Gtk.Notebook()
-        #notebook.append_page(wacom_options, Gtk.Label(_("Wacom options")))
+        # notebook.append_page(wacom_options, Gtk.Label(_("Wacom options")))
         notebook.append_page(script_editor, Gtk.Label(_("Script")))
 
         dialog.vbox.pack_start(notebook, expand=False, fill=False, padding=0)  # pylint: disable=no-member
