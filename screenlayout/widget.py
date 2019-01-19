@@ -25,7 +25,7 @@ import stat
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('PangoCairo', '1.0')
-from gi.repository import GObject, Gtk, Pango, PangoCairo, Gdk
+from gi.repository import GObject, Gtk, Pango, PangoCairo, Gdk, GLib
 
 from .snap import Snap
 from .xrandr import XRandR, Feature
@@ -273,21 +273,13 @@ class ARandRWidget(Gtk.DrawingArea):
             newdescr.set_size(textheight * Pango.SCALE)
 
             # create text
+            output_name_markup = GLib.markup_escape_text(output_name)
             layout = PangoCairo.create_layout(context)
             layout.set_font_description(newdescr)
             if output.primary:
-                underline_attrs = Pango.parse_markup("<u>test</u>", -1, "0")[1]
-                # attrs = Pango.AttrList()
-                # attr = Pango.Attribute()
-                # attr_class = Pango.AttrClass()
-                # attr_class.type = Pango.AttrType.UNDERLINE
-                # attr.init(attr_class)
-                # attrs.insert(attr)
-                # attrs.insert(Pango.Underline.SINGLE)
-                # layout.set_attributes(attrs)
-                layout.set_attributes(underline_attrs)
+                output_name_markup = "<u>%s</u>" % output_name_markup
 
-            layout.set_text(output_name, -1)
+            layout.set_markup(output_name_markup, -1)
 
             # position text
             layoutsize = layout.get_pixel_size()
