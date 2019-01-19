@@ -16,8 +16,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import gettext
-gettext.install('arandr')
+# pylint: disable=missing-docstring
+
+from .i18n import _
+
 
 __version__ = '0.1.9'
 PROGRAMNAME = _(u'ARandR Screen Layout Editor')
