@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """Wrapper around command line xrandr (mostly 1.2 per output features supported)"""
-# pylint: disable=too-few-public-methods,wrong-import-position,missing-docstring
+# pylint: disable=too-few-public-methods,wrong-import-position,missing-docstring,fixme
 
 import os
 import subprocess
@@ -36,6 +36,9 @@ class Feature:
 
 class XRandR:
     DEFAULTTEMPLATE = [SHELLSHEBANG, '%(xrandr)s']
+
+    configuration = None
+    state = None
 
     def __init__(self, display=None, force_version=False):
         """Create proxy object and check for xrandr at `display`. Fail with
@@ -328,6 +331,8 @@ class XRandR:
     class State:
         """Represents everything that can not be set by xrandr."""
 
+        virtual = None
+
         def __init__(self):
             self.outputs = {}
 
@@ -343,6 +348,9 @@ class XRandR:
                 self.max = max_mode
 
         class Output:
+            rotations = None
+            connected = None
+
             def __init__(self, name):
                 self.name = name
                 self.modes = []
@@ -355,6 +363,8 @@ class XRandR:
         Represents everything that can be set by xrandr
         (and is therefore subject to saving and loading from files)
         """
+
+        virtual = None
 
         def __init__(self, xrandr):
             self.outputs = {}
@@ -386,6 +396,7 @@ class XRandR:
             return args
 
         class OutputConfiguration:
+
             def __init__(self, active, primary, geometry, rotation, modename):
                 self.active = active
                 self.primary = primary

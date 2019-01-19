@@ -16,7 +16,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
-# pylint: disable=wrong-import-position,missing-docstring,attribute-defined-outside-init,fixme
+# pylint: disable=wrong-import-position,missing-docstring,fixme
 
 from __future__ import division
 import os
@@ -34,6 +34,12 @@ from .i18n import _
 
 
 class ARandRWidget(Gtk.DrawingArea):
+
+    sequence = None
+    _lastclick = None
+    _draggingoutput = None
+    _draggingfrom = None
+    _draggingsnap = None
 
     __gsignals__ = {
         # 'expose-event':'override', # FIXME: still needed?
