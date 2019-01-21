@@ -82,9 +82,8 @@ Dependencies
 Bugs / Communication
 --------------------
 
-* There exists a `list of bugs`_ (and feature requests and general wishlist). To report a problem or request a feature, you can `report it`_.
-* For general discussion, you can `subscribe to the general discussion list`_ <arandr-users@lists.alioth.debian.org>.
-* To stay informed about new releases, `subscribe to the announce list`_ <arandr-announce@lists.alioth.debian.org>.
+* There exists a `list of bugs`_ (and feature requests and general wishlist). If there is a problem or you want to request a feature, just `report it`_.
+* New releases are announced as published tags_ and can be subscribed as an `ATOM feed`_.
 
 Ongoing development
 -------------------
@@ -124,7 +123,7 @@ Contributing
 
 If you are fluent with languages not yet supported, you can add translations to ARandR using gettext_. An easy way to do this is `ARandR's page on hosted Weblate`_.
 
-If you want to contribute code, contact me_ directly or send bug reports, suggestions, patches and git pull requests to the bugtracker_ or the `arandr-users mailing list`_.
+If you want to contribute code, contact me_ directly or send bug reports, suggestions, patches and git pull requests to the bugtracker_.
 
 If you want to support the project via flattr, you can `flattr this`_.
 
@@ -195,7 +194,6 @@ Translations by
  .. _`ARandR's page on hosted Weblate`: http://hosted.weblate.org/projects/arandr/translations/
  .. _me: mailto:chrysn@fsfe.org
  .. _bugtracker: https://gitlab.com/arandr/arandr/issues
- .. _`arandr-users mailing list`: https://lists.alioth.debian.org/mailman/listinfo/arandr-users
  .. _python: http://www.python.org/
  .. _PyGObject: https://pygobject.readthedocs.io/en/latest/
  .. _slackbuilds.org: https://slackbuilds.org/repository/14.1/desktop/arandr/
@@ -207,6 +205,6 @@ Translations by
  .. _`X11:Utilities repository`: http://download.opensuse.org/repositories/X11:/Utilities/
  .. _`list of bugs`: https://gitlab.com/arandr/arandr/issues
  .. _`report it`: https://gitlab.com/arandr/arandr/issues/new
- .. _`subscribe to the general discussion list`: https://lists.alioth.debian.org/mailman/listinfo/arandr-users
- .. _`subscribe to the announce list`: https://lists.alioth.debian.org/mailman/listinfo/arandr-announce
  .. _`flattr this`: https://flattr.com/submit/auto?user_id=chrysn&url=http%3A%2F%2Fchristian.amsuess.com%2Ftools%2Farandr%2F
+ .. _tags: https://gitlab.com/arandr/arandr/tags
+ .. _`ATOM feed`: https://gitlab.com/arandr/arandr/tags?format=atom
