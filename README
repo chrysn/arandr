@@ -35,13 +35,6 @@ Installation
 
       pacman -S arandr
 
-  * Slackware using a `slackbuild by PhantomX`_::
-
-      wget http://cloud.github.com/downloads/PhantomX/slackbuilds/arandr-0.1.4.tar.bz2
-      tar xjf arandr-0.1.4.tar.bz2
-      cd arandr
-      ./arandr.SlackBuild 2>&1 | tee build.log
-
   * Gentoo_::
 
       emerge arandr
@@ -50,7 +43,11 @@ Installation
 
       yum install arandr
 
-  * SuSE users can use the `X11:Utilities repository`_; ARandR can be found in the ``noarch`` directory of their distribution version.
+  * OpenSUSE_::
+
+      zypper in arandr
+
+  * Slackware: see slackbuilds.org_
 
 * From source:
 
@@ -119,12 +116,12 @@ A number of other programs exist that cover similar functionality, often
 bundled with a particular desktop environment. Those I know of are, in
 alphabetical order:
 
-* Gnome's ``gnome-control-center display``, notable for its ``~/.config/monitors.xml`` `persistence <https://live.gnome.org/RandR#Storage_of_RANDR_configurations>`_
+* Gnome's ``gnome-control-center display``, notable for its ``~/.config/monitors.xml`` `persistence <https://wiki.gnome.org/Attic/RandR#Storage_of_RANDR_configurations>`_
 * `grandr <ftp://ftp.freedesktop.org/pub/individual/app/>`_
-* `grandr-applet <http://dekorte.homeip.net/download/grandr-applet/>`_ (which seems not to be related to grandr)
+* `grandr-applet <https://sites.google.com/site/kdekorte2/grandr_applet>`_ (which seems not to be related to grandr)
 * KDE's RandR tool ``krandrtray``, notable for being the only listed program to be Qt based
 * LXDE's `LXRandR <http://wiki.lxde.org/en/LXRandR>`_, notable for storing configuration in ``~/.config/autostart/lxrandr-autostart``
-* `urandr <http://www.albertomilone.com/urandr.html>`_
+* `urandr <http://www.albertomilone.com/wordpress/?p=288>`_
 * `zarfy <http://sourceforge.net/projects/zarfy/>`_, notable for its nice use of a current screenshot
 * cglita wrote a patch that solved the ValueError / "1080p" problem. His patches went a little further and include more precise mode line selection; I keep it around, and you can try it like this::
 
@@ -205,9 +202,10 @@ Translations by
  .. _`arandr-users mailing list`: https://lists.alioth.debian.org/mailman/listinfo/arandr-users
  .. _python: http://www.python.org/
  .. _PyGTK: http://www.pygtk.org/
- .. _`slackbuild by PhantomX`: http://github.com/PhantomX/slackbuilds/tree/master/arandr/
+ .. _slackbuilds.org: https://slackbuilds.org/repository/14.1/desktop/arandr/
  .. _Gentoo: http://packages.gentoo.org/package/x11-misc/arandr
  .. _Fedora: https://apps.fedoraproject.org/packages/arandr
+ .. _OpenSUSE: https://software.opensuse.org/package/arandr
  .. _docutils: http://docutils.sourceforge.net/
  .. _`debian bug #507521`: http://bugs.debian.org/507521
  .. _`X11:Utilities repository`: http://download.opensuse.org/repositories/X11:/Utilities/
