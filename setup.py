@@ -126,7 +126,7 @@ class update_translator_credits(NoOptionCommand):
         file2language = lambda f: f[len(PO_DIR)+1:-3]
 
         for po in glob.glob(os.path.join(PO_DIR, '*.po')):
-            contributors = set(subprocess.check_output(['git', 'log', '--pretty=format:%aN <%aE>', po]).split('\n'))
+            contributors = set(subprocess.check_output(['git', 'log', '--pretty=format:%aN <%aE>', po]).decode('utf8').split('\n'))
             contributors = [COMMITTER_ALIASES.get(c, c) for c in contributors]
 
             for c in contributors:
@@ -178,7 +178,7 @@ class update_translator_credits(NoOptionCommand):
 
         print("====================== for README ================")
         print()
-        print("\n".join(sorted("* %s (%s)"%(", ".join(strip_address(c) for c in sorted(contributors)), ", ".join(sorted(language2name(l).encode('utf8') for l in languages))) for (languages, contributors) in by_language_set.items())))
+        print("\n".join(sorted("* %s (%s)"%(", ".join(strip_address(c) for c in sorted(contributors)), ", ".join(sorted(language2name(l) for l in languages))) for (languages, contributors) in by_language_set.items())))
         print()
 
         by_language = {}
