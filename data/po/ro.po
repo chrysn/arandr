@@ -10,9 +10,9 @@ msgstr ""
 "Project-Id-Version: ARandR\n"
 "Report-Msgid-Bugs-To: chrysn@fsfe.org\n"
 "POT-Creation-Date: 2015-05-21 10:02+0200\n"
-"PO-Revision-Date: 2013-02-28 13:45+0200\n"
-"Last-Translator: Michal Čihař <michal@cihar.com>\n"
-"Language-Team: Romanian <http://hosted.weblate.org/projects/arandr/"
+"PO-Revision-Date: 2018-06-17 20:05+0000\n"
+"Last-Translator: Calin Sopterean <csopterean@gmail.com>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/arandr/"
 "translations/ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Weblate 1.5-dev\n"
+"X-Generator: Weblate 3.0.1\n"
 
 #: screenlayout/gui.py:117
 msgid "_Layout"
@@ -177,7 +177,7 @@ msgstr "Activ"
 
 #: screenlayout/widget.py:335
 msgid "Primary"
-msgstr ""
+msgstr "Principal"
 
 #: screenlayout/widget.py:349
 #, python-format
