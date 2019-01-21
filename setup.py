@@ -151,7 +151,10 @@ class update_translator_credits(NoOptionCommand):
                 lang, country = lang.split('_')
             else:
                 country = None
-            lang = pycountry.languages.get(alpha2=lang).name
+            try:
+                lang = pycountry.languages.get(alpha_2=lang).name
+            except KeyError:
+                pass # eg. "ckb"
 
             try:
                 # strip suffixes like 'Catalan; Valencian'
@@ -165,7 +168,10 @@ class update_translator_credits(NoOptionCommand):
                 pass
 
             if country:
-                country = pycountry.countries.get(alpha2=country).name
+                try:
+                    country = pycountry.countries.get(alpha_2=country).name
+                except KeyError:
+                    pass # keep country, eg. zh-Hant, whatever that means in detail
                 return u"%s (%s)"%(lang, country)
             else:
                 return lang
