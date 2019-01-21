@@ -13,11 +13,6 @@ Features
 * Full control over output positioning (instead of plain "left of") with edge snapping
 * Saving configurations as executable shell scripts (configurations can be loaded without using this program)
 * Configuration files can be edited to include additional payload (like xsetwacom_ commands tablet PC users need when rotating), which is preserved when editing
-* Metacity key binding integration:
-
-  * Saved configurations can be bound to arbitrary keys via metacity's custom commands.
-  * Several layouts can be bound to one key; they are cycled through. (Useful for "rotate" buttons on tablet PCs.)
-
 * Main widget separated from packaged application (to facilitate integration with existing solutions)
 
 
@@ -87,7 +82,6 @@ Dependencies
 Bugs / Communication
 --------------------
 
-* Versions before 0.1.7 depended on all modes to have a <width>x<height> name (see `debian bug #507521`_); if ARandR does not start up, please install the latest version. (On different bugtrackers, this is called the ValueError / "1080p" / "1024x768i" problem).
 * There exists a `list of bugs`_ (and feature requests and general wishlist). To report a problem or request a feature, you can `report it`_.
 * For general discussion, you can `subscribe to the general discussion list`_ <arandr-users@lists.alioth.debian.org>.
 * To stay informed about new releases, `subscribe to the announce list`_ <arandr-announce@lists.alioth.debian.org>.
@@ -122,18 +116,13 @@ alphabetical order:
 * LXDE's `LXRandR <http://wiki.lxde.org/en/LXRandR>`_, notable for storing configuration in ``~/.config/autostart/lxrandr-autostart``
 * `urandr <http://www.albertomilone.com/wordpress/?p=288>`_
 * `zarfy <http://sourceforge.net/projects/zarfy/>`_, notable for its nice use of a current screenshot
-* cglita wrote a patch that solved the ValueError / "1080p" problem. His patches went a little further and include more precise mode line selection; I keep it around, and you can try it like this::
-
-    git clone git://anonscm.debian.org/arandr/arandr.git -b cglita
-    cd arandr
-    ./arandr
 
 
 
 Contributing
 ------------
 
-If you are fluent with languages not yet supported, you can add translations to ARandR using gettext_. An easy way to do this is `ARandR's page on hosted Weblate`_. (Transifex and Launchpad translations were discontinued for lack of SCM integration and associated problems with attributing contributions).
+If you are fluent with languages not yet supported, you can add translations to ARandR using gettext_. An easy way to do this is `ARandR's page on hosted Weblate`_.
 
 If you want to contribute code, contact me_ directly or send bug reports, suggestions, patches and git pull requests to the bugtracker_ or the `arandr-users mailing list`_.
 
