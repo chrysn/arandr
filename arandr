@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # ARandR -- Another XRandR GUI
 # Copyright (C) 2008 -- 2011 chrysn <chrysn@fsfe.org>

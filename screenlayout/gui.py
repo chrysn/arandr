@@ -1,62 +1,67 @@
 # ARandR -- Another XRandR GUI
 # Copyright (C) 2008 -- 2011 chrysn <chrysn@fsfe.org>
-# 
+# copyright (C) 2019 actionless <actionless.loveless@gmail.com>
+#
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-# 
+#
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 """Main GUI for ARandR"""
+# pylint: disable=deprecated-method,deprecated-module,wrong-import-order,missing-docstring,wrong-import-position
 
 import os
 import optparse
 import inspect
 
-import gtk
+# import os
+# os.environ['DISPLAY']=':0.0'
+
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
 
 from . import widget
-from .metacity import show_keybinder
-
-from .meta import __version__, TRANSLATORS, COPYRIGHT, PROGRAMNAME, PROGRAMDESCRIPTION
-
-#import os
-#os.environ['DISPLAY']=':0.0'
-
-import gettext
-gettext.install('arandr')
+from .i18n import _
+from .meta import (
+    __version__, TRANSLATORS, COPYRIGHT, PROGRAMNAME, PROGRAMDESCRIPTION,
+)
 
 
 def actioncallback(function):
-    """Wrapper around a function that is intended to be used both as a callback from a gtk.Action and as a normal function.
+    """Wrapper around a function that is intended to be used both as a callback
+    from a Gtk.Action and as a normal function.
 
-    Functions taking no arguments will never be given any, functions taking one argument (callbacks for radio actions) will be given the value of the action or just the argument.
+    Functions taking no arguments will never be given any, functions taking one
+    argument (callbacks for radio actions) will be given the value of the action
+    or just the argument.
 
-    A first argument called 'self' is passed through."""
+    A first argument called 'self' is passed through.
+    """
     argnames = inspect.getargspec(function)[0]
     if argnames[0] == 'self':
         has_self = True
         argnames.pop(0)
     else:
         has_self = False
-    assert len(argnames) in (0,1)
+    assert len(argnames) in (0, 1)
 
     def wrapper(*args):
         args_in = list(args)
         args_out = []
         if has_self:
             args_out.append(args_in.pop(0))
-        if len(argnames) == len(args_in): # called directly
+        if len(argnames) == len(args_in):  # called directly
             args_out.extend(args_in)
-        elif len(argnames)+1 == len(args_in):
-            if len(argnames):
+        elif len(argnames) + 1 == len(args_in):
+            if argnames:
                 args_out.append(args_in[1].props.value)
         else:
             raise TypeError("Arguments don't match")
@@ -68,7 +73,7 @@ def actioncallback(function):
     return wrapper
 
 
-class Application(object):
+class Application:
     uixml = """
     <ui>
         <menubar name="MenuBar">
@@ -90,9 +95,6 @@ class Application(object):
             <menu action="Outputs" name="Outputs">
                 <menuitem action="OutputsDummy" />
             </menu>
-            <menu action="System">
-                <menuitem action="Metacity" />
-            </menu>
             <menu action="Help">
                 <menuitem action="About" />
             </menu>
@@ -108,21 +110,22 @@ class Application(object):
     """
 
     def __init__(self, file=None, randr_display=None, force_version=False):
-        self.window = window = gtk.Window()
+        self.window = window = Gtk.Window()
         window.props.title = "Screen Layout Editor"
 
         # actions
-        actiongroup = gtk.ActionGroup('default')
+        actiongroup = Gtk.ActionGroup('default')
         actiongroup.add_actions([
             ("Layout", None, _("_Layout")),
-            ("New", gtk.STOCK_NEW, None, None, None, self.do_new),
-            ("Open", gtk.STOCK_OPEN, None, None, None, self.do_open),
-            ("SaveAs", gtk.STOCK_SAVE_AS, None, None, None, self.do_save_as),
+            ("New", Gtk.STOCK_NEW, None, None, None, self.do_new),
+            ("Open", Gtk.STOCK_OPEN, None, None, None, self.do_open),
+            ("SaveAs", Gtk.STOCK_SAVE_AS, None, None, None, self.do_save_as),
 
-            ("Apply", gtk.STOCK_APPLY, None, '<Control>Return', None, self.do_apply),
-            ("LayoutSettings", gtk.STOCK_PROPERTIES, None, '<Alt>Return', None, self.do_open_properties),
+            ("Apply", Gtk.STOCK_APPLY, None, '<Control>Return', None, self.do_apply),
+            ("LayoutSettings", Gtk.STOCK_PROPERTIES, None,
+             '<Alt>Return', None, self.do_open_properties),
 
-            ("Quit", gtk.STOCK_QUIT, None, None, None, gtk.main_quit),
+            ("Quit", Gtk.STOCK_QUIT, None, None, None, Gtk.main_quit),
 
 
             ("View", None, _("_View")),
@@ -130,22 +133,19 @@ class Application(object):
             ("Outputs", None, _("_Outputs")),
             ("OutputsDummy", None, _("Dummy")),
 
-            ("System", None, _("_System")),
-            ("Metacity", None, _("_Keybindings (Metacity)"), None, None, self.do_open_metacity),
-
             ("Help", None, _("_Help")),
-            ("About", gtk.STOCK_ABOUT, None, None, None, self.about),
-            ])
+            ("About", Gtk.STOCK_ABOUT, None, None, None, self.about),
+        ])
         actiongroup.add_radio_actions([
             ("Zoom4", None, _("1:4"), None, None, 4),
             ("Zoom8", None, _("1:8"), None, None, 8),
             ("Zoom16", None, _("1:16"), None, None, 16),
-            ], 8, self.set_zoom)
+        ], 8, self.set_zoom)
 
-        window.connect('destroy', gtk.main_quit)
+        window.connect('destroy', Gtk.main_quit)
 
         # uimanager
-        self.uimanager = gtk.UIManager()
+        self.uimanager = Gtk.UIManager()
         accelgroup = self.uimanager.get_accel_group()
         window.add_accel_group(accelgroup)
 
@@ -154,7 +154,10 @@ class Application(object):
         self.uimanager.add_ui_from_string(self.uixml)
 
         # widget
-        self.widget = widget.ARandRWidget(display=randr_display, force_version=force_version)
+        self.widget = widget.ARandRWidget(
+            display=randr_display, force_version=force_version,
+            window=self.window
+        )
         if file is None:
             self.filetemplate = self.widget.load_from_x()
         else:
@@ -164,11 +167,11 @@ class Application(object):
         self._widget_changed(self.widget)
 
         # window layout
-        vbox = gtk.VBox()
+        vbox = Gtk.VBox()
         menubar = self.uimanager.get_widget('/MenuBar')
-        vbox.pack_start(menubar, expand=False)
+        vbox.pack_start(menubar, expand=False, fill=False, padding=0)
         toolbar = self.uimanager.get_widget('/ToolBar')
-        vbox.pack_start(toolbar, expand=False)
+        vbox.pack_start(toolbar, expand=False, fill=False, padding=0)
 
         vbox.add(self.widget)
 
@@ -180,31 +183,35 @@ class Application(object):
     #################### actions ####################
 
     @actioncallback
-    def set_zoom(self, value): # don't use directly: state is not pushed back to action group.
+    # don't use directly: state is not pushed back to action group.
+    def set_zoom(self, value):
         self.widget.factor = value
-        self.window.resize(1,1)
+        self.window.resize(1, 1)
 
     @actioncallback
     def do_open_properties(self):
-        d = gtk.Dialog(_("Script Properties"), None, gtk.DIALOG_MODAL, (gtk.STOCK_CLOSE, gtk.RESPONSE_ACCEPT))
-        d.set_default_size(300,400)
+        dialog = Gtk.Dialog(
+            _("Script Properties"), None,
+            Gtk.DialogFlags.MODAL, (Gtk.STOCK_CLOSE, Gtk.ResponseType.ACCEPT)
+        )
+        dialog.set_default_size(300, 400)
 
-        script_editor = gtk.TextView()
+        script_editor = Gtk.TextView()
         script_buffer = script_editor.get_buffer()
         script_buffer.set_text("\n".join(self.filetemplate))
         script_editor.props.editable = False
 
-        #wacom_options = gtk.Label("FIXME")
+        # wacom_options = Gtk.Label("FIXME")
 
-        nb = gtk.Notebook()
-        #nb.append_page(wacom_options, gtk.Label(_("Wacom options")))
-        nb.append_page(script_editor, gtk.Label(_("Script")))
+        notebook = Gtk.Notebook()
+        # notebook.append_page(wacom_options, Gtk.Label(_("Wacom options")))
+        notebook.append_page(script_editor, Gtk.Label(_("Script")))
 
-        d.vbox.pack_start(nb)
-        d.show_all()
+        dialog.vbox.pack_start(notebook, expand=False, fill=False, padding=0)  # pylint: disable=no-member
+        dialog.show_all()
 
-        d.run()
-        d.destroy()
+        dialog.run()
+        dialog.destroy()
 
     @actioncallback
     def do_apply(self):
@@ -213,10 +220,13 @@ class Application(object):
 
         try:
             self.widget.save_to_x()
-        except Exception, e:
-            d = gtk.MessageDialog(None, gtk.DIALOG_MODAL, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, _("XRandR failed:\n%s")%e)
-            d.run()
-            d.destroy()
+        except Exception as exc:  # pylint: disable=broad-except
+            dialog = Gtk.MessageDialog(
+                None, Gtk.DialogFlags.MODAL, Gtk.MessageType.ERROR,
+                Gtk.ButtonsType.OK, _("XRandR failed:\n%s") % exc
+            )
+            dialog.run()
+            dialog.destroy()
 
     @actioncallback
     def do_new(self):
@@ -224,98 +234,116 @@ class Application(object):
 
     @actioncallback
     def do_open(self):
-        d = self._new_file_dialog(_("Open Layout"), gtk.FILE_CHOOSER_ACTION_OPEN, gtk.STOCK_OPEN)
+        dialog = self._new_file_dialog(
+            _("Open Layout"), Gtk.FileChooserAction.OPEN, Gtk.STOCK_OPEN
+        )
 
-        result = d.run()
-        filenames = d.get_filenames()
-        d.destroy()
-        if result == gtk.RESPONSE_ACCEPT:
+        result = dialog.run()
+        filenames = dialog.get_filenames()
+        dialog.destroy()
+        if result == Gtk.ResponseType.ACCEPT:
             assert len(filenames) == 1
-            f = filenames[0]
-            self.filetemplate = self.widget.load_from_file(f)
+            filename = filenames[0]
+            self.filetemplate = self.widget.load_from_file(filename)
 
     @actioncallback
     def do_save_as(self):
-        d = self._new_file_dialog(_("Save Layout"), gtk.FILE_CHOOSER_ACTION_SAVE, gtk.STOCK_SAVE)
-        d.props.do_overwrite_confirmation = True
+        dialog = self._new_file_dialog(
+            _("Save Layout"), Gtk.FileChooserAction.SAVE, Gtk.STOCK_SAVE
+        )
+        dialog.props.do_overwrite_confirmation = True
 
-        result = d.run()
-        filenames = d.get_filenames()
-        d.destroy()
-        if result == gtk.RESPONSE_ACCEPT:
+        result = dialog.run()
+        filenames = dialog.get_filenames()
+        dialog.destroy()
+        if result == Gtk.ResponseType.ACCEPT:
             assert len(filenames) == 1
-            f = filenames[0]
-            if not f.endswith('.sh'): f = f + '.sh'
-            self.widget.save_to_file(f, self.filetemplate)
+            filename = filenames[0]
+            if not filename.endswith('.sh'):
+                filename = filename + '.sh'
+            self.widget.save_to_file(filename, self.filetemplate)
 
-    def _new_file_dialog(self, title, type, buttontype):
-        d = gtk.FileChooserDialog(title, None, type)
-        d.add_button(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL)
-        d.add_button(buttontype, gtk.RESPONSE_ACCEPT)
+    def _new_file_dialog(self, title, dialog_type, buttontype):  # pylint: disable=no-self-use
+        dialog = Gtk.FileChooserDialog(title, None, dialog_type)
+        dialog.add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL)
+        dialog.add_button(buttontype, Gtk.ResponseType.ACCEPT)
 
         layoutdir = os.path.expanduser('~/.screenlayout/')
         try:
             os.makedirs(layoutdir)
         except OSError:
             pass
-        d.set_current_folder(layoutdir)
+        dialog.set_current_folder(layoutdir)
 
-        f = gtk.FileFilter()
-        f.set_name('Shell script (Layout file)')
-        f.add_pattern('*.sh')
-        d.add_filter(f)
+        file_filter = Gtk.FileFilter()
+        file_filter.set_name('Shell script (Layout file)')
+        file_filter.add_pattern('*.sh')
+        dialog.add_filter(file_filter)
 
-        return d
+        return dialog
 
     #################### widget maintenance ####################
 
-    def _widget_changed(self, widget):
+    def _widget_changed(self, _widget):
         self._populate_outputs()
 
     def _populate_outputs(self):
-        w = self.uimanager.get_widget('/MenuBar/Outputs')
-        w.props.submenu = self.widget.contextmenu()
-
-    #################### metacity ####################
-
-    @actioncallback
-    def do_open_metacity(self):
-        show_keybinder()
+        outputs_widget = self.uimanager.get_widget('/MenuBar/Outputs')
+        outputs_widget.props.submenu = self.widget.contextmenu()
 
     #################### application related ####################
 
-    def about(self, *args):
-        d = gtk.AboutDialog()
-        d.props.program_name = PROGRAMNAME
-        d.props.version = __version__
-        d.props.translator_credits = "\n".join(TRANSLATORS)
-        d.props.copyright = COPYRIGHT
-        d.props.comments = PROGRAMDESCRIPTION
-        licensetext = open(os.path.join(os.path.dirname(__file__), 'data', 'gpl-3.txt')).read()
-        d.props.license = licensetext.replace('<', u'\u2329 ').replace('>', u' \u232a')
-        d.props.logo_icon_name = 'video-display'
-        d.run()
-        d.destroy()
+    def about(self, *_args):  # pylint: disable=no-self-use
+        dialog = Gtk.AboutDialog()
+        dialog.props.program_name = PROGRAMNAME
+        dialog.props.version = __version__
+        dialog.props.translator_credits = "\n".join(TRANSLATORS)
+        dialog.props.copyright = COPYRIGHT
+        dialog.props.comments = PROGRAMDESCRIPTION
+        licensetext = open(os.path.join(os.path.dirname(
+            __file__), 'data', 'gpl-3.txt')).read()
+        dialog.props.license = licensetext.replace(
+            '<', u'\u2329 ').replace('>', u' \u232a')
+        dialog.props.logo_icon_name = 'video-display'
+        dialog.run()
+        dialog.destroy()
 
-    def run(self):
-        gtk.main()
+    def run(self):  # pylint: disable=no-self-use
+        Gtk.main()
+
 
 def main():
-    p = optparse.OptionParser(usage="%prog [savedfile]", description="Another XRandrR GUI", version="%%prog %s"%__version__)
-    p.add_option('--randr-display', help='Use D as display for xrandr (but still show the GUI on the display from the environment; e.g. `localhost:10.0`)', metavar='D')
-    p.add_option('--force-version', help='Even run with untested XRandR versions', action='store_true')
+    parser = optparse.OptionParser(
+        usage="%prog [savedfile]",
+        description="Another XRandrR GUI",
+        version="%%prog %s" % __version__
+    )
+    parser.add_option(
+        '--randr-display',
+        help=(
+            'Use D as display for xrandr '
+            '(but still show the GUI on the display from the environment; '
+            'e.g. `localhost:10.0`)'
+        ),
+        metavar='D'
+    )
+    parser.add_option(
+        '--force-version',
+        help='Even run with untested XRandR versions',
+        action='store_true'
+    )
 
-    (options, args) = p.parse_args()
-    if len(args) == 0:
+    (options, args) = parser.parse_args()
+    if not args:
         file_to_open = None
     elif len(args) == 1:
         file_to_open = args[0]
     else:
-        p.usage()
+        parser.usage()
 
-    a = Application(
-            file=file_to_open,
-            randr_display=options.randr_display,
-            force_version=options.force_version
-            )
-    a.run()
+    app = Application(
+        file=file_to_open,
+        randr_display=options.randr_display,
+        force_version=options.force_version
+    )
+    app.run()

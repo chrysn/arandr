@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # ARandR -- Another XRandR GUI
 # Copyright (C) 2008 -- 2011 chrysn <chrysn@fsfe.org>
@@ -28,4 +28,4 @@ p.parse_args()
 
 current = screenlayout.xrandr.XRandR()
 current.load_from_x()
-print current.save_to_shellscript_string(["%(xrandr)s"]).strip()
+print(current.save_to_shellscript_string(["%(xrandr)s"]).strip())
