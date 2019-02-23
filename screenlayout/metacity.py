@@ -132,7 +132,7 @@ class KeyBindingButton(GConfButton):
     def on_clicked(self, widget):
         if not self.editing:
             self.editing = True
-            self.props.label = _("New accelerator...")
+            self.props.label = _("New accelerator…")
         else:
             self.abort_editing()
 
@@ -282,7 +282,7 @@ def show_keybinder():
     if not gconf:
         d = gtk.MessageDialog(None, gtk.DIALOG_DESTROY_WITH_PARENT, gtk.MESSAGE_ERROR, gtk.BUTTONS_CLOSE)
         d.props.text = _("gconf not available.")
-        d.props.secondary_text = _("In order to configure metacity, you need to have the python gconf module installed.")
+        d.props.secondary_text = _("In order to configure Metacity, you need to have the Python GConf module installed.")
         d.run()
         d.destroy()
         return
@@ -302,7 +302,7 @@ def show_keybinder():
 
     contents = gtk.VBox()
     contents.pack_start(t)
-    l = gtk.Label(_('Click on a button in the left column and press a key combination you want to bind to a certain screen layout. (Use backspace to clear accelerators, escape to abort editing.) Then, select one or more layouts in the right column.\n\nThis will only work if you use metacity or another program reading its configuration.'))
+    l = gtk.Label(_('Click on a button in the left column and press a key combination you want to bind to a certain screen layout. (Use Backspace to clear accelerators, and Esc to abort editing.) Then, select one or more layouts in the right column.\n\nThis will only work if you use Metacity or another program reading its configuration.'))
     l.props.wrap = True
     contents.pack_start(l)
     contents.pack_end(buttons, expand=False)
