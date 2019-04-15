@@ -1,8 +1,0 @@
-[main]
-host = https://www.transifex.net
-
-[arandr.messagespot]
-file_filter = data/po/<lang>.po
-source_file = data/po/messages.pot
-source_lang = en
-

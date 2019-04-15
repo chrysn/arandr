@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # ARandR -- Another XRandR GUI
 # Copyright (C) 2008 -- 2011 chrysn <chrysn@fsfe.org>
@@ -42,7 +42,7 @@ PO_DIR = 'data/po'
 POT_FILE = os.path.join(PO_DIR, 'messages.pot')
 
 PACKAGENAME = "arandr"
-PACKAGEVERSION = "0.1.9"
+PACKAGEVERSION = "0.1.10"
 AUTHOR = "chrysn"
 AUTHOR_MAIL = "chrysn@fsfe.org"
 URL = "http://christian.amsuess.com/tools/arandr/"
@@ -126,7 +126,7 @@ class update_translator_credits(NoOptionCommand):
         file2language = lambda f: f[len(PO_DIR)+1:-3]
 
         for po in glob.glob(os.path.join(PO_DIR, '*.po')):
-            contributors = set(subprocess.check_output(['git', 'log', '--pretty=format:%aN <%aE>', po]).split('\n'))
+            contributors = set(subprocess.check_output(['git', 'log', '--pretty=format:%aN <%aE>', po]).decode('utf8').split('\n'))
             contributors = [COMMITTER_ALIASES.get(c, c) for c in contributors]
 
             for c in contributors:
@@ -134,11 +134,11 @@ class update_translator_credits(NoOptionCommand):
 
         contributions.update(TRANSLATORS_OVERRIDES)
 
-        print "====================== for screenlayout/meta.py ================"
-        print
-        print "TRANSLATORS = [\n        " + ",\n        ".join("'%s'"%c for c in sorted(contributions)) + "\n        ]"
-        print
-        print
+        print("====================== for screenlayout/meta.py ================")
+        print()
+        print("TRANSLATORS = [\n        " + ",\n        ".join("'%s'"%c for c in sorted(contributions)) + "\n        ]")
+        print()
+        print()
 
         by_language_set = {}
         for name, languages in contributions.items():
@@ -151,7 +151,10 @@ class update_translator_credits(NoOptionCommand):
                 lang, country = lang.split('_')
             else:
                 country = None
-            lang = pycountry.languages.get(alpha2=lang).name
+            try:
+                lang = pycountry.languages.get(alpha_2=lang).name
+            except KeyError:
+                pass # eg. "ckb"
 
             try:
                 # strip suffixes like 'Catalan; Valencian'
@@ -165,29 +168,32 @@ class update_translator_credits(NoOptionCommand):
                 pass
 
             if country:
-                country = pycountry.countries.get(alpha2=country).name
+                try:
+                    country = pycountry.countries.get(alpha_2=country).name
+                except KeyError:
+                    pass # keep country, eg. zh-Hant, whatever that means in detail
                 return u"%s (%s)"%(lang, country)
             else:
                 return lang
 
-        print "====================== for README ================"
-        print
-        print "\n".join(sorted("* %s (%s)"%(", ".join(strip_address(c) for c in sorted(contributors)), ", ".join(sorted(language2name(l).encode('utf8') for l in languages))) for (languages, contributors) in by_language_set.items()))
-        print
+        print("====================== for README ================")
+        print()
+        print("\n".join(sorted("* %s (%s)"%(", ".join(strip_address(c) for c in sorted(contributors)), ", ".join(sorted(language2name(l) for l in languages))) for (languages, contributors) in by_language_set.items())))
+        print()
 
         by_language = {}
         for name, languages in contributions.items():
             for l in languages:
                 by_language.setdefault(l, set()).add(name)
-        print "====================== for debian/copyright ================"
-        print
+        print("====================== for debian/copyright ================")
+        print()
         for l, names in sorted(by_language.items()):
-            print "Files: data/po/%s.po"%l
-            print "Copyright: 2008-%s, chrysn <chrysn@fsfe.org>"%datetime.datetime.now().year
+            print("Files: data/po/%s.po"%l)
+            print("Copyright: 2008-%s, chrysn <chrysn@fsfe.org>"%datetime.datetime.now().year)
             for n in sorted(names):
-                print "          %s"%n
-            print "License: GPL-3+"
-            print
+                print("          %s"%n)
+            print("License: GPL-3+")
+            print()
 
 class build(_build):
     sub_commands = _build.sub_commands + [('build_trans', None), ('build_man', None)]

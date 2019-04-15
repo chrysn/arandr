@@ -1,3 +1,29 @@
+Version 0.1.10
+* Ported to Python 3 and PyGObject (by actionless)
+* Metacity keybindings removed
+* New translations
+  - Finnish
+  - Hebrew
+  - Indonesian
+  - Kurdish Sorani
+  - Norwegian Bokmål
+* Updated translations
+  - Breton
+  - Czech
+  - French
+  - Galego
+  - Galician
+  - Greek
+  - Japanese
+  - Kannada
+  - Lithuanian
+  - Romanian
+  - Sardinian
+  - Slovak
+  - Swedish
+  - Turkish
+  - Chinese (Traditional)
+
 Version 0.1.9
 * Support xrandr 1.5.0
 * New translations:
