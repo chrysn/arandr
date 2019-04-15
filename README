@@ -50,9 +50,9 @@ Installation
 
     * the `latest release`_::
 
-        wget http://christian.amsuess.com/tools/arandr/files/arandr-0.1.9.tar.gz
-        tar xzf arandr-0.1.9.tar.gz
-        cd arandr-0.1.9
+        wget http://christian.amsuess.com/tools/arandr/files/arandr-0.1.10.tar.gz
+        tar xzf arandr-0.1.10.tar.gz
+        cd arandr-0.1.10
 
     * or get it directly from GIT (`hosted on GitLab`_)::
 

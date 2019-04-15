@@ -42,7 +42,7 @@ PO_DIR = 'data/po'
 POT_FILE = os.path.join(PO_DIR, 'messages.pot')
 
 PACKAGENAME = "arandr"
-PACKAGEVERSION = "0.1.9"
+PACKAGEVERSION = "0.1.10"
 AUTHOR = "chrysn"
 AUTHOR_MAIL = "chrysn@fsfe.org"
 URL = "http://christian.amsuess.com/tools/arandr/"
