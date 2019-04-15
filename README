@@ -88,7 +88,7 @@ Bugs / Communication
 Ongoing development
 -------------------
 
-An overhauled version of ARandR is in the works in the `verbose` and `gtk3` branches found in the git repository. Feature parity with the current releases has not been reached, but some interesting features are already implemented:
+An overhauled version of ARandR is in the works in the `next` branch found in the git repository. Feature parity with the current releases has not been reached, but some interesting features are already implemented:
 
 * Parsing of the complete `--verbose` output, including properties
 * Setting refresh rates
