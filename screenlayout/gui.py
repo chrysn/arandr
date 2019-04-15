@@ -186,7 +186,7 @@ class Application:
     # don't use directly: state is not pushed back to action group.
     def set_zoom(self, value):
         self.widget.factor = value
-        self.window.resize(1, 1)
+        #self.window.resize(1, 1)
 
     @actioncallback
     def do_open_properties(self):
