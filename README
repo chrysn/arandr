@@ -56,7 +56,7 @@ Installation
 
     * or get it directly from GIT (`hosted on GitLab`_)::
 
-        git clone git://anonscm.debian.org/arandr/arandr.git
+        git clone https://gitlab.com/arandr/arandr
         cd arandr
 
   * and start it using::
