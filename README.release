@@ -14,5 +14,5 @@ checklist before release:
  * `git archive $VERSION --prefix="arandr-$VERSION/" | gzip -9 > ../arandr_$VERSION.orig.tar.gz`
  * `pristine-tar commit ../arandr_$VERSION.orig.tar.gz $VERSION`
  * update website to reflect new README, upload tarball
- * push to alioth, and any other mirrors
+ * push to all mirrors, including tags
  * notify maintainers
