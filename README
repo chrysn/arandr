@@ -74,6 +74,7 @@ Dependencies
 
 * python_ 3
 * PyGObject_
+* pycairo_
 * xrandr_
 * docutils_ (for building the man page)
 
@@ -196,6 +197,7 @@ Translations by
  .. _bugtracker: https://gitlab.com/arandr/arandr/issues
  .. _python: http://www.python.org/
  .. _PyGObject: https://pygobject.readthedocs.io/en/latest/
+ .. _pycairo: https://www.cairographics.org/pycairo/
  .. _slackbuilds.org: https://slackbuilds.org/repository/14.1/desktop/arandr/
  .. _Gentoo: http://packages.gentoo.org/package/x11-misc/arandr
  .. _Fedora: https://apps.fedoraproject.org/packages/arandr
