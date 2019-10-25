@@ -1,0 +1,18 @@
+checklist before release:
+
+ * work on branch master
+ * set version in `setup.py` and `screenlayout/meta.py`
+ * make sure the latest NEWS entry matches
+ * update README for new file names (be sure to catch all)
+ * update copyright references to current year (screenlayout/meta.py, README)
+ * commit as 'Ready for release ...'
+ * `git log --first-parent master > ChangeLog.new`
+ * `git checkout release`
+ * `git merge --no-ff master` (files may be modified in both: deleted in release, modified in master. the probably hould still be deleted.)
+ * `mv ChangeLog.new ChangeLog; git commit --amend -a` and set commit message to last NEWS entry
+ * `git tag $VERSION`
+ * `git archive $VERSION --prefix="arandr-$VERSION/" | gzip -9 > ../arandr_$VERSION.orig.tar.gz`
+ * `pristine-tar commit ../arandr_$VERSION.orig.tar.gz $VERSION`
+ * update website to reflect new README, upload tarball
+ * push to all mirrors, including tags
+ * notify maintainers

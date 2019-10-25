@@ -1,4 +1,123 @@
-commit 790cd346bbd57426930a2b3beb654cf3a39712fd (HEAD -> master)
+commit 664720bc9458db24e057a7e43820fddfc69c6d61 (HEAD -> master)
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Apr 15 14:47:37 2019 +0200
+
+    Ready for release 0.1.10
+
+commit 29cdb0f106e5e31b4c8ef1331b4ce8b0fc46c97b (origin/master, github/master)
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Apr 15 14:22:57 2019 +0200
+
+    gui: Don't force a resize on scale changes
+
+commit 3c3dc307ab55530a3b4c5a39f2d6c3ddfc938051
+Merge: f948704 e944fca
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Apr 15 14:45:21 2019 +0200
+
+    Update README: links, communication means, branches
+
+commit f948704227e628fcaf72156b0deab43644585acc
+Author: chrysn <chrysn@fsfe.org>
+Date:   Tue Jan 22 00:33:45 2019 +0100
+
+    Update translation and contributor copyrights
+
+commit 5dc51175c238fbfe58ac23df5641cc322cd9e6f8
+Author: chrysn <chrysn@fsfe.org>
+Date:   Tue Jan 22 00:31:02 2019 +0100
+
+    setup: Missing fixes for Python 3
+
+commit 24b3a6026e699b3a89871a1bb1ab0b66a1aa4d2d
+Author: chrysn <chrysn@fsfe.org>
+Date:   Tue Jan 22 00:27:47 2019 +0100
+
+    README: Remove outdated references
+
+commit 5cfd41e4324e2e1c1ff561f550c0f16d4b1d4057
+Author: chrysn <chrysn@fsfe.org>
+Date:   Tue Jan 22 00:20:53 2019 +0100
+
+    README: Update declared dependencies
+
+commit 7539c8ddfa7ef7298d661c01a5b82d3b16a32ce1
+Merge: 1814550 7e1d5d4
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Jan 21 23:41:00 2019 +0100
+
+    New translations from weblate
+    
+    New languages:
+    
+    * Chinese
+    * Finnish
+    * Galician
+    * Hebrew
+    * Indonesian
+    * Norway
+    * Sardinian
+    * Sorani
+    * Swedish
+    
+    Updates:
+    
+    * Breton
+    * Greek
+    * Japanese
+    * Kannada
+    * Lithuanian
+    * Romanian
+    * Slovak
+    * Turkish
+
+commit 1814550874e7dc0b496360560edc0f13a5124a4f
+Merge: dfde50b 2edc680
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Jan 21 23:24:50 2019 +0100
+
+    README: Updated installation instructions and links
+
+commit dfde50b1e0343c80a772cc55de1ed49784721af6
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Jan 21 23:23:46 2019 +0100
+
+    setup: be more tolerant towards unknown languages, follow pycountry changes
+
+commit da0ebacc22ba478b8d7aedc3d6a6bbe426059dc5
+Merge: 3927414 46f567b
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Jan 21 22:09:34 2019 +0100
+
+    Port to GTK3 and Python3, drop Metacity keybindings
+    
+    This includes PEP8/pylint and general variable renaming.
+
+commit 3927414848003c7ffcfa7f00a97a87e76dbd7b9a
+Author: chrysn <chrysn@fsfe.org>
+Date:   Tue Jan 1 01:25:45 2019 +0100
+
+    README: Change URIs from alioth to GitLab
+
+commit a79876a3c7e5573546cf76f8893d0f0fc04bed90
+Author: Gareth Pulham <garethpulham@gmail.com>
+Date:   Sat May 26 16:40:00 2018 +0200
+
+    snapping: Snap on center lines as well
+
+commit 95913c9ccfbd35bf7b6fae1dffbb828433fc9006
+Author: chrysn <chrysn@fsfe.org>
+Date:   Wed Feb 24 16:42:48 2016 +0100
+
+    Release procedure update
+
+commit 1d9eb6e749a5b71d18ab63682f5b7cf615159019
+Author: chrysn <chrysn@fsfe.org>
+Date:   Wed Feb 24 16:40:01 2016 +0100
+
+    Drop long-unused transifex config
+
+commit 790cd346bbd57426930a2b3beb654cf3a39712fd (origin/translations)
 Author: chrysn <chrysn@fsfe.org>
 Date:   Wed Feb 24 13:46:20 2016 +0100
 
@@ -57,7 +176,7 @@ Date:   Wed Feb 24 10:02:54 2016 +0100
     * Chinese (China; zh_CN)
     * Dutch (nl)
 
-commit 465df4eb26979ccfbcd747755c95e26c0500d6ab (origin/translations, origin/master, translations)
+commit 465df4eb26979ccfbcd747755c95e26c0500d6ab
 Author: chrysn <chrysn@fsfe.org>
 Date:   Fri Jun 26 11:02:46 2015 +0200
 
@@ -239,7 +358,7 @@ Date:   Thu Feb 28 19:12:46 2013 +0100
 
     ready for release 0.1.7
 
-commit 615607eb6796345d946e0fae8fdaf8680758b95e (weblate/master)
+commit 615607eb6796345d946e0fae8fdaf8680758b95e
 Author: chrysn <chrysn@fsfe.org>
 Date:   Thu Feb 28 18:27:48 2013 +0100
 

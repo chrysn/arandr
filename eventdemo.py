@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 # ARandR -- Another XRandR GUI
 # Copyright (C) 2008 -- 2011 chrysn <chrysn@fsfe.org>
 # 
@@ -16,27 +14,27 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-"""Run ARandR GUI"""
+import xcb
+import xcb.xproto
+import xcb.randr
 
-import sys
-import gettext
+RRScreenChangeNotifyMask = 1 << 0 # from randr.h
 
-# monkey patch gettext for local execution
+def main():
+    conn = xcb.connect()
+    conn.randr = conn(xcb.randr.key)
 
-if sys.argv[0].startswith('./'):
-    old_find = gettext.find
+    setup = conn.get_setup()
+    root = setup.roots[0].root
 
-    def find_wrapper(domain, localedir=None, languages=None, all=False):
-        """Catch finds for arandr and redirect them to local files"""
-        if domain == 'arandr':
-            result = old_find(domain, './build/locale', languages, all)
-            if result:
-                return result
-        return old_find(domain, localedir, languages, all)
+    print "XRRSelectInput"
+    conn.randr.SelectInput(root, RRScreenChangeNotifyMask) # as seen in http://www.mail-archive.com/sawfish-list@gnome.org/msg03630.html
 
-    gettext.find = find_wrapper
+    conn.flush()
 
-# defer importing and thus loading locales until monkey patching is done
+    while True:
+        e = conn.wait_for_event()
+        print e, vars(e)
 
-from screenlayout.gui import main
-main()
+if __name__ == "__main__":
+    main()
