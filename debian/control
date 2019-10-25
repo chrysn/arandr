@@ -6,8 +6,8 @@ Homepage: http://christian.amsuess.com/tools/arandr/
 Build-Depends: debhelper (>= 10), python3, dh-python
 Build-Depends-Indep: gettext, python-docutils (>=0.6)
 Standards-Version: 3.9.8
-Vcs-Browser: https://anonscm.debian.org/cgit/arandr/arandr.git/?h=debian
-Vcs-git: https://anonscm.debian.org/git/arandr/arandr.git -b debian
+Vcs-Browser: https://gitlab.com/arandr/arandr/tree/debian
+Vcs-git: https://gitlab.com/arandr/arandr.git -b debian
 
 Package: arandr
 Architecture: all
