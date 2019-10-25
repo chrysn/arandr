@@ -6,139 +6,173 @@ Comment: The bulk of data/po files can easily be managed by the upstream
          setup.py update_translator_credits command.
 
 Files: *
-Copyright: 2008–2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008–2019, chrysn <chrysn@fsfe.org>
+           2019, actionless 2019
 License: GPL-3+
 
 Files: screenlayout/xrandr.py screenlayout/widget.py
-Copyright: 2008–2015, chrysn <chrysn@fsfe.org>
+Copyright: 2008–2019, chrysn <chrysn@fsfe.org>
            2011, Себастьян Gli ţa Κατινα
            2015, Johannes Holmberg <johannes@update.uu.se>
+           2019, actionless 2019
 License: GPL-3+
 
 Files: data/po/ar.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Bakr Al-Tamimi <Bakr.Tamimi@gmail.com>
           Mohammad Alhargan <malham1@gmail.com>
           aboodilankaboot <shiningmoon25@gmail.com>
 License: GPL-3+
 
 Files: data/po/br.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Belvar <glasbarg@gmail.com>
+          tornoz <tornoz@laposte.net>
 License: GPL-3+
 
 Files: data/po/bs.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Semsudin Abdic <abdic88@gmail.com>
 License: GPL-3+
 
 Files: data/po/ca.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           el_libre <el.libre@gmail.com>
           josep constanti <jconstanti@yahoo.es>
 License: GPL-3+
 
+Files: data/po/ckb.po
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
+          Rasti K5 <rasti.khdhr@gmail.com>
+License: GPL-3+
+
 Files: data/po/cs.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Michal Čihař <michal@cihar.com>
 License: GPL-3+
 
 Files: data/po/da.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Joe Hansen <joedalton2@yahoo.dk>
           Sebastian Wahl <swahl11@student.aau.dk>
 License: GPL-3+
 
 Files: data/po/de.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
+          chrysn <chrysn@fsfe.org>
 License: GPL-3+
 
 Files: data/po/el.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
+          Alex Kalles <alexakis1997@hotmail.com>
           Dimitris Giouroukis
           Efstathios Iosifidis <iefstathios@gmail.com>
 License: GPL-3+
 
 Files: data/po/es.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Luis García Sevillano <floss.dev@gmail.com>
           Miguel Anxo Bouzada <mbouzada@gmail.com>
           Ricardo A. Hermosilla Carrillo <ra.hermosillac@gmail.com>
 License: GPL-3+
 
 Files: data/po/et.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Kristjan Räts <kristjanrats@gmail.com>
 License: GPL-3+
 
 Files: data/po/fa.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Alireza Savand <agahia.com@gmail.com>
           reza khan <reza_khn@yahoo.com>
 License: GPL-3+
 
+Files: data/po/fi.po
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
+          ekeimaja <ekeimaja@gmail.com>
+License: GPL-3+
+
 Files: data/po/fr.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Bruno_Patri <bruno.patri@gmail.com>
           Clément Démoulins <clement@archivel.fr>
           Tuux <tuxa@galaxie.eu.org>
 License: GPL-3+
 
 Files: data/po/gl.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
+          Miguel A. Bouzada <mbouzada@gmail.com>
           Miguel Anxo Bouzada <mbouzada@gmail.com>
 License: GPL-3+
 
+Files: data/po/he.po
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
+          Yaron Shahrabani <sh.yaron@gmail.com>
+License: GPL-3+
+
 Files: data/po/hu.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Balázs Úr <urbalazs@gmail.com>
           Tamás Nagy <kisagy@gmail.com>
 License: GPL-3+
 
+Files: data/po/id.po
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
+          ditokp <ditokpl@gmail.com>
+License: GPL-3+
+
 Files: data/po/it.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Luca Vetturi <io@lucavettu.com>
           Quizzlo <paolone.marco@gmail.com>
 License: GPL-3+
 
 Files: data/po/ja.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
+          Nobuhiro Iwamatsu <iwamatsu@gmail.com>
           o-157
 License: GPL-3+
 
 Files: data/po/kn.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
+          DARREN MELROY MENEZES <dmm6799@gmail.com>
           gundachandru <gundachandru@gmail.com>
 License: GPL-3+
 
 Files: data/po/ko_KR.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           ParkJS <HeavensBus@gmail.com>
           cho bkwon <chobkwon@gmail.com>
           pCsOrI <pcsori@gmail.com>
 License: GPL-3+
 
 Files: data/po/lt.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Algimantas Margevičius <margevicius.algimantas@gmail.com>
           Mantas Kriaučiūnas <mantas@akl.lt>
+          Moo <hazap@hotmail.com>
+License: GPL-3+
+
+Files: data/po/nb_NO.po
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
+          Allan Nordhøy <epost@anotheragency.no>
 License: GPL-3+
 
 Files: data/po/nl.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           ikmaak <info@ikmaak.nl>
           wimfeijen <wimfeijen@gmail.com>
 License: GPL-3+
 
 Files: data/po/pl.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Piotr Strebski <strebski@o2.pl>
           RooTer <rooter@kyberian.net>
           agilob <weblate@agilob.net>
 License: GPL-3+
 
 Files: data/po/pt_BR.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Fred Maranhão <fred.maranhao@gmail.com>
           Guilherme Souza Silva <g.szsilva@gmail.com>
           Lu Ca <lmelonimamo@yahoo.it>
@@ -146,58 +180,69 @@ Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
 License: GPL-3+
 
 Files: data/po/ro.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
+          Calin Sopterean <csopterean@gmail.com>
           Себастьян Gli ţa Κατινα <gseba@users.sourceforge.net>
 License: GPL-3+
 
 Files: data/po/ru.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           HsH <hsh@runtu.org>
           Ivan Vantu5z <vantu5z@mail.ru>
           Vladimir <vladimir-csp@yandex.ru>
 License: GPL-3+
 
 Files: data/po/sc.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
+          Ajeje Brazorf <lmelonimamo@yahoo.it>
           Lu Ca <lmelonimamo@yahoo.it>
 License: GPL-3+
 
 Files: data/po/sk.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
+          Fuxik Nah <fuxik12345@gmail.com>
           Slavko <linux@slavino.sk>
 License: GPL-3+
 
 Files: data/po/sq.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Denis Jukni <deblenden8@gmail.com>
 License: GPL-3+
 
 Files: data/po/sr.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Slobodan Simić <slsimic@gmail.com>
 License: GPL-3+
 
 Files: data/po/sv.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
+          Anders Jonsson <anders.jonsson@norsjovallen.se>
+          Erik Sundin <esundin@miman.biz>
           Ingemar Karlsson <ingemar@ingk.se>
 License: GPL-3+
 
 Files: data/po/tr.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Mehmet Gülmen <memetgulmen@gmail.com>
+          cem guresci <cemguresci@std.iyte.edu.tr>
 License: GPL-3+
 
 Files: data/po/uk.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Igor <vmta@yahoo.com>
           Olexandr Nesterenko <olexn@ukr.net>
           Rax Garfield
 License: GPL-3+
 
 Files: data/po/zh_CN.po
-Copyright: 2008-2016, chrysn <chrysn@fsfe.org>
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
           Carezero <carezero@qq.com>
           ChuChangMing <82724824@qq.com>
+License: GPL-3+
+
+Files: data/po/zh_Hant.po
+Copyright: 2008-2019, chrysn <chrysn@fsfe.org>
+          Louies <louies0623@gmail.com>
 License: GPL-3+
 
 License: GPL-3+
