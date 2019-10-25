@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Christian M. Amsüss <chrysn@fsfe.org>
 Homepage: http://christian.amsuess.com/tools/arandr/
 Build-Depends: debhelper (>= 10), python3, dh-python
-Build-Depends-Indep: gettext, python-docutils
+Build-Depends-Indep: gettext, python3-docutils
 Standards-Version: 4.4.1
 Vcs-Browser: https://gitlab.com/arandr/arandr/tree/debian
 Vcs-git: https://gitlab.com/arandr/arandr.git -b debian
