@@ -1,11 +1,21 @@
-arandr (0.1.10-1) UNRELEASED; urgency=medium
+arandr (0.1.10-1) unstable; urgency=medium
 
   * New upstream release
     - Ported to GTK 3 and Python 3 (Closes: #885259, 936132)
     - New translations
+  * Modernize package description
+  * Update dependencies to Python/GTK 3
+  * Use pybuild for building
+  * Update policy version (no changes needed)
+  * Update external references
+    - Update Vcs-* paths to reflect new hosting
+    - Use HTTPS for watch file
+  * Add workaround to man pages for #943376
+  * Remove dependency cruft
   * Copyright file updates
+  * State that no root is required for rules execution
 
- -- Christian M. Amsüss <chrysn@fsfe.org>  Fri, 25 Oct 2019 10:05:55 +0200
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Fri, 25 Oct 2019 13:28:53 +0200
 
 arandr (0.1.9-2) unstable; urgency=medium
 
