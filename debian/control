@@ -8,6 +8,7 @@ Build-Depends-Indep: gettext, python-docutils (>=0.6)
 Standards-Version: 3.9.8
 Vcs-Browser: https://gitlab.com/arandr/arandr/tree/debian
 Vcs-git: https://gitlab.com/arandr/arandr.git -b debian
+Rules-Requires-Root: no
 
 Package: arandr
 Architecture: all
