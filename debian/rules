@@ -2,3 +2,8 @@
 
 %:
 	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_install:
+	dh_auto_install
+	# Workaround for https://bugs.debian.org/943376
+	for x in debian/arandr/usr/share/man/man*/*.gz; do gunzip $$x; done
