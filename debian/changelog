@@ -92,7 +92,7 @@ arandr (0.1.3-1) unstable; urgency=low
   * Change Standards-Version to 3.8.4 (no changes)
   * New upstream version
     - New translations
-    - Minor bugfixes 
+    - Minor bugfixes
   * Add build dependency on python-docutils for man page generation
   * Note new translations in copyright file
   * Install new docs
@@ -148,4 +148,3 @@ arandr (0.0-1) unstable; urgency=low
   * Initial pre-release package
 
  -- chrysn <chrysn@fsfe.org>  Mon, 17 Mar 2008 16:08:54 +0000
-
