@@ -2,8 +2,3 @@
 
 %:
 	dh $@ --with python3 --buildsystem=pybuild
-
-override_dh_auto_install:
-	dh_auto_install
-	# Can no be easily done using debian/arandr.links as the path depends on the Python version
-	find debian/arandr/ -iname gpl-3.txt -exec ln -s -f /usr/share/common-licenses/GPL-3 '{}' ';'
