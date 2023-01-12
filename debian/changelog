@@ -1,3 +1,10 @@
+arandr (0.1.10-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * No-change source-only upload to allow testing migration. 
+
+ -- Boyuan Yang <byang@debian.org>  Fri, 17 Jan 2020 13:16:21 -0500
+
 arandr (0.1.10-1) unstable; urgency=medium
 
   * New upstream release
