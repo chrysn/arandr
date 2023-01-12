@@ -50,9 +50,9 @@ Installation
 
     * the `latest release`_::
 
-        wget http://christian.amsuess.com/tools/arandr/files/arandr-0.1.10.tar.gz
-        tar xzf arandr-0.1.10.tar.gz
-        cd arandr-0.1.10
+        wget http://christian.amsuess.com/tools/arandr/files/arandr-0.1.11.tar.gz
+        tar xzf arandr-0.1.11.tar.gz
+        cd arandr-0.1.11
 
     * or get it directly from GIT (`hosted on GitLab`_)::
 
@@ -74,6 +74,7 @@ Dependencies
 
 * python_ 3
 * PyGObject_
+* pycairo_
 * xrandr_
 * docutils_ (for building the man page)
 
@@ -181,7 +182,7 @@ Translations by
 
  .. _XRandR: http://www.x.org/wiki/Projects/XRandR
  .. _xsetwacom: http://linuxwacom.sourceforge.net/index.php/howto/xsetwacom
- .. _`latest release`: http://christian.amsuess.com/tools/arandr/files/arandr-0.1.9.tar.gz
+ .. _`latest release`: http://christian.amsuess.com/tools/arandr/files/arandr-0.1.11.tar.gz
  .. _archlinux: http://www.archlinux.org/packages/community/any/arandr/
  .. _chrysn: http://christian.amsuess.com
  .. _GPLv3: http://www.gnu.org/licenses/gpl-3.0.txt
@@ -196,6 +197,7 @@ Translations by
  .. _bugtracker: https://gitlab.com/arandr/arandr/issues
  .. _python: http://www.python.org/
  .. _PyGObject: https://pygobject.readthedocs.io/en/latest/
+ .. _pycairo: https://www.cairographics.org/pycairo/
  .. _slackbuilds.org: https://slackbuilds.org/repository/14.1/desktop/arandr/
  .. _Gentoo: http://packages.gentoo.org/package/x11-misc/arandr
  .. _Fedora: https://apps.fedoraproject.org/packages/arandr

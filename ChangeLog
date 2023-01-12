@@ -1,10 +1,50 @@
-commit 664720bc9458db24e057a7e43820fddfc69c6d61 (HEAD -> master)
+commit 822e903ec533b89e856bab25f1bd47206d40b863
+Author: chrysn <chrysn@fsfe.org>
+Date:   Thu Jan 12 16:55:26 2023 +0100
+
+    Ready for release 0.1.11
+
+commit 4ff888564a101cf9aabdc182a3ec0b03fe71b51e
+Author: Rowan Hart <rowanbhart@gmail.com>
+Date:   Thu Jan 12 16:20:26 2023 +0100
+
+    Fix Python 3.11 compatibility by replacing getargspec with getfullargspec
+    
+    Merges: https://gitlab.com/arandr/arandr/-/merge_requests/10
+
+commit 807c9284c10acffeeb57f9c0fa578f87348a280f
+Author: chrysn <chrysn@fsfe.org>
+Date:   Tue Apr 23 11:00:58 2019 +0200
+
+    README: Note dependency on cairo
+    
+    I'm not 100% sure where in the gi-mediated imports this becomes
+    essential (as it is not imported explicitly), but the cairo module does
+    get loaded in the course of running arandr.
+    
+    Closes: https://gitlab.com/arandr/arandr/issues/33
+
+commit f24a67137fc5723aacae7e4e6c477157d38325c6
+Author: chrysn <chrysn@fsfe.org>
+Date:   Tue Apr 16 16:08:26 2019 +0200
+
+    README: fix latest release link
+
+commit 4cdde43c31e2c4458e42b5966ae362f0d5439384
+Author: chrysn <chrysn@fsfe.org>
+Date:   Mon Apr 15 14:54:45 2019 +0200
+
+    Update release instructions
+    
+    avoid cluttering my own branch names into change log
+
+commit 664720bc9458db24e057a7e43820fddfc69c6d61
 Author: chrysn <chrysn@fsfe.org>
 Date:   Mon Apr 15 14:47:37 2019 +0200
 
     Ready for release 0.1.10
 
-commit 29cdb0f106e5e31b4c8ef1331b4ce8b0fc46c97b (origin/master, github/master)
+commit 29cdb0f106e5e31b4c8ef1331b4ce8b0fc46c97b
 Author: chrysn <chrysn@fsfe.org>
 Date:   Mon Apr 15 14:22:57 2019 +0200
 
@@ -117,7 +157,7 @@ Date:   Wed Feb 24 16:40:01 2016 +0100
 
     Drop long-unused transifex config
 
-commit 790cd346bbd57426930a2b3beb654cf3a39712fd (origin/translations)
+commit 790cd346bbd57426930a2b3beb654cf3a39712fd
 Author: chrysn <chrysn@fsfe.org>
 Date:   Wed Feb 24 13:46:20 2016 +0100
 

@@ -6,7 +6,7 @@ checklist before release:
  * update README for new file names (be sure to catch all)
  * update copyright references to current year (screenlayout/meta.py, README)
  * commit as 'Ready for release ...'
- * `git log --first-parent master > ChangeLog.new`
+ * `git log --first-parent --no-decorate master > ChangeLog.new`
  * `git checkout release`
  * `git merge --no-ff master` (files may be modified in both: deleted in release, modified in master. the probably hould still be deleted.)
  * `mv ChangeLog.new ChangeLog; git commit --amend -a` and set commit message to last NEWS entry
