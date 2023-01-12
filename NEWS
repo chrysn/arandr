@@ -1,3 +1,6 @@
+Version 0.1.11
+* Fix compatibility with Python 3.11 (by Rowan Hart)
+
 Version 0.1.10
 * Ported to Python 3 and PyGObject (by actionless)
 * Metacity keybindings removed
