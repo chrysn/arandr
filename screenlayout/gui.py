@@ -45,7 +45,7 @@ def actioncallback(function):
 
     A first argument called 'self' is passed through.
     """
-    argnames = inspect.getargspec(function)[0]
+    argnames = inspect.getfullargspec(function)[0]
     if argnames[0] == 'self':
         has_self = True
         argnames.pop(0)
