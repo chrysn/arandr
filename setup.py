@@ -153,7 +153,7 @@ class update_translator_credits(NoOptionCommand):
                 country = None
             try:
                 lang = pycountry.languages.get(alpha_2=lang).name
-            except KeyError:
+            except (KeyError, AttributeError): # different versions raise different errors
                 pass # eg. "ckb"
 
             try:
@@ -170,7 +170,7 @@ class update_translator_credits(NoOptionCommand):
             if country:
                 try:
                     country = pycountry.countries.get(alpha_2=country).name
-                except KeyError:
+                except (KeyError, AttributeError): # different versions raise different errors
                     pass # keep country, eg. zh-Hant, whatever that means in detail
                 return u"%s (%s)"%(lang, country)
             else:
