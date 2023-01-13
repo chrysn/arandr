@@ -1,3 +1,15 @@
+arandr (0.1.11-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #1028138, #1028406)
+    - Fix Python 3.11 compatibility by replacing getargspec with
+      getfullargspec
+
+  [ Ryan Kavanagh ]
+  * Move python3-docutils from Build-Depends-Indep to Build-Depends
+    (Closes: #1021216)
+
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Fri, 13 Jan 2023 09:24:48 +0100
+
 arandr (0.1.10-1.1) unstable; urgency=medium
 
   * Non-maintainer upload.
