@@ -92,6 +92,10 @@ class Application:
                 <menuitem action="Zoom8" />
                 <menuitem action="Zoom16" />
             </menu>
+            <menu action="Snapping" name="Snapping">
+                <menuitem action="SnapHorizontally" />
+                <menuitem action="SnapVertically" />
+            </menu>
             <menu action="Outputs" name="Outputs">
                 <menuitem action="OutputsDummy" />
             </menu>
@@ -127,8 +131,9 @@ class Application:
 
             ("Quit", Gtk.STOCK_QUIT, None, None, None, Gtk.main_quit),
 
-
             ("View", None, _("_View")),
+
+            ("Snapping", None, _("_Snapping")),
 
             ("Outputs", None, _("_Outputs")),
             ("OutputsDummy", None, _("Dummy")),
@@ -141,6 +146,11 @@ class Application:
             ("Zoom8", None, _("1:8"), None, None, 8),
             ("Zoom16", None, _("1:16"), None, None, 16),
         ], 8, self.set_zoom)
+
+        actiongroup.add_toggle_actions([
+            ("SnapHorizontally", None, _("Snap horizontally"), None, None, self.set_horizontal_snap, True),
+            ("SnapVertically", None, _("Snap vertically"), None, None, self.set_vertical_snap, True),
+        ])
 
         window.connect('destroy', Gtk.main_quit)
 
@@ -181,6 +191,14 @@ class Application:
         self.gconf = None
 
     #################### actions ####################
+
+    @actioncallback
+    def set_horizontal_snap(self, value):
+        self.widget.horizontal_snap = value.get_active()
+
+    @actioncallback
+    def set_vertical_snap(self, value):
+        self.widget.vertical_snap = value.get_active()
 
     @actioncallback
     # don't use directly: state is not pushed back to action group.

@@ -20,8 +20,10 @@ from .auxiliary import Position
 class Snap:
     """Snap-to-edges manager"""
 
-    def __init__(self, size, tolerance, positions):
+    def __init__(self, size, tolerance, positions, horizontal_snap=True, vertical_snap=True):
         self.tolerance = tolerance
+        self.horizontal_snap = horizontal_snap
+        self.vertical_snap = vertical_snap
 
         self.horizontal = set()
         self.vertical = set()
@@ -45,9 +47,9 @@ class Snap:
         horizontal = [y for y in self.horizontal if abs(
             y - position[1]) < self.tolerance]
 
-        if vertical:
+        if vertical and self.vertical_snap:
             position = Position((vertical[0], position[1]))
-        if horizontal:
+        if horizontal and self.horizontal_snap:
             position = Position((position[0], horizontal[0]))
 
         return position

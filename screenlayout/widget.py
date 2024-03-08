@@ -40,6 +40,8 @@ class ARandRWidget(Gtk.DrawingArea):
     _draggingoutput = None
     _draggingfrom = None
     _draggingsnap = None
+    horizontal_snap = True
+    vertical_snap = True
 
     __gsignals__ = {
         # 'expose-event':'override', # FIXME: still needed?
@@ -483,7 +485,9 @@ class ARandRWidget(Gtk.DrawingArea):
                 (virtual_state.position, virtual_state.size)
                 for (k, virtual_state) in self._xrandr.configuration.outputs.items()
                 if k != self._draggingoutput and virtual_state.active
-            ]
+            ],
+            widget.horizontal_snap,
+            widget.vertical_snap
         )
 
     def _dragmotion_cb(self, widget, context, x, y, time):  # pylint: disable=too-many-arguments
