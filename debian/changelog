@@ -1,3 +1,9 @@
+arandr (0.1.11-2) unstable; urgency=medium
+
+  * Declare build dependency on python3-setuptools (Closes: #1080542)
+
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Thu, 13 Mar 2025 07:20:02 +0100
+
 arandr (0.1.11-1) unstable; urgency=medium
 
   * New upstream release (Closes: #1028138, #1028406)
